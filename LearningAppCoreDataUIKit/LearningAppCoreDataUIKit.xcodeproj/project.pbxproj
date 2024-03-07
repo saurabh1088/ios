@@ -18,6 +18,7 @@
 		B7BD74AE2B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD74AD2B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITests.swift */; };
 		B7BD74B02B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD74AF2B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITestsLaunchTests.swift */; };
 		B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6CF292B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift */; };
+		B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B7BD74AD2B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppCoreDataUIKitUITests.swift; sourceTree = "<group>"; };
 		B7BD74AF2B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppCoreDataUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7D6CF292B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScenariosTableViewController.swift; sourceTree = "<group>"; };
+		B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		B7BD74882B9821BE002BC6C0 /* LearningAppCoreDataUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7DFAA2C2B994C04005F25C1 /* Movies */,
 				B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */,
 				B7BD748B2B9821BE002BC6C0 /* SceneDelegate.swift */,
 				B7BD748D2B9821BE002BC6C0 /* ViewController.swift */,
@@ -131,6 +134,14 @@
 				B7BD74AF2B9821BF002BC6C0 /* LearningAppCoreDataUIKitUITestsLaunchTests.swift */,
 			);
 			path = LearningAppCoreDataUIKitUITests;
+			sourceTree = "<group>";
+		};
+		B7DFAA2C2B994C04005F25C1 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */,
+			);
+			path = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BD748E2B9821BE002BC6C0 /* ViewController.swift in Sources */,
+				B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */,
 				B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */,
 				B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */,
 				B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */,
