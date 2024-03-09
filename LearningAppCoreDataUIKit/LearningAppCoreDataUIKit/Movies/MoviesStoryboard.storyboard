@@ -49,8 +49,79 @@
             </objects>
             <point key="canvasLocation" x="915.26717557251902" y="3.5211267605633805"/>
         </scene>
+        <!--Add Movie View Controller-->
+        <scene sceneID="lrz-ci-SOd">
+            <objects>
+                <viewController storyboardIdentifier="addMovieViewController" id="KOd-4k-uTe" customClass="AddMovieViewController" customModule="LearningAppCoreDataUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4US-sU-bFX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-Dw-SRe">
+                                <rect key="frame" x="16" y="791.66666666666663" width="361" height="34.333333333333371"/>
+                                <color key="backgroundColor" name="neonRed"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addMovieButtonAction:" destination="KOd-4k-uTe" eventType="touchUpInside" id="kES-eg-8DX"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="x3k-Ns-v3V">
+                                <rect key="frame" x="16" y="67" width="361" height="716.66666666666663"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-At-fUS">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Director" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFx-Sa-jEo">
+                                        <rect key="frame" x="0.0" y="227.66666666666669" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cast" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4I-Ny-QYa">
+                                        <rect key="frame" x="0.0" y="455" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgJ-HN-t4G">
+                                        <rect key="frame" x="0.0" y="682.66666666666663" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yf0-CZ-LYt"/>
+                        <color key="backgroundColor" name="neonYellow"/>
+                        <constraints>
+                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="leading" secondItem="Yf0-CZ-LYt" secondAttribute="leading" constant="16" id="8ax-sD-Z5e"/>
+                            <constraint firstItem="x3k-Ns-v3V" firstAttribute="top" secondItem="Yf0-CZ-LYt" secondAttribute="top" constant="8" id="BOL-0A-AJe"/>
+                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="bottom" secondItem="Yf0-CZ-LYt" secondAttribute="bottom" constant="8" id="RI1-Xn-bcU"/>
+                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="Ezc-Dw-SRe" secondAttribute="trailing" constant="16" id="Svf-SF-Mcq"/>
+                            <constraint firstItem="x3k-Ns-v3V" firstAttribute="leading" secondItem="Yf0-CZ-LYt" secondAttribute="leading" constant="16" id="TAa-f5-8Sm"/>
+                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="top" secondItem="x3k-Ns-v3V" secondAttribute="bottom" constant="8" id="WT5-xA-qgS"/>
+                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="x3k-Ns-v3V" secondAttribute="trailing" constant="16" id="lI7-1a-6sO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieCastTextField" destination="E4I-Ny-QYa" id="7pu-7c-EnK"/>
+                        <outlet property="movieDirectorTextField" destination="KFx-Sa-jEo" id="t15-Jo-9Mx"/>
+                        <outlet property="movieGenreTextField" destination="pgJ-HN-t4G" id="7xc-hc-pF6"/>
+                        <outlet property="movieTitleTextField" destination="a1L-At-fUS" id="M8t-OC-wkx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lK4-XR-S7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809.9236641221373" y="8.4507042253521139"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="neonRed">
+            <color red="0.7803921568627451" green="0.0" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="neonYellow">
             <color red="0.97254901960784312" green="0.87058823529411766" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

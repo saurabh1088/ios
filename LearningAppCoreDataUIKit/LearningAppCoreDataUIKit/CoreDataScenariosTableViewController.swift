@@ -85,3 +85,15 @@ class CoreDataScenariosTableViewController: UITableViewController {
     */
 
 }
+
+extension CoreDataScenariosTableViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMoviesViewController" {
+            if let destination = segue.destination as? MoviesViewController {
+                let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
+                destination.viewModel = MoviesViewModel(managedContext: managedObjectContext)
+            }
+        }
+    }
+}

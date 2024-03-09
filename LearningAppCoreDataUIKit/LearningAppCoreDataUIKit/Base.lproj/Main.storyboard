@@ -60,7 +60,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="neonRed"/>
                                 <connections>
-                                    <segue destination="AAH-HW-Xl6" kind="show" id="48K-eS-RyX"/>
+                                    <segue destination="AAH-HW-Xl6" kind="show" identifier="showMoviesViewController" id="48K-eS-RyX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

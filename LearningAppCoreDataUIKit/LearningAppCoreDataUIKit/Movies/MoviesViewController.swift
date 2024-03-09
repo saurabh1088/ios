@@ -8,6 +8,9 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
+    
+    var viewModel: MoviesViewModel!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,8 +19,6 @@ class MoviesViewController: UIViewController {
         tableView.dataSource = self
         createRightNavigationBarButton()
     }
-    
-    
 }
 
 // MARK: -----------------------------------------------------------------------
@@ -37,7 +38,10 @@ extension MoviesViewController {
     
     @objc
     func rightNavigationBarButtonAction() {
-        print("Right button tapped")
+        let storyboard = UIStoryboard(name: "MoviesStoryboard", bundle: Bundle.main)
+        let addMovieViewController = storyboard.instantiateViewController(withIdentifier: "addMovieViewController") as! AddMovieViewController
+        addMovieViewController.viewModel = viewModel
+        self.navigationController?.present(addMovieViewController, animated: true)
     }
 }
 
@@ -47,7 +51,7 @@ extension MoviesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieTableViewCell", for: indexPath)
-        cell.textLabel?.text = "Test"
+        cell.textLabel?.text = viewModel.movies[indexPath.row].title
         return cell
     }
 }
@@ -61,6 +65,6 @@ extension MoviesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.movies.count
     }
 }
