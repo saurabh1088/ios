@@ -38,4 +38,18 @@ class MoviesViewModel: MoviesViewModelProtocol {
             print("Some error occurred while trying to fetch movies")
         }
     }
+    
+    func addMovie(title: String, director: String, cast: String, genre: String) {
+        let movieEntity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
+        let newMovie = NSManagedObject(entity: movieEntity, insertInto: managedContext)
+        newMovie.setValue(title, forKey: "title")
+        newMovie.setValue(director, forKey: "director")
+        newMovie.setValue(cast, forKey: "cast")
+        newMovie.setValue(genre, forKey: "genre")
+        do {
+            try managedContext.save()
+        } catch {
+            print("Error while saving new movie to managedContext")
+        }
+    }
 }

@@ -20,7 +20,15 @@ class AddMovieViewController: UIViewController {
     }
     
     @IBAction func addMovieButtonAction(_ sender: Any) {
-        
+        if let title = movieTitleTextField.text,
+           let director = movieDirectorTextField.text,
+           let cast = movieCastTextField.text,
+           let genre = movieGenreTextField.text {
+            viewModel.addMovie(title: title,
+                               director: director,
+                               cast: cast,
+                               genre: genre)
+        }
     }
     
 }
