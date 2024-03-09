@@ -79,3 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: -----------------------------------------------------------------------
+// MARK: TODOs
+// TODO: Convert to follow design pattern VIPER
+// TODO: Add scenario using Core Data with in memory persistence only

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72ED2192B9C645E0038A388 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED2182B9C645D0038A388 /* Common.swift */; };
 		B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73243802B9A999500641FC5 /* MoviesViewController.swift */; };
 		B78189682B9BEC120060A522 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78189672B9BEC120060A522 /* AddMovieViewController.swift */; };
 		B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72ED2182B9C645D0038A388 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B73243802B9A999500641FC5 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		B78189672B9BEC120060A522 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		B7BD74862B9821BE002BC6C0 /* LearningAppCoreDataUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppCoreDataUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B72ED2172B9C644D0038A388 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B72ED2182B9C645D0038A388 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B7BD747D2B9821BE002BC6C0 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		B7BD74882B9821BE002BC6C0 /* LearningAppCoreDataUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B72ED2172B9C644D0038A388 /* Common */,
 				B7DFAA2C2B994C04005F25C1 /* Movies */,
 				B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */,
 				B7BD748B2B9821BE002BC6C0 /* SceneDelegate.swift */,
@@ -289,6 +300,7 @@
 				B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */,
 				B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */,
 				B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */,
+				B72ED2192B9C645E0038A388 /* Common.swift in Sources */,
 				B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */,
 				B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */,
 				B7BD74942B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld in Sources */,

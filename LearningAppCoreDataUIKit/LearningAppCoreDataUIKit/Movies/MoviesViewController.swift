@@ -46,6 +46,9 @@ extension MoviesViewController {
         let storyboard = UIStoryboard(name: "MoviesStoryboard", bundle: Bundle.main)
         let addMovieViewController = storyboard.instantiateViewController(withIdentifier: "addMovieViewController") as! AddMovieViewController
         addMovieViewController.viewModel = viewModel
+        addMovieViewController.addMovieAction = {
+            self.tableView.reloadData()
+        }
         self.navigationController?.present(addMovieViewController, animated: true)
     }
 }

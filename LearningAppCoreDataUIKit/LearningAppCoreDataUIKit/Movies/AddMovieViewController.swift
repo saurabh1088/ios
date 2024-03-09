@@ -9,6 +9,7 @@ import UIKit
 
 class AddMovieViewController: UIViewController {
     var viewModel: MoviesViewModel!
+    var addMovieAction: BasicBlock?
     
     @IBOutlet weak var movieTitleTextField: UITextField!
     @IBOutlet weak var movieDirectorTextField: UITextField!
@@ -28,6 +29,10 @@ class AddMovieViewController: UIViewController {
                                director: director,
                                cast: cast,
                                genre: genre)
+            if let action = addMovieAction {
+                action()
+            }
+            self.dismiss(animated: true)
         }
     }
     

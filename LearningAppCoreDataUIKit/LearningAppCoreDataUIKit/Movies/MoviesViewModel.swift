@@ -48,6 +48,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
         newMovie.setValue(genre, forKey: "genre")
         do {
             try managedContext.save()
+            fetchAllMovies()
         } catch {
             print("Error while saving new movie to managedContext")
         }
