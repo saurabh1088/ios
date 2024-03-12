@@ -12,6 +12,7 @@ import UIKit
 protocol MoviesViewModelProtocol {
     var managedContext: NSManagedObjectContext { get }
     func fetchAllMovies()
+    func addMovie(title: String, length: Int16, yearOfRelease: Int16)
 }
 
 class MoviesViewModel: MoviesViewModelProtocol {
@@ -39,13 +40,12 @@ class MoviesViewModel: MoviesViewModelProtocol {
         }
     }
     
-    func addMovie(title: String, director: String, cast: String, genre: String) {
+    func addMovie(title: String, length: Int16, yearOfRelease: Int16) {
         let movieEntity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
         let newMovie = NSManagedObject(entity: movieEntity, insertInto: managedContext)
         newMovie.setValue(title, forKey: "title")
-        newMovie.setValue(director, forKey: "director")
-        newMovie.setValue(cast, forKey: "cast")
-        newMovie.setValue(genre, forKey: "genre")
+        newMovie.setValue(length, forKey: "length")
+        newMovie.setValue(yearOfRelease, forKey: "yearOfRelease")
         do {
             try managedContext.save()
             fetchAllMovies()

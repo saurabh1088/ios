@@ -12,9 +12,8 @@ class AddMovieViewController: UIViewController {
     var addMovieAction: BasicBlock?
     
     @IBOutlet weak var movieTitleTextField: UITextField!
-    @IBOutlet weak var movieDirectorTextField: UITextField!
-    @IBOutlet weak var movieCastTextField: UITextField!
-    @IBOutlet weak var movieGenreTextField: UITextField!
+    @IBOutlet weak var movieLengthTextField: UITextField!
+    @IBOutlet weak var movieYearOfReleaseTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +21,31 @@ class AddMovieViewController: UIViewController {
     
     @IBAction func addMovieButtonAction(_ sender: Any) {
         if let title = movieTitleTextField.text,
-           let director = movieDirectorTextField.text,
-           let cast = movieCastTextField.text,
-           let genre = movieGenreTextField.text {
+           let movieLength = movieLength,
+           let movieYearOfRelease = movieYearOfRelease {
             viewModel.addMovie(title: title,
-                               director: director,
-                               cast: cast,
-                               genre: genre)
+                               length: movieLength,
+                               yearOfRelease: movieYearOfRelease)
             if let action = addMovieAction {
                 action()
             }
             self.dismiss(animated: true)
         }
     }
+}
+
+extension AddMovieViewController {
+    var movieLength: Int16? {
+        if let length = movieLengthTextField.text {
+            return Int16(length)
+        }
+        return nil
+    }
     
+    var movieYearOfRelease: Int16? {
+        if let yearOfRelease = movieYearOfReleaseTextField.text {
+            return Int16(yearOfRelease)
+        }
+        return nil
+    }
 }
