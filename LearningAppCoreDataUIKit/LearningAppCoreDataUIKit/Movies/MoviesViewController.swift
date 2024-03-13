@@ -22,34 +22,22 @@ class MoviesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        createRightNavigationBarButton()
     }
 }
 
 // MARK: -----------------------------------------------------------------------
-// MARK: MoviesViewController Navigation Items
-// TODO: Figure out if instead programmatically this can be added through storyboard itself
-// Current issue is if MoviesStoryboard is again embedded in navigation controller
-// then the show segue starts to get performed as present instead of push.
+// MARK: MoviesViewController Segue
 extension MoviesViewController {
     
-    func createRightNavigationBarButton() {
-        let rightBarButtonImage = UIImage(systemName: "plus")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: rightBarButtonImage,
-                                                                 style: .plain,
-                                                                 target: self,
-                                                                 action: #selector(rightNavigationBarButtonAction))
-    }
-    
-    @objc
-    func rightNavigationBarButtonAction() {
-        let storyboard = UIStoryboard(name: "MoviesStoryboard", bundle: Bundle.main)
-        let addMovieViewController = storyboard.instantiateViewController(withIdentifier: "addMovieViewController") as! AddMovieViewController
-        addMovieViewController.viewModel = viewModel
-        addMovieViewController.addMovieAction = {
-            self.tableView.reloadData()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "presentAddMovieViewController" {
+            if let destination = segue.destination as? AddMovieViewController {
+                destination.viewModel = viewModel
+                destination.addMovieAction = {
+                    self.tableView.reloadData()
+                }
+            }
         }
-        self.navigationController?.present(addMovieViewController, animated: true)
     }
 }
 

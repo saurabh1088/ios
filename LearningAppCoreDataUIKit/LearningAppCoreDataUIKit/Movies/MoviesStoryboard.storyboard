@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8A4-tl-CRb">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" name="neonYellow"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieTableViewCell" id="iNb-Eb-HDB">
@@ -34,13 +34,20 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="neonYellow"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8A4-tl-CRb" secondAttribute="bottom" id="7Kc-HR-s4U"/>
-                            <constraint firstItem="8A4-tl-CRb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WbN-QX-Ksd"/>
-                            <constraint firstItem="8A4-tl-CRb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="k4d-Wf-vIB"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8A4-tl-CRb" secondAttribute="trailing" id="nET-cY-ljD"/>
+                            <constraint firstItem="8A4-tl-CRb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="7A4-vs-Cta"/>
+                            <constraint firstItem="8A4-tl-CRb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="M3F-Tu-w2M"/>
+                            <constraint firstItem="8A4-tl-CRb" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="ovn-Wz-tCh"/>
+                            <constraint firstItem="8A4-tl-CRb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tRD-oS-dqJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rf7-ZW-s0H"/>
+                    <navigationItem key="navigationItem" id="rf7-ZW-s0H">
+                        <barButtonItem key="rightBarButtonItem" image="plus.app.fill" catalog="system" id="pqx-Cp-ORs">
+                            <connections>
+                                <segue destination="KOd-4k-uTe" kind="presentation" identifier="presentAddMovieViewController" id="tKB-Ak-Jbb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="8A4-tl-CRb" id="759-n8-akm"/>
                     </connections>
@@ -54,11 +61,11 @@
             <objects>
                 <viewController storyboardIdentifier="addMovieViewController" id="KOd-4k-uTe" customClass="AddMovieViewController" customModule="LearningAppCoreDataUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4US-sU-bFX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-Dw-SRe">
-                                <rect key="frame" x="16" y="791.66666666666663" width="361" height="34.333333333333371"/>
+                                <rect key="frame" x="16" y="815.66666666666663" width="361" height="34.333333333333371"/>
                                 <color key="backgroundColor" name="neonRed"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add">
@@ -69,7 +76,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="x3k-Ns-v3V">
-                                <rect key="frame" x="16" y="67" width="361" height="716.66666666666663"/>
+                                <rect key="frame" x="16" y="8" width="361" height="799.66666666666663"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-At-fUS">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
@@ -77,12 +84,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-wE-2Ak">
-                                        <rect key="frame" x="0.0" y="341.33333333333331" width="361" height="34"/>
+                                        <rect key="frame" x="0.0" y="383" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of release" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtc-Q0-slf">
-                                        <rect key="frame" x="0.0" y="682.66666666666663" width="361" height="34"/>
+                                        <rect key="frame" x="0.0" y="765.66666666666663" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -101,6 +108,7 @@
                             <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="x3k-Ns-v3V" secondAttribute="trailing" constant="16" id="lI7-1a-6sO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ra6-Qh-hXT"/>
                     <connections>
                         <outlet property="movieLengthTextField" destination="Drt-wE-2Ak" id="Ugg-A3-tLG"/>
                         <outlet property="movieTitleTextField" destination="a1L-At-fUS" id="M8t-OC-wkx"/>
@@ -109,10 +117,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lK4-XR-S7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809.9236641221373" y="8.4507042253521139"/>
+            <point key="canvasLocation" x="1825" y="4"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <namedColor name="neonRed">
             <color red="0.7803921568627451" green="0.0" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
