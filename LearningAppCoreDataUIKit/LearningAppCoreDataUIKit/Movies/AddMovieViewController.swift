@@ -17,6 +17,7 @@ class AddMovieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Add Movie"
     }
     
     @IBAction func addMovieButtonAction(_ sender: Any) {

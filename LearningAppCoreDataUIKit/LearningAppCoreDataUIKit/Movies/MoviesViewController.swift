@@ -39,6 +39,10 @@ extension MoviesViewController {
             }
         }
     }
+    
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+        print("Unwind segue performed :: \(unwindSegue.identifier)")
+    }
 }
 
 // MARK: -----------------------------------------------------------------------
