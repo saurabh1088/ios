@@ -134,6 +134,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QJj-Od-aDp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="neonRed"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
