@@ -13,6 +13,7 @@ protocol MoviesViewModelProtocol {
     var managedContext: NSManagedObjectContext { get }
     func fetchAllMovies()
     func addMovie(title: String, length: Int16, yearOfRelease: Int16)
+    func deleteMovie(at indexPath: IndexPath)
 }
 
 class MoviesViewModel: MoviesViewModelProtocol {
@@ -51,6 +52,16 @@ class MoviesViewModel: MoviesViewModelProtocol {
             fetchAllMovies()
         } catch {
             print("Error while saving new movie to managedContext")
+        }
+    }
+    
+    func deleteMovie(at indexPath: IndexPath) {
+        managedContext.delete(movies[indexPath.row])
+        movies.remove(at: indexPath.row)
+        do {
+            try managedContext.save()
+        } catch {
+            print("Error while saving managedContext after delete")
         }
     }
 }

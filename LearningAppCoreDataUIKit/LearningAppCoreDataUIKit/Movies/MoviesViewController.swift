@@ -31,7 +31,7 @@ extension MoviesViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "presentAddMovieViewController" {
-            if let destination = segue.destination as? AddMovieViewController {
+            if let destination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddMovieViewController {
                 destination.viewModel = viewModel
                 destination.addMovieAction = {
                     self.tableView.reloadData()
@@ -66,5 +66,15 @@ extension MoviesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.movies.count
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: MoviesViewController TableViewCell Editing
+extension MoviesViewController {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        print("Editing row :: \(indexPath.row)")
+        viewModel.deleteMovie(at: indexPath)
+        tableView.reloadData()
     }
 }
