@@ -8,3 +8,8 @@
 import Foundation
 
 typealias BasicBlock = () -> ()
+
+enum CoreDataScenarios: String, CaseIterable {
+    case movies = "Movies"
+    case director = "Director"
+}

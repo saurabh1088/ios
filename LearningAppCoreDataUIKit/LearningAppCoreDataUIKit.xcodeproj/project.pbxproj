@@ -102,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				B72ED2182B9C645D0038A388 /* Common.swift */,
+				B7EA9EE92BB10DDE00BE6E15 /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -129,6 +130,7 @@
 		B7BD74882B9821BE002BC6C0 /* LearningAppCoreDataUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7EA9EE82BB10D9F00BE6E15 /* Director */,
 				B72ED2172B9C644D0038A388 /* Common */,
 				B7DFAA2C2B994C04005F25C1 /* Movies */,
 				B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */,
@@ -140,10 +142,6 @@
 				B7BD74972B9821BE002BC6C0 /* LaunchScreen.storyboard */,
 				B7BD749A2B9821BE002BC6C0 /* Info.plist */,
 				B7BD74922B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld */,
-				B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */,
-				B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */,
-				B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */,
-				B7352F172BB07D470011587D /* DirectorViewModel.swift */,
 			);
 			path = LearningAppCoreDataUIKit;
 			sourceTree = "<group>";
@@ -174,6 +172,24 @@
 				B78189672B9BEC120060A522 /* AddMovieViewController.swift */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		B7EA9EE82BB10D9F00BE6E15 /* Director */ = {
+			isa = PBXGroup;
+			children = (
+				B7352F172BB07D470011587D /* DirectorViewModel.swift */,
+			);
+			path = Director;
+			sourceTree = "<group>";
+		};
+		B7EA9EE92BB10DDE00BE6E15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */,
+				B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */,
+				B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
