@@ -50,3 +50,13 @@ extension AddMovieViewController {
         return nil
     }
 }
+
+extension AddMovieViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDirectorSelectionViewController" {
+            if let destination = segue.destination as? OptionsSelectionViewController {
+                
+            }
+        }
+    }
+}

@@ -9,8 +9,11 @@ import Foundation
 import CoreData
 import UIKit
 
-protocol MoviesViewModelProtocol {
+protocol HasManagedContext {
     var managedContext: NSManagedObjectContext { get }
+}
+
+protocol MoviesViewModelProtocol: HasManagedContext {
     func fetchAllMovies()
     func addMovie(title: String, length: Int16, yearOfRelease: Int16)
     func deleteMovie(at indexPath: IndexPath)
@@ -44,6 +47,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
     func addMovie(title: String, length: Int16, yearOfRelease: Int16) {
         let movieEntity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
         let newMovie = NSManagedObject(entity: movieEntity, insertInto: managedContext)
+        newMovie.setValue(UUID(), forKey: "id")
         newMovie.setValue(title, forKey: "title")
         newMovie.setValue(length, forKey: "length")
         newMovie.setValue(yearOfRelease, forKey: "yearOfRelease")

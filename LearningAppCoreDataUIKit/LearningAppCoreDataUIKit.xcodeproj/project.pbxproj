@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B72ED2192B9C645E0038A388 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED2182B9C645D0038A388 /* Common.swift */; };
 		B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73243802B9A999500641FC5 /* MoviesViewController.swift */; };
+		B7352F162BB079A80011587D /* OptionsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */; };
+		B7352F182BB07D470011587D /* DirectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F172BB07D470011587D /* DirectorViewModel.swift */; };
 		B78189682B9BEC120060A522 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78189672B9BEC120060A522 /* AddMovieViewController.swift */; };
 		B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */; };
 		B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD748B2B9821BE002BC6C0 /* SceneDelegate.swift */; };
@@ -23,6 +25,8 @@
 		B7CD2D4C2B9A32A300D7AFDD /* MoviesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CD2D4B2B9A32A300D7AFDD /* MoviesStoryboard.storyboard */; };
 		B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6CF292B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift */; };
 		B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */; };
+		B7F911352BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */; };
+		B7F911372BB03E6600D65EB2 /* FullScreenWideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 /* Begin PBXFileReference section */
 		B72ED2182B9C645D0038A388 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B73243802B9A999500641FC5 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelectionViewController.swift; sourceTree = "<group>"; };
+		B7352F172BB07D470011587D /* DirectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorViewModel.swift; sourceTree = "<group>"; };
 		B78189672B9BEC120060A522 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		B7BD74862B9821BE002BC6C0 /* LearningAppCoreDataUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppCoreDataUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,8 @@
 		B7CD2D4B2B9A32A300D7AFDD /* MoviesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviesStoryboard.storyboard; sourceTree = "<group>"; };
 		B7D6CF292B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScenariosTableViewController.swift; sourceTree = "<group>"; };
 		B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionsSelectorStoryboard.storyboard; sourceTree = "<group>"; };
+		B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenWideButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 				B7BD74972B9821BE002BC6C0 /* LaunchScreen.storyboard */,
 				B7BD749A2B9821BE002BC6C0 /* Info.plist */,
 				B7BD74922B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld */,
+				B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */,
+				B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */,
+				B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */,
+				B7352F172BB07D470011587D /* DirectorViewModel.swift */,
 			);
 			path = LearningAppCoreDataUIKit;
 			sourceTree = "<group>";
@@ -270,6 +282,7 @@
 			files = (
 				B7BD74992B9821BE002BC6C0 /* LaunchScreen.storyboard in Resources */,
 				B7BD74962B9821BE002BC6C0 /* Assets.xcassets in Resources */,
+				B7F911352BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard in Resources */,
 				B7CD2D4C2B9A32A300D7AFDD /* MoviesStoryboard.storyboard in Resources */,
 				B7BD74912B9821BE002BC6C0 /* Main.storyboard in Resources */,
 			);
@@ -298,13 +311,16 @@
 			files = (
 				B7BD748E2B9821BE002BC6C0 /* ViewController.swift in Sources */,
 				B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */,
+				B7352F182BB07D470011587D /* DirectorViewModel.swift in Sources */,
 				B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */,
 				B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */,
 				B72ED2192B9C645E0038A388 /* Common.swift in Sources */,
 				B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */,
 				B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */,
+				B7F911372BB03E6600D65EB2 /* FullScreenWideButton.swift in Sources */,
 				B7BD74942B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld in Sources */,
 				B78189682B9BEC120060A522 /* AddMovieViewController.swift in Sources */,
+				B7352F162BB079A80011587D /* OptionsSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
