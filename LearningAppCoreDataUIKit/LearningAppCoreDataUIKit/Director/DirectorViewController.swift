@@ -17,6 +17,7 @@ class DirectorViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        createRightNavigationBarButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,5 +43,21 @@ extension DirectorViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "directorTableViewCell", for: indexPath)
         cell.textLabel?.text = viewModel.directors[indexPath.row].name
         return cell
+    }
+}
+
+extension DirectorViewController {
+    func createRightNavigationBarButton() {
+        let image = UIImage(systemName: "plus")
+        let rightNavBarButton = UIBarButtonItem(image: image,
+                                                style: .plain,
+                                                target: self,
+                                                action: #selector(openAddNewDirector))
+        self.navigationItem.rightBarButtonItem = rightNavBarButton
+    }
+    
+    @objc
+    func openAddNewDirector() {
+        self.performSegue(withIdentifier: "showAddDirectorViewController", sender: nil)
     }
 }
