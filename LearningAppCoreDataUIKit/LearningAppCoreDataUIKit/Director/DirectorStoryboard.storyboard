@@ -52,17 +52,47 @@
             </objects>
             <point key="canvasLocation" x="58.778625954198468" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Director View Controller-->
         <scene sceneID="uk8-Wr-m1P">
             <objects>
-                <viewController id="Ez3-VM-Np5" sceneMemberID="viewController">
+                <viewController id="Ez3-VM-Np5" customClass="AddDirectorViewController" customModule="LearningAppCoreDataUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kns-vS-eDP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKY-hF-3hb">
+                                <rect key="frame" x="16" y="763" width="361" height="35"/>
+                                <color key="backgroundColor" name="neonRed"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addDirectorAction:" destination="Ez3-VM-Np5" eventType="touchUpInside" id="Jmm-eg-f8N"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a director" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IiH-d9-cEN">
+                                <rect key="frame" x="16" y="404" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J8h-o9-njx"/>
                         <color key="backgroundColor" name="neonYellow"/>
+                        <constraints>
+                            <constraint firstItem="IiH-d9-cEN" firstAttribute="centerX" secondItem="Kns-vS-eDP" secondAttribute="centerX" id="1SD-gI-eeF"/>
+                            <constraint firstItem="IiH-d9-cEN" firstAttribute="leading" secondItem="J8h-o9-njx" secondAttribute="leading" constant="16" id="7mS-Lp-Pg8"/>
+                            <constraint firstItem="J8h-o9-njx" firstAttribute="trailing" secondItem="yKY-hF-3hb" secondAttribute="trailing" constant="16" id="dn0-hQ-PNF"/>
+                            <constraint firstItem="yKY-hF-3hb" firstAttribute="leading" secondItem="J8h-o9-njx" secondAttribute="leading" constant="16" id="hZC-1b-NIR"/>
+                            <constraint firstItem="J8h-o9-njx" firstAttribute="trailing" secondItem="IiH-d9-cEN" secondAttribute="trailing" constant="16" id="heG-i7-Azn"/>
+                            <constraint firstItem="J8h-o9-njx" firstAttribute="bottom" secondItem="yKY-hF-3hb" secondAttribute="bottom" constant="44" id="vos-qE-wVV"/>
+                            <constraint firstItem="IiH-d9-cEN" firstAttribute="centerY" secondItem="Kns-vS-eDP" secondAttribute="centerY" id="zmE-RA-EPr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X5R-j7-uYA"/>
+                    <connections>
+                        <outlet property="directorNameTextField" destination="IiH-d9-cEN" id="SgQ-Rn-XTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWt-uB-y0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

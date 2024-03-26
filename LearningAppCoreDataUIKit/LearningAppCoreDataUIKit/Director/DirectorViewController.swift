@@ -60,4 +60,15 @@ extension DirectorViewController {
     func openAddNewDirector() {
         self.performSegue(withIdentifier: "showAddDirectorViewController", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAddDirectorViewController" {
+            if let destination = segue.destination as? AddDirectorViewController {
+                destination.viewModel = viewModel
+                destination.addDirectorCallback = {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7093B532BB342A6008C81A1 /* AddDirectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093B522BB342A6008C81A1 /* AddDirectorViewController.swift */; };
 		B72ED2192B9C645E0038A388 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED2182B9C645D0038A388 /* Common.swift */; };
 		B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73243802B9A999500641FC5 /* MoviesViewController.swift */; };
 		B7352F162BB079A80011587D /* OptionsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7093B522BB342A6008C81A1 /* AddDirectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDirectorViewController.swift; sourceTree = "<group>"; };
 		B72ED2182B9C645D0038A388 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B73243802B9A999500641FC5 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelectionViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				B7352F172BB07D470011587D /* DirectorViewModel.swift */,
 				B7EA9EEA2BB10EE200BE6E15 /* DirectorStoryboard.storyboard */,
 				B7EA9EEC2BB10F4000BE6E15 /* DirectorViewController.swift */,
+				B7093B522BB342A6008C81A1 /* AddDirectorViewController.swift */,
 			);
 			path = Director;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */,
 				B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */,
 				B7F911372BB03E6600D65EB2 /* FullScreenWideButton.swift in Sources */,
+				B7093B532BB342A6008C81A1 /* AddDirectorViewController.swift in Sources */,
 				B7BD74942B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld in Sources */,
 				B78189682B9BEC120060A522 /* AddMovieViewController.swift in Sources */,
 				B7352F162BB079A80011587D /* OptionsSelectionViewController.swift in Sources */,
