@@ -45,6 +45,11 @@ extension CoreDataScenariosTableViewController {
                 let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
                 destination.viewModel = MoviesViewModel(managedContext: managedObjectContext)
             }
+        } else if segue.identifier == "showDirectorsViewController" {
+            if let destination = segue.destination as? DirectorViewController {
+                let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
+                destination.viewModel = DirectorViewModel(managedContext: managedObjectContext)
+            }
         }
     }
 }

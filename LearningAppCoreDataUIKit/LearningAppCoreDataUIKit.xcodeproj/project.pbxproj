@@ -25,6 +25,8 @@
 		B7CD2D4C2B9A32A300D7AFDD /* MoviesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CD2D4B2B9A32A300D7AFDD /* MoviesStoryboard.storyboard */; };
 		B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6CF292B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift */; };
 		B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */; };
+		B7EA9EEB2BB10EE200BE6E15 /* DirectorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EA9EEA2BB10EE200BE6E15 /* DirectorStoryboard.storyboard */; };
+		B7EA9EED2BB10F4000BE6E15 /* DirectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EA9EEC2BB10F4000BE6E15 /* DirectorViewController.swift */; };
 		B7F911352BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */; };
 		B7F911372BB03E6600D65EB2 /* FullScreenWideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 		B7CD2D4B2B9A32A300D7AFDD /* MoviesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviesStoryboard.storyboard; sourceTree = "<group>"; };
 		B7D6CF292B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScenariosTableViewController.swift; sourceTree = "<group>"; };
 		B7DFAA2D2B994C61005F25C1 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		B7EA9EEA2BB10EE200BE6E15 /* DirectorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectorStoryboard.storyboard; sourceTree = "<group>"; };
+		B7EA9EEC2BB10F4000BE6E15 /* DirectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorViewController.swift; sourceTree = "<group>"; };
 		B7F911342BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionsSelectorStoryboard.storyboard; sourceTree = "<group>"; };
 		B7F911362BB03E6600D65EB2 /* FullScreenWideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenWideButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				B7352F172BB07D470011587D /* DirectorViewModel.swift */,
+				B7EA9EEA2BB10EE200BE6E15 /* DirectorStoryboard.storyboard */,
+				B7EA9EEC2BB10F4000BE6E15 /* DirectorViewController.swift */,
 			);
 			path = Director;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BD74992B9821BE002BC6C0 /* LaunchScreen.storyboard in Resources */,
+				B7EA9EEB2BB10EE200BE6E15 /* DirectorStoryboard.storyboard in Resources */,
 				B7BD74962B9821BE002BC6C0 /* Assets.xcassets in Resources */,
 				B7F911352BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard in Resources */,
 				B7CD2D4C2B9A32A300D7AFDD /* MoviesStoryboard.storyboard in Resources */,
@@ -327,6 +334,7 @@
 			files = (
 				B7BD748E2B9821BE002BC6C0 /* ViewController.swift in Sources */,
 				B7DFAA2E2B994C61005F25C1 /* MoviesViewModel.swift in Sources */,
+				B7EA9EED2BB10F4000BE6E15 /* DirectorViewController.swift in Sources */,
 				B7352F182BB07D470011587D /* DirectorViewModel.swift in Sources */,
 				B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */,
 				B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */,

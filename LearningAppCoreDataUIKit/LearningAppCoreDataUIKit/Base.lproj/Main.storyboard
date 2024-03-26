@@ -71,6 +71,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="neonRed"/>
+                                <connections>
+                                    <segue destination="9qV-e8-TfF" kind="show" identifier="showDirectorsViewController" id="laQ-Gj-4nx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -93,6 +96,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Q5-aX-lSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2595" y="-169"/>
+        </scene>
+        <!--DirectorStoryboard-->
+        <scene sceneID="HnT-Y3-eng">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DirectorStoryboard" id="9qV-e8-TfF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6YY-dV-l8S"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hl5-wC-ITV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vz3-xk-PiJ">

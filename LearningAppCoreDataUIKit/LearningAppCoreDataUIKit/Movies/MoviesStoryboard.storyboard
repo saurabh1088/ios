@@ -64,19 +64,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-Dw-SRe">
-                                <rect key="frame" x="16" y="815.66666666666663" width="361" height="34.333333333333371"/>
-                                <color key="backgroundColor" name="neonRed"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="addMovieButtonAction:" destination="KOd-4k-uTe" eventType="touchUpInside" id="kES-eg-8DX"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="x3k-Ns-v3V">
-                                <rect key="frame" x="16" y="64" width="361" height="743.66666666666663"/>
+                                <rect key="frame" x="16" y="499.33333333333331" width="361" height="232.33333333333331"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-At-fUS">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
@@ -84,7 +73,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAl-L6-unW" customClass="FullScreenWideButton" customModule="LearningAppCoreDataUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="236.33333333333331" width="361" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="66.000000000000057" width="361" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Director" titleAlignment="leading">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,28 +83,41 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-wE-2Ak">
-                                        <rect key="frame" x="0.0" y="473.33333333333337" width="361" height="34"/>
+                                        <rect key="frame" x="0.0" y="132.33333333333331" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of release" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtc-Q0-slf">
-                                        <rect key="frame" x="0.0" y="709.66666666666663" width="361" height="34"/>
+                                        <rect key="frame" x="0.0" y="198.33333333333331" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="mtc-Q0-slf" firstAttribute="top" secondItem="Drt-wE-2Ak" secondAttribute="bottom" constant="32" id="Y5Q-hm-v5G"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-Dw-SRe">
+                                <rect key="frame" x="16" y="763.66666666666663" width="361" height="34.333333333333371"/>
+                                <color key="backgroundColor" name="neonRed"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addMovieButtonAction:" destination="KOd-4k-uTe" eventType="touchUpInside" id="kES-eg-8DX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yf0-CZ-LYt"/>
                         <color key="backgroundColor" name="neonYellow"/>
                         <constraints>
-                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="leading" secondItem="Yf0-CZ-LYt" secondAttribute="leading" constant="16" id="8ax-sD-Z5e"/>
-                            <constraint firstItem="x3k-Ns-v3V" firstAttribute="top" secondItem="Yf0-CZ-LYt" secondAttribute="top" constant="8" id="BOL-0A-AJe"/>
-                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="bottom" secondItem="Yf0-CZ-LYt" secondAttribute="bottom" constant="8" id="RI1-Xn-bcU"/>
-                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="Ezc-Dw-SRe" secondAttribute="trailing" constant="16" id="Svf-SF-Mcq"/>
-                            <constraint firstItem="x3k-Ns-v3V" firstAttribute="leading" secondItem="Yf0-CZ-LYt" secondAttribute="leading" constant="16" id="TAa-f5-8Sm"/>
-                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="top" secondItem="x3k-Ns-v3V" secondAttribute="bottom" constant="8" id="WT5-xA-qgS"/>
-                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="x3k-Ns-v3V" secondAttribute="trailing" constant="16" id="lI7-1a-6sO"/>
+                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="Ezc-Dw-SRe" secondAttribute="trailing" constant="16" id="4dA-aX-pIh"/>
+                            <constraint firstItem="x3k-Ns-v3V" firstAttribute="leading" secondItem="Yf0-CZ-LYt" secondAttribute="leading" constant="16" id="6pA-zm-hzA"/>
+                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="bottom" secondItem="Ezc-Dw-SRe" secondAttribute="bottom" constant="44" id="Ig4-Y5-NG6"/>
+                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="leading" secondItem="Yf0-CZ-LYt" secondAttribute="leading" constant="16" id="Jc1-Tg-pZu"/>
+                            <constraint firstItem="Yf0-CZ-LYt" firstAttribute="trailing" secondItem="x3k-Ns-v3V" secondAttribute="trailing" constant="16" id="bks-1p-1XO"/>
+                            <constraint firstItem="Ezc-Dw-SRe" firstAttribute="top" secondItem="x3k-Ns-v3V" secondAttribute="bottom" constant="32" id="hGu-p0-hur"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ra6-Qh-hXT">
