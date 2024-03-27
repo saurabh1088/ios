@@ -9,6 +9,7 @@ import UIKit
 
 class AddMovieViewController: UIViewController {
     var viewModel: MoviesViewModel!
+    var directorViewModel: DirectorViewModel!
     var addMovieAction: BasicBlock?
     
     @IBOutlet weak var movieTitleTextField: UITextField!
@@ -55,7 +56,13 @@ extension AddMovieViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDirectorSelectionViewController" {
             if let destination = segue.destination as? OptionsSelectionViewController {
-                
+                var directors = [String]()
+                for movie in directorViewModel.directors {
+                    if let name = movie.name {
+                        directors.append(name)
+                    }
+                }
+                destination.dataSource = directors
             }
         }
     }

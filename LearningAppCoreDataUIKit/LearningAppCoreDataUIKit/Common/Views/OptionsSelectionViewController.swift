@@ -9,6 +9,7 @@ import UIKit
 
 class OptionsSelectionViewController: UIViewController {
     
+    var dataSource = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,7 +23,7 @@ class OptionsSelectionViewController: UIViewController {
 extension OptionsSelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "selectableOptionTableViewCell", for: indexPath)
-        cell.textLabel?.text = "Director"
+        cell.textLabel?.text = dataSource[indexPath.row]
         return cell
     }
 }
@@ -33,6 +34,6 @@ extension OptionsSelectionViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        dataSource.count
     }
 }

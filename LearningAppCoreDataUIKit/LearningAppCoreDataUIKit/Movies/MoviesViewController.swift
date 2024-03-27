@@ -10,6 +10,7 @@ import UIKit
 class MoviesViewController: UIViewController {
     
     var viewModel: MoviesViewModel!
+    var directorViewModel: DirectorViewModel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,6 +34,7 @@ extension MoviesViewController {
         if segue.identifier == "presentAddMovieViewController" {
             if let destination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddMovieViewController {
                 destination.viewModel = viewModel
+                destination.directorViewModel = directorViewModel
                 destination.addMovieAction = {
                     self.tableView.reloadData()
                 }
