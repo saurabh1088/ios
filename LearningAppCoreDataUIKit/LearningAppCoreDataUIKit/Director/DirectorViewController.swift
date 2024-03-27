@@ -58,17 +58,23 @@ extension DirectorViewController {
     
     @objc
     func openAddNewDirector() {
-        self.performSegue(withIdentifier: "showAddDirectorViewController", sender: nil)
+        self.performSegue(withIdentifier: "showAddDirectorViewController", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAddDirectorViewController" {
-            if let destination = segue.destination as? AddDirectorViewController {
+            if let destination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddDirectorViewController {
                 destination.viewModel = viewModel
                 destination.addDirectorCallback = {
                     self.tableView.reloadData()
                 }
             }
         }
+    }
+}
+
+extension DirectorViewController {
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+        print("Unwind from :: \(unwindSegue.identifier)")
     }
 }

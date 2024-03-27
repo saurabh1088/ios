@@ -24,12 +24,14 @@ class DirectorViewModel: DirectorViewModelProtocol {
     }
     
     func fetchDirectors() {
+        var fetchedDirectors = [Director]()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Director")
         do {
             let result = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
             for data in result {
-                directors.append(data as! Director)
+                fetchedDirectors.append(data as! Director)
             }
+            directors = fetchedDirectors
         } catch {
             print("Some error occurred while trying to fetch director")
         }
@@ -41,6 +43,7 @@ class DirectorViewModel: DirectorViewModelProtocol {
         newDirector.setValue(name, forKey: "name")
         do {
             try managedContext.save()
+            fetchDirectors()
         } catch {
             print("Some error occured while trying to add new director")
         }
