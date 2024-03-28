@@ -7,9 +7,12 @@
 
 import UIKit
 
+typealias OptionSelectedCallback = (String) -> ()
+
 class OptionsSelectionViewController: UIViewController {
     
     var dataSource = [String]()
+    var optionSelectedCallback: OptionSelectedCallback?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,5 +38,12 @@ extension OptionsSelectionViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let action = optionSelectedCallback {
+            action(dataSource[indexPath.row])
+            self.dismiss(animated: true)
+        }
     }
 }

@@ -16,6 +16,9 @@ class AddMovieViewController: UIViewController {
     @IBOutlet weak var movieLengthTextField: UITextField!
     @IBOutlet weak var movieYearOfReleaseTextField: UITextField!
     
+    @IBOutlet weak var directorSelectionButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Add Movie"
@@ -55,14 +58,18 @@ extension AddMovieViewController {
 extension AddMovieViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDirectorSelectionViewController" {
-            if let destination = segue.destination as? OptionsSelectionViewController {
+            if let destination = (segue.destination as? UINavigationController)?.viewControllers.first as? OptionsSelectionViewController {
                 var directors = [String]()
+                directorViewModel.fetchDirectors()
                 for movie in directorViewModel.directors {
                     if let name = movie.name {
                         directors.append(name)
                     }
                 }
                 destination.dataSource = directors
+                destination.optionSelectedCallback = { selectedValue in
+                    self.directorSelectionButton.setTitle(selectedValue, for: .normal)
+                }
             }
         }
     }
