@@ -16,6 +16,7 @@ protocol HasManagedContext {
 protocol MoviesViewModelProtocol: HasManagedContext {
     func fetchAllMovies()
     func addMovie(title: String, length: Int16, yearOfRelease: Int16)
+    func addMovie(title: String, length: Int16, yearOfRelease: Int16, director: String)
     func deleteMovie(at indexPath: IndexPath)
 }
 
@@ -51,6 +52,21 @@ class MoviesViewModel: MoviesViewModelProtocol {
         newMovie.setValue(title, forKey: "title")
         newMovie.setValue(length, forKey: "length")
         newMovie.setValue(yearOfRelease, forKey: "yearOfRelease")
+        do {
+            try managedContext.save()
+            fetchAllMovies()
+        } catch {
+            print("Error while saving new movie to managedContext")
+        }
+    }
+    
+    func addMovie(title: String, length: Int16, yearOfRelease: Int16, director: String) {
+        let movieEntity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
+        let newMovie = Movie(entity: movieEntity, insertInto: managedContext)
+        newMovie.id = UUID()
+        newMovie.title = title
+        newMovie.length = length
+        newMovie.yearOfRelease = yearOfRelease
         do {
             try managedContext.save()
             fetchAllMovies()

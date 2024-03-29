@@ -27,10 +27,12 @@ class AddMovieViewController: UIViewController {
     @IBAction func addMovieButtonAction(_ sender: Any) {
         if let title = movieTitleTextField.text,
            let movieLength = movieLength,
-           let movieYearOfRelease = movieYearOfRelease {
+           let movieYearOfRelease = movieYearOfRelease,
+           let directorName = directorSelectionButton.titleLabel?.text {
             viewModel.addMovie(title: title,
                                length: movieLength,
-                               yearOfRelease: movieYearOfRelease)
+                               yearOfRelease: movieYearOfRelease,
+                               director: directorName)
             if let action = addMovieAction {
                 action()
             }

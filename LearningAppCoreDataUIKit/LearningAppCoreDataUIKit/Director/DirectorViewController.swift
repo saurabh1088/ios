@@ -75,6 +75,8 @@ extension DirectorViewController {
 
 extension DirectorViewController {
     @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
-        print("Unwind from :: \(unwindSegue.identifier)")
+        if let identifier = unwindSegue.identifier {
+            print("Unwind from :: \(identifier)")
+        }
     }
 }
