@@ -87,6 +87,8 @@ class MoviesViewModel: MoviesViewModelProtocol {
     }
     
     func undoLastChange() {
-        managedContext.rollback()
+        if managedContext.undoManager?.canUndo == true {
+            managedContext.undoManager?.undo()
+        }
     }
 }

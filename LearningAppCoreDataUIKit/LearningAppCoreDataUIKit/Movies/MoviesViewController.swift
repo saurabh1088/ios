@@ -31,7 +31,9 @@ class MoviesViewController: UIViewController {
     
     @IBAction func undoLastChangesButtonAction(_ sender: Any) {
         viewModel.undoLastChange()
+        viewModel.fetchAllMovies()
         tableView.reloadData()
+        undoLastChangesButton.isHidden = true
     }
 }
 
