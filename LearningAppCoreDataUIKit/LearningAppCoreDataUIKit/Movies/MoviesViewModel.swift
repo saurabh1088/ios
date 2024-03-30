@@ -17,7 +17,7 @@ protocol MoviesViewModelProtocol: HasManagedContext {
     func fetchAllMovies()
     func addMovie(title: String, length: Int16, yearOfRelease: Int16)
     func addMovie(title: String, length: Int16, yearOfRelease: Int16, director: String)
-    func deleteMovie(at indexPath: IndexPath)
+    func deleteMovie(at indexPath: IndexPath, completion: BasicBlock)
 }
 
 class MoviesViewModel: MoviesViewModelProtocol {
@@ -75,13 +75,18 @@ class MoviesViewModel: MoviesViewModelProtocol {
         }
     }
     
-    func deleteMovie(at indexPath: IndexPath) {
+    func deleteMovie(at indexPath: IndexPath, completion: BasicBlock) {
         managedContext.delete(movies[indexPath.row])
         movies.remove(at: indexPath.row)
         do {
             try managedContext.save()
+            completion()
         } catch {
             print("Error while saving managedContext after delete")
         }
+    }
+    
+    func undoLastChange() {
+        managedContext.rollback()
     }
 }

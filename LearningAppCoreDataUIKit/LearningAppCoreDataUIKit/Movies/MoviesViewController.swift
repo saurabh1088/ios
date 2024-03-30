@@ -12,6 +12,9 @@ class MoviesViewController: UIViewController {
     var viewModel: MoviesViewModel!
     var directorViewModel: DirectorViewModel!
     
+    @IBOutlet weak var undoLastChangesButton: UIBarButtonItem!
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,6 +26,12 @@ class MoviesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        undoLastChangesButton.isHidden = true
+    }
+    
+    @IBAction func undoLastChangesButtonAction(_ sender: Any) {
+        viewModel.undoLastChange()
+        tableView.reloadData()
     }
 }
 
@@ -78,7 +87,9 @@ extension MoviesViewController: UITableViewDataSource {
 extension MoviesViewController {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         print("Editing row :: \(indexPath.row)")
-        viewModel.deleteMovie(at: indexPath)
+        viewModel.deleteMovie(at: indexPath) {
+            self.undoLastChangesButton.isHidden = false
+        }
         tableView.reloadData()
     }
 }
