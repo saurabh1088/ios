@@ -14,6 +14,9 @@
 		B745611E2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745611D2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUITests.swift */; };
 		B74561282BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74561272BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.swift */; };
 		B745612A2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74561292BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift */; };
+		B79B38962BBC25530094AC7D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B38952BBC25530094AC7D /* LandingView.swift */; };
+		B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */; };
+		B79B389B2BBC72EA0094AC7D /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		B74561232BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningKeychainAPIsSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74561272BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningKeychainAPIsSwiftUIUITests.swift; sourceTree = "<group>"; };
 		B74561292BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B79B38952BBC25530094AC7D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeychainSecretView.swift; sourceTree = "<group>"; };
+		B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +100,13 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B79B38992BBC72CB0094AC7D /* Keychain */,
 				B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */,
 				B745610E2BBBAAD0001FFA26 /* ContentView.swift */,
 				B74561102BBBAAD1001FFA26 /* Assets.xcassets */,
 				B74561122BBBAAD1001FFA26 /* Preview Content */,
+				B79B38952BBC25530094AC7D /* LandingView.swift */,
+				B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */,
 			);
 			path = LearningKeychainAPIsSwiftUI;
 			sourceTree = "<group>";
@@ -125,6 +134,14 @@
 				B74561292BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = LearningKeychainAPIsSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		B79B38992BBC72CB0094AC7D /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */,
+				B79B38962BBC25530094AC7D /* LandingView.swift in Sources */,
+				B79B389B2BBC72EA0094AC7D /* KeychainServices.swift in Sources */,
 				B745610F2BBBAAD0001FFA26 /* ContentView.swift in Sources */,
 				B745610D2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift in Sources */,
 			);
