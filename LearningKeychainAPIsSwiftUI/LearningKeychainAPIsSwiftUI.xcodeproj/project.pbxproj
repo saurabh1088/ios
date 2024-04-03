@@ -17,6 +17,7 @@
 		B79B38962BBC25530094AC7D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B38952BBC25530094AC7D /* LandingView.swift */; };
 		B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */; };
 		B79B389B2BBC72EA0094AC7D /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */; };
+		B7B956322BBCE46700BE50F1 /* AddKeychainSecretViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B956312BBCE46700BE50F1 /* AddKeychainSecretViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B79B38952BBC25530094AC7D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeychainSecretView.swift; sourceTree = "<group>"; };
 		B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServices.swift; sourceTree = "<group>"; };
+		B7B956312BBCE46700BE50F1 /* AddKeychainSecretViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeychainSecretViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +102,13 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B7B956302BBCE43000BE50F1 /* AddToKeychain */,
 				B79B38992BBC72CB0094AC7D /* Keychain */,
 				B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */,
 				B745610E2BBBAAD0001FFA26 /* ContentView.swift */,
 				B74561102BBBAAD1001FFA26 /* Assets.xcassets */,
 				B74561122BBBAAD1001FFA26 /* Preview Content */,
 				B79B38952BBC25530094AC7D /* LandingView.swift */,
-				B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */,
 			);
 			path = LearningKeychainAPIsSwiftUI;
 			sourceTree = "<group>";
@@ -142,6 +144,15 @@
 				B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B7B956302BBCE43000BE50F1 /* AddToKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */,
+				B7B956312BBCE46700BE50F1 /* AddKeychainSecretViewModel.swift */,
+			);
+			path = AddToKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			files = (
 				B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */,
 				B79B38962BBC25530094AC7D /* LandingView.swift in Sources */,
+				B7B956322BBCE46700BE50F1 /* AddKeychainSecretViewModel.swift in Sources */,
 				B79B389B2BBC72EA0094AC7D /* KeychainServices.swift in Sources */,
 				B745610F2BBBAAD0001FFA26 /* ContentView.swift in Sources */,
 				B745610D2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift in Sources */,

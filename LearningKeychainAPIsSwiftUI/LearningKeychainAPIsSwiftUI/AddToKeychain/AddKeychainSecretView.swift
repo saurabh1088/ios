@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AddKeychainSecretView: View {
+    @ObservedObject var viewModel: AddKeychainSecretViewModel
+    
     @State private var secret = String()
     
     var body: some View {
@@ -15,7 +17,7 @@ struct AddKeychainSecretView: View {
             TextField("Secret", text: $secret)
             
             Button {
-                
+                viewModel.addSecret(secret, of: "user")
             } label: {
                 Text("Add to keychain")
             }
@@ -25,5 +27,5 @@ struct AddKeychainSecretView: View {
 }
 
 #Preview {
-    AddKeychainSecretView()
+    AddKeychainSecretView(viewModel: AddKeychainSecretViewModel(keychainService: KeychainServices()))
 }

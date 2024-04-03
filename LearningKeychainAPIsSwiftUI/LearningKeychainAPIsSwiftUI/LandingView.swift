@@ -27,7 +27,7 @@ struct LandingView: View {
                     .foregroundColor(.white)
             }
             .sheet(isPresented: $showAddSecretView, content: {
-                AddKeychainSecretView()
+                AddKeychainSecretView(viewModel: AddKeychainSecretViewModel(keychainService: KeychainServices()))
             })
         }
         .onAppear {
