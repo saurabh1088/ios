@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandingView: View {
     @State private var animate: Bool = false
-    @State private var showAddSecretView: Bool = false
+    @State private var showKeychainOptions: Bool = false
     
     var body: some View {
         VStack {
@@ -19,15 +19,15 @@ struct LandingView: View {
             Text("Keychain")
             
             Button {
-                showAddSecretView.toggle()
+                showKeychainOptions.toggle()
             } label: {
                 Text("Start")
                     .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
                     .background(.red)
                     .foregroundColor(.white)
             }
-            .sheet(isPresented: $showAddSecretView, content: {
-                AddKeychainSecretView(viewModel: AddKeychainSecretViewModel(keychainService: KeychainServices()))
+            .fullScreenCover(isPresented: $showKeychainOptions, content: {
+                KeychainOptionsView()
             })
         }
         .onAppear {
