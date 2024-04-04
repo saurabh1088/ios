@@ -11,9 +11,14 @@ import Security
 protocol KeychainServicesProvider {
     func secure(secret: String, of user: String)
     func retrieveSecret(for user: String) -> String?
+    func update(secret: String, for user: String)
 }
 
-class KeychainServices: KeychainServicesProvider {
+class KeychainServices: KeychainServicesProvider { }
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension KeychainServices for retrieve functionality
+extension KeychainServices {
     
     func retrieveSecret(for user: String) -> String? {
         let query: [String: Any] = [
@@ -31,6 +36,7 @@ class KeychainServices: KeychainServicesProvider {
                let username = retrievedItem[kSecAttrAccount as String] as? String,
                let password = retrievedItem[kSecValueData as String] as? Data,
                let secret = String(data: password, encoding: .utf8){
+                print("Retrieved secret from keychain for user : \(username)")
                 return secret
             }
         } else {
@@ -38,7 +44,11 @@ class KeychainServices: KeychainServicesProvider {
         }
         return nil
     }
-    
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension KeychainServices for add to keychain functionality
+extension KeychainServices {
     
     func secure(secret: String, of user: String) {
         guard let password = secret.data(using: .utf8) else {
@@ -55,6 +65,32 @@ class KeychainServices: KeychainServicesProvider {
             print("Item saved successfully")
         } else {
             print("Error while saving secret to keychain")
+        }
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension KeychainServices for update to keychain functionality
+extension KeychainServices {
+    
+    func update(secret: String, for user: String) {
+        guard let newPassword = secret.data(using: .utf8) else {
+            return
+        }
+        
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: user
+        ]
+        
+        let attributes: [String: Any] = [
+            kSecValueData as String: newPassword
+        ]
+        
+        if SecItemUpdate(query as CFDictionary, attributes as CFDictionary) == noErr {
+            print("Successfully updated secret")
+        } else {
+            print("Error occurred while updating secret")
         }
     }
 }
