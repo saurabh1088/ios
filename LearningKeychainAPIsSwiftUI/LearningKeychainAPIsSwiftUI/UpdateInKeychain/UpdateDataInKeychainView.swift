@@ -25,7 +25,7 @@ struct UpdateDataInKeychainView: View {
             }
             
             Button {
-                viewModel.update(secret: username, for: secret)
+                viewModel.update(secret: secret, for: username)
             } label: {
                 Text("Update")
                     .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)

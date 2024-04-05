@@ -87,7 +87,8 @@ extension KeychainServices {
             kSecValueData as String: newPassword
         ]
         
-        if SecItemUpdate(query as CFDictionary, attributes as CFDictionary) == noErr {
+        let status = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
+        if status == noErr {
             print("Successfully updated secret")
         } else {
             print("Error occurred while updating secret")
