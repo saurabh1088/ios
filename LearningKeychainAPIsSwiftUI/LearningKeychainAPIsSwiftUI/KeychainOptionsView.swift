@@ -10,11 +10,13 @@ import SwiftUI
 struct KeychainOptionsView: View {
     @State private var showAddSecretView = false
     @State private var showRetrievedSecretView = false
+    @State private var showUpdateSecretView = false
     
     var body: some View {
         VStack {
             addToKeychainButton
             retrieveFromKeychainButton
+            updateSecretInKeychainButton
         }
     }
     
@@ -45,6 +47,21 @@ struct KeychainOptionsView: View {
         }
         .sheet(isPresented: $showRetrievedSecretView, content: {
             RetrieveDataFromKeychainView(viewModel: RetrieveDataFromKeychainViewModel(keychainService: KeychainServices()))
+        })
+    }
+    
+    @ViewBuilder
+    private var updateSecretInKeychainButton: some View {
+        Button {
+            showUpdateSecretView.toggle()
+        } label: {
+            Text("Update")
+                .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
+                .background(.red)
+                .foregroundColor(.white)
+        }
+        .sheet(isPresented: $showUpdateSecretView, content: {
+            UpdateDataInKeychainView(viewModel: UpdateDataInKeychainViewModel(keychainservice: KeychainServices()))
         })
     }
 }

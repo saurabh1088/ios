@@ -21,6 +21,8 @@
 		B7B956342BBD54B100BE50F1 /* KeychainOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B956332BBD54B100BE50F1 /* KeychainOptionsView.swift */; };
 		B7B956372BBDBE2600BE50F1 /* RetrieveDataFromKeychainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B956362BBDBE2600BE50F1 /* RetrieveDataFromKeychainView.swift */; };
 		B7B956392BBDBE3B00BE50F1 /* RetrieveDataFromKeychainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B956382BBDBE3B00BE50F1 /* RetrieveDataFromKeychainViewModel.swift */; };
+		B7D4C7FC2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D4C7FB2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift */; };
+		B7D4C7FE2BBF87EB00FA2147 /* UpdateDataInKeychainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D4C7FD2BBF87EB00FA2147 /* UpdateDataInKeychainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		B7B956332BBD54B100BE50F1 /* KeychainOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainOptionsView.swift; sourceTree = "<group>"; };
 		B7B956362BBDBE2600BE50F1 /* RetrieveDataFromKeychainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveDataFromKeychainView.swift; sourceTree = "<group>"; };
 		B7B956382BBDBE3B00BE50F1 /* RetrieveDataFromKeychainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveDataFromKeychainViewModel.swift; sourceTree = "<group>"; };
+		B7D4C7FB2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDataInKeychainView.swift; sourceTree = "<group>"; };
+		B7D4C7FD2BBF87EB00FA2147 /* UpdateDataInKeychainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDataInKeychainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B7D4C7FA2BBF86B300FA2147 /* UpdateInKeychain */,
 				B7B956352BBDBDF900BE50F1 /* RetrieveFromKeychain */,
 				B7B956302BBCE43000BE50F1 /* AddToKeychain */,
 				B79B38992BBC72CB0094AC7D /* Keychain */,
@@ -170,6 +175,15 @@
 				B7B956382BBDBE3B00BE50F1 /* RetrieveDataFromKeychainViewModel.swift */,
 			);
 			path = RetrieveFromKeychain;
+			sourceTree = "<group>";
+		};
+		B7D4C7FA2BBF86B300FA2147 /* UpdateInKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				B7D4C7FB2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift */,
+				B7D4C7FD2BBF87EB00FA2147 /* UpdateDataInKeychainViewModel.swift */,
+			);
+			path = UpdateInKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D4C7FC2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift in Sources */,
 				B7B956372BBDBE2600BE50F1 /* RetrieveDataFromKeychainView.swift in Sources */,
 				B7B956342BBD54B100BE50F1 /* KeychainOptionsView.swift in Sources */,
 				B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */,
+				B7D4C7FE2BBF87EB00FA2147 /* UpdateDataInKeychainViewModel.swift in Sources */,
 				B79B38962BBC25530094AC7D /* LandingView.swift in Sources */,
 				B7B956322BBCE46700BE50F1 /* AddKeychainSecretViewModel.swift in Sources */,
 				B79B389B2BBC72EA0094AC7D /* KeychainServices.swift in Sources */,
