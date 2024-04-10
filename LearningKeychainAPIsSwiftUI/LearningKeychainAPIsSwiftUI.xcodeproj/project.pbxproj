@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B70F113A2BBFAA57004E64DB /* DeleteFromKeychainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */; };
 		B70F113C2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */; };
+		B725CB6C2BC63C110067AF25 /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CB6B2BC63C110067AF25 /* MockKeychainService.swift */; };
 		B745610D2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */; };
 		B745610F2BBBAAD0001FFA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745610E2BBBAAD0001FFA26 /* ContentView.swift */; };
 		B74561112BBBAAD1001FFA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74561102BBBAAD1001FFA26 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromKeychainView.swift; sourceTree = "<group>"; };
 		B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromKeychainViewModel.swift; sourceTree = "<group>"; };
+		B725CB6B2BC63C110067AF25 /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
 		B74561092BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningKeychainAPIsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningKeychainAPIsSwiftUIApp.swift; sourceTree = "<group>"; };
 		B745610E2BBBAAD0001FFA26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B745611D2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUITests.swift */,
+				B725CB6B2BC63C110067AF25 /* MockKeychainService.swift */,
 			);
 			path = LearningKeychainAPIsSwiftUITests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B745611E2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUITests.swift in Sources */,
+				B725CB6C2BC63C110067AF25 /* MockKeychainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
