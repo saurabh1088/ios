@@ -12,6 +12,7 @@ protocol KeychainServicesProvider {
     func secure(secret: String, of user: String)
     func retrieveSecret(for user: String) -> String?
     func update(secret: String, for user: String)
+    func deleteEntry(for user: String)
 }
 
 class KeychainServices: KeychainServicesProvider { }
@@ -92,6 +93,25 @@ extension KeychainServices {
             print("Successfully updated secret")
         } else {
             print("Error occurred while updating secret")
+        }
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension KeychainServices for delete from keychain functionality
+extension KeychainServices {
+    
+    func deleteEntry(for user: String) {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: user
+        ]
+        
+        let status = SecItemDelete(query as CFDictionary)
+        if status == noErr {
+            print("Succeddfully deleted")
+        } else {
+            print("Error while deleting from keychain")
         }
     }
 }

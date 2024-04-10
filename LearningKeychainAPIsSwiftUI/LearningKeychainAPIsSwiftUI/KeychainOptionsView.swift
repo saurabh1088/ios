@@ -11,12 +11,14 @@ struct KeychainOptionsView: View {
     @State private var showAddSecretView = false
     @State private var showRetrievedSecretView = false
     @State private var showUpdateSecretView = false
+    @State private var showDeleteSecretView = false
     
     var body: some View {
         VStack {
             addToKeychainButton
             retrieveFromKeychainButton
             updateSecretInKeychainButton
+            deleteFromKeychainButton
         }
     }
     
@@ -62,6 +64,21 @@ struct KeychainOptionsView: View {
         }
         .sheet(isPresented: $showUpdateSecretView, content: {
             UpdateDataInKeychainView(viewModel: UpdateDataInKeychainViewModel(keychainservice: KeychainServices()))
+        })
+    }
+    
+    @ViewBuilder
+    private var deleteFromKeychainButton: some View {
+        Button {
+            showDeleteSecretView.toggle()
+        } label: {
+            Text("Delete")
+                .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
+                .background(.red)
+                .foregroundColor(.white)
+        }
+        .sheet(isPresented: $showDeleteSecretView, content: {
+            DeleteFromKeychainView(viewModel: DeleteFromKeychainViewModel(keychainservice: KeychainServices()))
         })
     }
 }

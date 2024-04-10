@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70F113A2BBFAA57004E64DB /* DeleteFromKeychainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */; };
+		B70F113C2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */; };
 		B745610D2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */; };
 		B745610F2BBBAAD0001FFA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745610E2BBBAAD0001FFA26 /* ContentView.swift */; };
 		B74561112BBBAAD1001FFA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74561102BBBAAD1001FFA26 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromKeychainView.swift; sourceTree = "<group>"; };
+		B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromKeychainViewModel.swift; sourceTree = "<group>"; };
 		B74561092BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningKeychainAPIsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningKeychainAPIsSwiftUIApp.swift; sourceTree = "<group>"; };
 		B745610E2BBBAAD0001FFA26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70F11382BBFAA2A004E64DB /* DeleteFromKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */,
+				B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */,
+			);
+			path = DeleteFromKeychain;
+			sourceTree = "<group>";
+		};
 		B74561002BBBAACF001FFA26 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B70F11382BBFAA2A004E64DB /* DeleteFromKeychain */,
 				B7D4C7FA2BBF86B300FA2147 /* UpdateInKeychain */,
 				B7B956352BBDBDF900BE50F1 /* RetrieveFromKeychain */,
 				B7B956302BBCE43000BE50F1 /* AddToKeychain */,
@@ -317,6 +331,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D4C7FC2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift in Sources */,
+				B70F113C2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift in Sources */,
+				B70F113A2BBFAA57004E64DB /* DeleteFromKeychainView.swift in Sources */,
 				B7B956372BBDBE2600BE50F1 /* RetrieveDataFromKeychainView.swift in Sources */,
 				B7B956342BBD54B100BE50F1 /* KeychainOptionsView.swift in Sources */,
 				B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */,
