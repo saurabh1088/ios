@@ -103,6 +103,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70B36812BC77D4B006557B2 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				B745610E2BBBAAD0001FFA26 /* ContentView.swift */,
+				B79B38952BBC25530094AC7D /* LandingView.swift */,
+				B7B956332BBD54B100BE50F1 /* KeychainOptionsView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		B70B36822BC77D7D006557B2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B7B956302BBCE43000BE50F1 /* AddToKeychain */,
+				B70F11382BBFAA2A004E64DB /* DeleteFromKeychain */,
+				B7B956352BBDBDF900BE50F1 /* RetrieveFromKeychain */,
+				B7D4C7FA2BBF86B300FA2147 /* UpdateInKeychain */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		B70F11382BBFAA2A004E64DB /* DeleteFromKeychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,17 +156,12 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				B70F11382BBFAA2A004E64DB /* DeleteFromKeychain */,
-				B7D4C7FA2BBF86B300FA2147 /* UpdateInKeychain */,
-				B7B956352BBDBDF900BE50F1 /* RetrieveFromKeychain */,
-				B7B956302BBCE43000BE50F1 /* AddToKeychain */,
 				B79B38992BBC72CB0094AC7D /* Keychain */,
+				B70B36812BC77D4B006557B2 /* MainViews */,
+				B70B36822BC77D7D006557B2 /* UseCases */,
 				B745610C2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUIApp.swift */,
-				B745610E2BBBAAD0001FFA26 /* ContentView.swift */,
 				B74561102BBBAAD1001FFA26 /* Assets.xcassets */,
 				B74561122BBBAAD1001FFA26 /* Preview Content */,
-				B79B38952BBC25530094AC7D /* LandingView.swift */,
-				B7B956332BBD54B100BE50F1 /* KeychainOptionsView.swift */,
 			);
 			path = LearningKeychainAPIsSwiftUI;
 			sourceTree = "<group>";
