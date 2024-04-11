@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70B36852BC785D8006557B2 /* KeychainScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B36842BC785D8006557B2 /* KeychainScenarios.swift */; };
+		B70B36872BC7C290006557B2 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B36862BC7C290006557B2 /* ViewModelFactory.swift */; };
 		B70F113A2BBFAA57004E64DB /* DeleteFromKeychainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */; };
 		B70F113C2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */; };
 		B725CB6C2BC63C110067AF25 /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CB6B2BC63C110067AF25 /* MockKeychainService.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70B36842BC785D8006557B2 /* KeychainScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainScenarios.swift; sourceTree = "<group>"; };
+		B70B36862BC7C290006557B2 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		B70F11392BBFAA57004E64DB /* DeleteFromKeychainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromKeychainView.swift; sourceTree = "<group>"; };
 		B70F113B2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromKeychainViewModel.swift; sourceTree = "<group>"; };
 		B725CB6B2BC63C110067AF25 /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		B70B36832BC785AD006557B2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B70B36842BC785D8006557B2 /* KeychainScenarios.swift */,
+				B70B36862BC7C290006557B2 /* ViewModelFactory.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B70F11382BBFAA2A004E64DB /* DeleteFromKeychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B70B36832BC785AD006557B2 /* Common */,
 				B79B38992BBC72CB0094AC7D /* Keychain */,
 				B70B36812BC77D4B006557B2 /* MainViews */,
 				B70B36822BC77D7D006557B2 /* UseCases */,
@@ -364,6 +378,8 @@
 				B7D4C7FC2BBF86DA00FA2147 /* UpdateDataInKeychainView.swift in Sources */,
 				B70F113C2BBFAAC5004E64DB /* DeleteFromKeychainViewModel.swift in Sources */,
 				B70F113A2BBFAA57004E64DB /* DeleteFromKeychainView.swift in Sources */,
+				B70B36872BC7C290006557B2 /* ViewModelFactory.swift in Sources */,
+				B70B36852BC785D8006557B2 /* KeychainScenarios.swift in Sources */,
 				B7B956372BBDBE2600BE50F1 /* RetrieveDataFromKeychainView.swift in Sources */,
 				B7B956342BBD54B100BE50F1 /* KeychainOptionsView.swift in Sources */,
 				B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */,
@@ -542,6 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearningKeychainAPIsSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -549,6 +566,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,6 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearningKeychainAPIsSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -577,6 +596,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

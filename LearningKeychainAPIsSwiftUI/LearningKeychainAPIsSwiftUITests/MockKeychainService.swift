@@ -16,6 +16,10 @@ class MockKeychainService: KeychainServicesProvider {
         storage[user] = secret
     }
     
+    func secureWithDemandUserPresence(secret: String, of user: String) {
+        storage[user] = secret
+    }
+    
     func retrieveSecret(for user: String) -> String? {
         storage[user]
     }

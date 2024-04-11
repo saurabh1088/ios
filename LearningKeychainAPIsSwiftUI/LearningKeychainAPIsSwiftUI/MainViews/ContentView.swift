@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             LandingView()
+                .environmentObject(ViewModelFactory(keychainServiceProvider: KeychainServices()))
         }
         .padding()
     }

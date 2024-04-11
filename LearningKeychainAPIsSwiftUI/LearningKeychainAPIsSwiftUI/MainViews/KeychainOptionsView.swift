@@ -12,6 +12,9 @@ struct KeychainOptionsView: View {
     @State private var showRetrievedSecretView = false
     @State private var showUpdateSecretView = false
     @State private var showDeleteSecretView = false
+    @State private var showAddSecretSecureView = false
+    
+    @EnvironmentObject private var viewModelFactory: ViewModelFactory
     
     var body: some View {
         VStack {
@@ -19,6 +22,7 @@ struct KeychainOptionsView: View {
             retrieveFromKeychainButton
             updateSecretInKeychainButton
             deleteFromKeychainButton
+            addToKeychainSecuredButton
         }
     }
     
@@ -27,13 +31,13 @@ struct KeychainOptionsView: View {
         Button {
             showAddSecretView.toggle()
         } label: {
-            Text("Add")
+            Text(KeychainScenarios.add.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
                 .background(.red)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showAddSecretView, content: {
-            AddKeychainSecretView(viewModel: AddKeychainSecretViewModel(keychainService: KeychainServices()))
+            AddKeychainSecretView(viewModel: viewModelFactory.createAddKeychainSecretViewModel())
         })
     }
     
@@ -42,13 +46,13 @@ struct KeychainOptionsView: View {
         Button {
             showRetrievedSecretView.toggle()
         } label: {
-            Text("Retrieve")
+            Text(KeychainScenarios.retrieve.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
                 .background(.red)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showRetrievedSecretView, content: {
-            RetrieveDataFromKeychainView(viewModel: RetrieveDataFromKeychainViewModel(keychainService: KeychainServices()))
+            RetrieveDataFromKeychainView(viewModel: viewModelFactory.createRetrieveDataFromKeychainViewModel())
         })
     }
     
@@ -57,13 +61,13 @@ struct KeychainOptionsView: View {
         Button {
             showUpdateSecretView.toggle()
         } label: {
-            Text("Update")
+            Text(KeychainScenarios.update.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
                 .background(.red)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showUpdateSecretView, content: {
-            UpdateDataInKeychainView(viewModel: UpdateDataInKeychainViewModel(keychainservice: KeychainServices()))
+            UpdateDataInKeychainView(viewModel: viewModelFactory.createUpdateDataInKeychainViewModel())
         })
     }
     
@@ -72,13 +76,28 @@ struct KeychainOptionsView: View {
         Button {
             showDeleteSecretView.toggle()
         } label: {
-            Text("Delete")
+            Text(KeychainScenarios.delete.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
                 .background(.red)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showDeleteSecretView, content: {
-            DeleteFromKeychainView(viewModel: DeleteFromKeychainViewModel(keychainservice: KeychainServices()))
+            DeleteFromKeychainView(viewModel: viewModelFactory.createDeleteFromKeychainViewModel())
+        })
+    }
+    
+    @ViewBuilder
+    private var addToKeychainSecuredButton: some View {
+        Button {
+            showAddSecretSecureView.toggle()
+        } label: {
+            Text(KeychainScenarios.addSecure.rawValue)
+                .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
+                .background(.red)
+                .foregroundColor(.white)
+        }
+        .sheet(isPresented: $showAddSecretSecureView, content: {
+            AddKeychainSecretView(viewModel: viewModelFactory.createAddKeychainSecretViewModelMoreSecure())
         })
     }
 }

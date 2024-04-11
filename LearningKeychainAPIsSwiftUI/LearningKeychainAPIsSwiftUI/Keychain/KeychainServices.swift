@@ -10,6 +10,7 @@ import Security
 
 protocol KeychainServicesProvider {
     func secure(secret: String, of user: String)
+    func secureWithDemandUserPresence(secret: String, of user: String)
     func retrieveSecret(for user: String) -> String?
     func update(secret: String, for user: String)
     func deleteEntry(for user: String)
@@ -109,9 +110,39 @@ extension KeychainServices {
         
         let status = SecItemDelete(query as CFDictionary)
         if status == noErr {
-            print("Succeddfully deleted")
+            print("Successfully deleted")
         } else {
             print("Error while deleting from keychain")
+        }
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension KeychainServices for adding an entry which demands user presence
+extension KeychainServices {
+    
+    func secureWithDemandUserPresence(secret: String, of user: String) {
+        guard let password = secret.data(using: .utf8) else {
+            return
+        }
+        let error: UnsafeMutablePointer<Unmanaged<CFError>?>? = nil
+        let access = SecAccessControlCreateWithFlags(kCFAllocatorDefault,
+                                                     kSecAttrAccessibleWhenUnlocked,
+                                                     SecAccessControlCreateFlags.devicePasscode,
+                                                     error)
+        
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: user,
+            kSecAttrAccessControl as String: access as Any,
+            kSecValueData as String: password
+        ]
+        
+        let status = SecItemAdd(query as CFDictionary, nil)
+        if status == noErr {
+            print("Item saved successfully")
+        } else {
+            print("Error while saving secret to keychain")
         }
     }
 }
