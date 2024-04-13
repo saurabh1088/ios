@@ -16,6 +16,8 @@ struct RetrieveDataFromKeychainView: View {
         VStack {
             Text(retrievedData)
         }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(Color.neonYellow)
         .onAppear {
             retrievedData = viewModel.retrieveSecret(of: "user")
         }

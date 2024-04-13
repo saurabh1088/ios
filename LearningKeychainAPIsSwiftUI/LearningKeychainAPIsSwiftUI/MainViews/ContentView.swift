@@ -13,7 +13,7 @@ struct ContentView: View {
             LandingView()
                 .environmentObject(ViewModelFactory(keychainServiceProvider: KeychainServices()))
         }
-        .padding()
+        .background(Color.neonYellow)
     }
 }
 

@@ -23,6 +23,8 @@ struct AddKeychainSecretView: View {
             }
 
         }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(Color.neonYellow)
     }
 }
 

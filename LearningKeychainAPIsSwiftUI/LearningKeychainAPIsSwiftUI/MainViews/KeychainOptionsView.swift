@@ -24,6 +24,8 @@ struct KeychainOptionsView: View {
             deleteFromKeychainButton
             addToKeychainSecuredButton
         }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(Color.neonYellow)
     }
     
     @ViewBuilder
@@ -33,7 +35,7 @@ struct KeychainOptionsView: View {
         } label: {
             Text(KeychainScenarios.add.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                .background(.red)
+                .background(.neonRed)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showAddSecretView, content: {
@@ -48,7 +50,7 @@ struct KeychainOptionsView: View {
         } label: {
             Text(KeychainScenarios.retrieve.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                .background(.red)
+                .background(.neonRed)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showRetrievedSecretView, content: {
@@ -63,7 +65,7 @@ struct KeychainOptionsView: View {
         } label: {
             Text(KeychainScenarios.update.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                .background(.red)
+                .background(.neonRed)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showUpdateSecretView, content: {
@@ -78,7 +80,7 @@ struct KeychainOptionsView: View {
         } label: {
             Text(KeychainScenarios.delete.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                .background(.red)
+                .background(.neonRed)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showDeleteSecretView, content: {
@@ -93,7 +95,7 @@ struct KeychainOptionsView: View {
         } label: {
             Text(KeychainScenarios.addSecure.rawValue)
                 .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                .background(.red)
+                .background(.neonRed)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $showAddSecretSecureView, content: {

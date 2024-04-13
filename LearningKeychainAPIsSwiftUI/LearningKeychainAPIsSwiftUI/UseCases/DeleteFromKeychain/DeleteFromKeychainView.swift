@@ -23,10 +23,12 @@ struct DeleteFromKeychainView: View {
             } label: {
                 Text("Delete")
                     .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                    .background(.red)
+                    .background(.neonRed)
                     .foregroundColor(.white)
             }
         }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(Color.neonYellow)
     }
 }
 

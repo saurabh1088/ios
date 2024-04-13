@@ -23,13 +23,14 @@ struct LandingView: View {
             } label: {
                 Text("Start")
                     .frame(width: UIScreen.main.bounds.size.width - 32, height: 44)
-                    .background(.red)
+                    .background(.neonRed)
                     .foregroundColor(.white)
             }
             .fullScreenCover(isPresented: $showKeychainOptions, content: {
                 KeychainOptionsView()
             })
         }
+        .background(Color.neonYellow)
         .onAppear {
             withAnimation(.easeInOut(duration: 1)) {
                 animate.toggle()
