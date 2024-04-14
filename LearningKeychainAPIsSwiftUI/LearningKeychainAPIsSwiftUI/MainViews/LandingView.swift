@@ -29,6 +29,9 @@ struct LandingView: View {
             .fullScreenCover(isPresented: $showKeychainOptions, content: {
                 KeychainOptionsView()
             })
+            
+            // Without this the button `Start` appears to have more width
+            Spacer()
         }
         .background(Color.neonYellow)
         .onAppear {
