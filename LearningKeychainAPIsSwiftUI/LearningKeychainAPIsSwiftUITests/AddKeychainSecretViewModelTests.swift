@@ -30,11 +30,19 @@ final class AddKeychainSecretViewModelTests: XCTestCase {
         
         XCTAssertEqual("new secret", keychainservices.retrieveSecret(for: "new user"))
     }
+    
+    func test_addToKeychainWithSecureOption_success() {
+        sut.accessShouldDemandUserPresence()
+        sut.addSecret("secure secret", of: "secure user")
+        
+        XCTAssertEqual("secure secret", keychainservices.retrieveSecret(for: "secure user"))
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            sut.addSecret("new secret", of: "new user")
         }
     }
 
