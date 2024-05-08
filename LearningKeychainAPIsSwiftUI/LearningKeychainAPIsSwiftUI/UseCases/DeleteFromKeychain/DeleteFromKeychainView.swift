@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViewsHelper
 
 struct DeleteFromKeychainView: View {
     
@@ -27,8 +28,7 @@ struct DeleteFromKeychainView: View {
                     .foregroundColor(.white)
             }
         }
-        .containerRelativeFrame([.horizontal, .vertical])
-        .background(Color.neonYellow)
+        .fullScreenBackgroundWith(color: .neonYellow)
     }
 }
 

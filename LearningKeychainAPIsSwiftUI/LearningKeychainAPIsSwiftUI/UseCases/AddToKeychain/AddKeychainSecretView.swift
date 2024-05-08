@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViewsHelper
 
 struct AddKeychainSecretView: View {
     @ObservedObject var viewModel: AddKeychainSecretViewModel
@@ -23,8 +24,7 @@ struct AddKeychainSecretView: View {
             }
 
         }
-        .containerRelativeFrame([.horizontal, .vertical])
-        .background(Color.neonYellow)
+        .fullScreenBackgroundWith(color: .neonYellow)
     }
 }
 

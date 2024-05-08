@@ -23,6 +23,7 @@
 		B745611E2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745611D2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUITests.swift */; };
 		B74561282BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74561272BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.swift */; };
 		B745612A2BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74561292BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift */; };
+		B7960AD32BEB0B3F00A4D1D9 /* SwiftUIViewsHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B7960AD22BEB0B3F00A4D1D9 /* SwiftUIViewsHelper */; };
 		B79B38962BBC25530094AC7D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B38952BBC25530094AC7D /* LandingView.swift */; };
 		B79B38982BBC704F0094AC7D /* AddKeychainSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */; };
 		B79B389B2BBC72EA0094AC7D /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */; };
@@ -87,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7960AD32BEB0B3F00A4D1D9 /* SwiftUIViewsHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +263,9 @@
 			dependencies = (
 			);
 			name = LearningKeychainAPIsSwiftUI;
+			packageProductDependencies = (
+				B7960AD22BEB0B3F00A4D1D9 /* SwiftUIViewsHelper */,
+			);
 			productName = LearningKeychainAPIsSwiftUI;
 			productReference = B74561092BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -333,6 +338,9 @@
 				Base,
 			);
 			mainGroup = B74561002BBBAACF001FFA26;
+			packageReferences = (
+				B7960AD12BEB0B3F00A4D1D9 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */,
+			);
 			productRefGroup = B745610A2BBBAAD0001FFA26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -722,6 +730,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7960AD12BEB0B3F00A4D1D9 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saurabh1088/swift-ui-views-helper.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7960AD22BEB0B3F00A4D1D9 /* SwiftUIViewsHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7960AD12BEB0B3F00A4D1D9 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */;
+			productName = SwiftUIViewsHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B74561012BBBAACF001FFA26 /* Project object */;
 }

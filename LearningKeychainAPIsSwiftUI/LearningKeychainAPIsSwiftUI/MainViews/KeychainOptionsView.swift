@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViewsHelper
 
 struct KeychainOptionsView: View {
     @State private var showAddSecretView = false
@@ -24,8 +25,7 @@ struct KeychainOptionsView: View {
             deleteFromKeychainButton
             addToKeychainSecuredButton
         }
-        .containerRelativeFrame([.horizontal, .vertical])
-        .background(Color.neonYellow)
+        .fullScreenBackgroundWith(color: .neonYellow)
     }
     
     @ViewBuilder

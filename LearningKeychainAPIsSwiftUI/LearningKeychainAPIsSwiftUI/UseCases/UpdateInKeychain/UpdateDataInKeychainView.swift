@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViewsHelper
 
 struct UpdateDataInKeychainView: View {
     @ObservedObject var viewModel: UpdateDataInKeychainViewModel
@@ -33,8 +34,7 @@ struct UpdateDataInKeychainView: View {
                     .foregroundColor(.white)
             }
         }
-        .containerRelativeFrame([.horizontal, .vertical])
-        .background(Color.neonYellow)
+        .fullScreenBackgroundWith(color: .neonYellow)
     }
 }
 
