@@ -72,6 +72,7 @@
 		B74561232BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningKeychainAPIsSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74561272BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningKeychainAPIsSwiftUIUITests.swift; sourceTree = "<group>"; };
 		B74561292BBBAAD1001FFA26 /* LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningKeychainAPIsSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B763A8D92BF62E790017C88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B79B38952BBC25530094AC7D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		B79B38972BBC704F0094AC7D /* AddKeychainSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeychainSecretView.swift; sourceTree = "<group>"; };
 		B79B389A2BBC72EA0094AC7D /* KeychainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServices.swift; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 		B745610B2BBBAAD0001FFA26 /* LearningKeychainAPIsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B763A8D92BF62E790017C88D /* Info.plist */,
 				B70B36832BC785AD006557B2 /* Common */,
 				B79B38992BBC72CB0094AC7D /* Keychain */,
 				B70B36812BC77D4B006557B2 /* MainViews */,
@@ -569,9 +571,9 @@
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearningKeychainAPIsSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -599,9 +601,9 @@
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearningKeychainAPIsSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
