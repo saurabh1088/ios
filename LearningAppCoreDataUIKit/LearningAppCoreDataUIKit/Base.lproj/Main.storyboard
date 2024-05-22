@@ -45,7 +45,7 @@
         <!--Core Data Scenarios Table View Controller-->
         <scene sceneID="0nG-rx-DXb">
             <objects>
-                <tableViewController id="pCl-DS-GFy" customClass="CoreDataScenariosTableViewController" customModule="LearningAppCoreDataUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="coreDataScenariosTableViewController" id="pCl-DS-GFy" customClass="CoreDataScenariosTableViewController" customModule="LearningAppCoreDataUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="lq3-Jf-3SV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

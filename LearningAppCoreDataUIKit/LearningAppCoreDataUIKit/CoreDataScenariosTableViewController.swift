@@ -54,3 +54,9 @@ extension CoreDataScenariosTableViewController {
         }
     }
 }
+
+#Preview {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let viewcontroller = storyboard.instantiateViewController(withIdentifier: "coreDataScenariosTableViewController")
+    return viewcontroller
+}
