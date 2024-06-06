@@ -13,24 +13,24 @@ class CoreDataScenariosTableViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-    // MARK: - Table view data source
+    
+}
+
+// MARK: - Table view data source
+extension CoreDataScenariosTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CoreDataScenarios.allCases.count
+        return CoreDataScenario.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "coreDataScenarioMoviesTableViewCell", for: indexPath)
-            cell.textLabel?.text = CoreDataScenarios.allCases[indexPath.row].rawValue
-            return cell
-        } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "coreDataScenarioDirectorTableViewCell", for: indexPath)
-            cell.textLabel?.text = CoreDataScenarios.allCases[indexPath.row].rawValue
+        if let scenario = CoreDataScenario.scenarioFor(index: indexPath.row) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: scenario.cellReuseIdentifier, for: indexPath)
+            cell.textLabel?.text = scenario.rawValue
             return cell
         }
         return UITableViewCell()
