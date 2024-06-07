@@ -10,6 +10,7 @@
 		B7093B532BB342A6008C81A1 /* AddDirectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093B522BB342A6008C81A1 /* AddDirectorViewController.swift */; };
 		B72ED2192B9C645E0038A388 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED2182B9C645D0038A388 /* Common.swift */; };
 		B73243812B9A999500641FC5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73243802B9A999500641FC5 /* MoviesViewController.swift */; };
+		B732D8042C12963F001D3592 /* CoreDataScenarioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B732D8032C12963F001D3592 /* CoreDataScenarioTests.swift */; };
 		B7352F162BB079A80011587D /* OptionsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */; };
 		B7352F182BB07D470011587D /* DirectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F172BB07D470011587D /* DirectorViewModel.swift */; };
 		B78189682B9BEC120060A522 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78189672B9BEC120060A522 /* AddMovieViewController.swift */; };
@@ -53,6 +54,7 @@
 		B7093B522BB342A6008C81A1 /* AddDirectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDirectorViewController.swift; sourceTree = "<group>"; };
 		B72ED2182B9C645D0038A388 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B73243802B9A999500641FC5 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		B732D8032C12963F001D3592 /* CoreDataScenarioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScenarioTests.swift; sourceTree = "<group>"; };
 		B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelectionViewController.swift; sourceTree = "<group>"; };
 		B7352F172BB07D470011587D /* DirectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorViewModel.swift; sourceTree = "<group>"; };
 		B78189672B9BEC120060A522 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		B7BD74A22B9821BF002BC6C0 /* LearningAppCoreDataUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				B732D8032C12963F001D3592 /* CoreDataScenarioTests.swift */,
 				B7BD74A32B9821BF002BC6C0 /* LearningAppCoreDataUIKitTests.swift */,
 			);
 			path = LearningAppCoreDataUIKitTests;
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B732D8042C12963F001D3592 /* CoreDataScenarioTests.swift in Sources */,
 				B7BD74A42B9821BF002BC6C0 /* LearningAppCoreDataUIKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
