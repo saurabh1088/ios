@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        navigationItem.title = "Storage Option"
     }
 }
 

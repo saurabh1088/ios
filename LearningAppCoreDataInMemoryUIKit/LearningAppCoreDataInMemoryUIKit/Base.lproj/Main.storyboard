@@ -26,6 +26,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8Oy-rE-pJu" kind="show" identifier="showBikesViewController" id="bLZ-C6-fDx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -48,6 +51,39 @@
             </objects>
             <point key="canvasLocation" x="1031.2977099236641" y="-2.1126760563380285"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="L2Z-El-vbS">
+            <objects>
+                <viewController id="8Oy-rE-pJu" customClass="BikesViewController" customModule="LearningAppCoreDataInMemoryUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GUC-Mj-dtX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QZI-fb-g17">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O8e-HP-kGJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O8e-HP-kGJ" firstAttribute="bottom" secondItem="QZI-fb-g17" secondAttribute="bottom" id="BUn-C4-AFD"/>
+                            <constraint firstItem="O8e-HP-kGJ" firstAttribute="trailing" secondItem="QZI-fb-g17" secondAttribute="trailing" id="O2k-N4-Zc4"/>
+                            <constraint firstItem="QZI-fb-g17" firstAttribute="leading" secondItem="O8e-HP-kGJ" secondAttribute="leading" id="p7g-hp-O3w"/>
+                            <constraint firstItem="QZI-fb-g17" firstAttribute="top" secondItem="O8e-HP-kGJ" secondAttribute="top" id="xYh-g2-ecP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="HhS-sk-ddJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="IVg-QR-bgk"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="QZI-fb-g17" id="pBd-nx-Eke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nF-k8-A3U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947" y="-2"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qcD-0F-mDk">
             <objects>
@@ -68,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
