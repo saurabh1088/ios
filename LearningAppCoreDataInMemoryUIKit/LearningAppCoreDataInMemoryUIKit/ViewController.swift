@@ -53,7 +53,7 @@ extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBikesViewController" {
             if let viewController = segue.destination as? BikesViewController {
-                let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
+                let managedObjectContext = CoreDataManager.shared.persistentContainer.viewContext
                 viewController.viewModel = BikesViewModel(managedContext: managedObjectContext)
             }
         }

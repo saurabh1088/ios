@@ -35,11 +35,6 @@ class BikesViewModel: BikesViewModelProtocol {
         newBike.name = name
         newBike.manufacturer = maker
         newBike.engine = Int16(engineCapacity)
-        do {
-            try managedContext.save()
-        } catch {
-            print("Error while saving new bike")
-        }
+        CoreDataManager.shared.saveContext(.save("Adding a new bike"))
     }
-    
 }
