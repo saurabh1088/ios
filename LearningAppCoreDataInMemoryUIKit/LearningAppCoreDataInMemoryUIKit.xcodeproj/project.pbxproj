@@ -18,6 +18,8 @@
 		B73028B32C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73028B22C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitTests.swift */; };
 		B73028BD2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73028BC2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITests.swift */; };
 		B73028BF2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73028BE2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITestsLaunchTests.swift */; };
+		B7C41C5E2C14A0980070C662 /* AddNewBikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C41C5D2C14A0980070C662 /* AddNewBikeViewController.swift */; };
+		B7C41C612C14B0D20070C662 /* HasManagedContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C41C602C14B0D20070C662 /* HasManagedContext.swift */; };
 		B7F505692C14182D00A62935 /* BikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F505682C14182D00A62935 /* BikesViewController.swift */; };
 		B7F5056B2C141AC200A62935 /* BikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F5056A2C141AC200A62935 /* BikesViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		B73028B82C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppCoreDataInMemoryUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73028BC2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppCoreDataInMemoryUIKitUITests.swift; sourceTree = "<group>"; };
 		B73028BE2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppCoreDataInMemoryUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7C41C5D2C14A0980070C662 /* AddNewBikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBikeViewController.swift; sourceTree = "<group>"; };
+		B7C41C602C14B0D20070C662 /* HasManagedContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasManagedContext.swift; sourceTree = "<group>"; };
 		B7F505682C14182D00A62935 /* BikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewController.swift; sourceTree = "<group>"; };
 		B7F5056A2C141AC200A62935 /* BikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,7 @@
 		B73028972C1361D200989FA6 /* LearningAppCoreDataInMemoryUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7C41C5F2C14B0B80070C662 /* Protocols */,
 				B73028982C1361D200989FA6 /* AppDelegate.swift */,
 				B730289A2C1361D200989FA6 /* SceneDelegate.swift */,
 				B730289C2C1361D200989FA6 /* ViewController.swift */,
@@ -118,6 +123,7 @@
 				B71AB68A2C13F001002CBD05 /* CoreDataMemoryOption.swift */,
 				B7F505682C14182D00A62935 /* BikesViewController.swift */,
 				B7F5056A2C141AC200A62935 /* BikesViewModel.swift */,
+				B7C41C5D2C14A0980070C662 /* AddNewBikeViewController.swift */,
 			);
 			path = LearningAppCoreDataInMemoryUIKit;
 			sourceTree = "<group>";
@@ -137,6 +143,14 @@
 				B73028BE2C1361D300989FA6 /* LearningAppCoreDataInMemoryUIKitUITestsLaunchTests.swift */,
 			);
 			path = LearningAppCoreDataInMemoryUIKitUITests;
+			sourceTree = "<group>";
+		};
+		B7C41C5F2C14B0B80070C662 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B7C41C602C14B0D20070C662 /* HasManagedContext.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +287,11 @@
 				B730289D2C1361D200989FA6 /* ViewController.swift in Sources */,
 				B7F505692C14182D00A62935 /* BikesViewController.swift in Sources */,
 				B73028992C1361D200989FA6 /* AppDelegate.swift in Sources */,
+				B7C41C612C14B0D20070C662 /* HasManagedContext.swift in Sources */,
 				B71AB68B2C13F001002CBD05 /* CoreDataMemoryOption.swift in Sources */,
 				B730289B2C1361D200989FA6 /* SceneDelegate.swift in Sources */,
 				B73028A32C1361D200989FA6 /* LearningAppCoreDataInMemoryUIKit.xcdatamodeld in Sources */,
+				B7C41C5E2C14A0980070C662 /* AddNewBikeViewController.swift in Sources */,
 				B7F5056B2C141AC200A62935 /* BikesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,11 +10,13 @@ import UIKit
 class BikesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    var viewModel: BikesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        viewModel.fetchAllBikes()
     }
 }
 
@@ -26,11 +28,13 @@ extension BikesViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.bikes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bikeDetailsTableViewCell", for: indexPath)
+        cell.textLabel?.text = viewModel.bikes[indexPath.row].name
+        return cell
     }
 }
 
@@ -39,5 +43,16 @@ extension BikesViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tableView didSelectRowAt indexPath")
+    }
+}
+
+extension BikesViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAddNewBikeViewController" {
+            if let viewController = (segue.destination as? UINavigationController)?.viewControllers.first as? AddNewBikeViewController {
+                viewController.viewModel = viewModel
+            }
+        }
     }
 }
