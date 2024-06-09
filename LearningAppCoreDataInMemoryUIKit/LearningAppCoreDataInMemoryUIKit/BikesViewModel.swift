@@ -15,10 +15,12 @@ protocol BikesViewModelProtocol: HasManagedContext {
 
 class BikesViewModel: BikesViewModelProtocol {
     var managedContext: NSManagedObjectContext
+    let memoryOption: CoreDataMemoryOption
     var bikes = [Bike]()
     
-    init(managedContext: NSManagedObjectContext) {
+    init(managedContext: NSManagedObjectContext, memoryOption: CoreDataMemoryOption) {
         self.managedContext = managedContext
+        self.memoryOption = memoryOption
     }
     
     func fetchAllBikes() {
@@ -35,6 +37,6 @@ class BikesViewModel: BikesViewModelProtocol {
         newBike.name = name
         newBike.manufacturer = maker
         newBike.engine = Int16(engineCapacity)
-        CoreDataManager.shared.saveContext(.save("Adding a new bike"))
+        memoryOption.saveContext(.save("Adding a new bike"))
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    private var memoryOption: CoreDataMemoryOption = .inMemory
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +44,18 @@ extension ViewController {
 // MARK: Extension ViewController UITableViewDelegate
 extension ViewController {
     
+    /// Instead of using a storyboard segue with method `prepare(for:sender:)` to prepare viewcontroller
+    /// here viewcontroller is configured this way as `prepare(for:sender:)` gets called before `didSelectRowAt`
+    /// method and hence the selection isn't available to pass on to the viewcontroller while configuring it.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tableView didSelectRowAt indexPath \(indexPath)")
-    }
-}
-
-extension ViewController {
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showBikesViewController" {
-            if let viewController = segue.destination as? BikesViewController {
-                let managedObjectContext = CoreDataManager.shared.persistentContainer.viewContext
-                viewController.viewModel = BikesViewModel(managedContext: managedObjectContext)
-            }
+        memoryOption = indexPath.row == 0 ? .inMemory : .onDisk
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "bikesViewControllerStoryboardId") as? BikesViewController {
+            let managedObjectContext = memoryOption.persistentContainer.viewContext
+            let viewModel = BikesViewModel(managedContext: managedObjectContext, memoryOption: memoryOption)
+            viewController.viewModel = viewModel
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
