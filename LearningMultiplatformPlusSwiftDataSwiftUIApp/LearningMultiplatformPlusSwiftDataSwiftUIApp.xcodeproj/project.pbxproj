@@ -15,6 +15,7 @@
 		B71619372C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71619362C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppTests.swift */; };
 		B71619412C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71619402C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITests.swift */; };
 		B71619432C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71619422C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITestsLaunchTests.swift */; };
+		B744E8072C17FAEC003684F5 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744E8062C17FAEC003684F5 /* SwiftDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B716193C2C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningMultiplatformPlusSwiftDataSwiftUIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71619402C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningMultiplatformPlusSwiftDataSwiftUIAppUITests.swift; sourceTree = "<group>"; };
 		B71619422C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningMultiplatformPlusSwiftDataSwiftUIAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B744E8062C17FAEC003684F5 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B71619282C178B770042E3F5 /* Assets.xcassets */,
 				B716192A2C178B770042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIApp.entitlements */,
 				B716192B2C178B770042E3F5 /* Preview Content */,
+				B744E8062C17FAEC003684F5 /* SwiftDataManager.swift */,
 			);
 			path = LearningMultiplatformPlusSwiftDataSwiftUIApp;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				B71619252C178B760042E3F5 /* ContentView.swift in Sources */,
 				B71619272C178B760042E3F5 /* Item.swift in Sources */,
 				B71619232C178B760042E3F5 /* LearningMultiplatformPlusSwiftDataSwiftUIAppApp.swift in Sources */,
+				B744E8072C17FAEC003684F5 /* SwiftDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
