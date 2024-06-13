@@ -43,6 +43,10 @@ struct ContentView: View {
             Text("Select an item")
         }
     }
+    
+    var dateFormat: some FormatStyle {
+        return Date.FormatStyle(date: .numeric, time: .standard)
+    }
 
     private func addItem() {
         withAnimation {
