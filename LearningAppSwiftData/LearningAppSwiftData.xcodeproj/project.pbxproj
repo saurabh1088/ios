@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72F62972C1CAB3000B0FAA0 /* BikeGarageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F62962C1CAB3000B0FAA0 /* BikeGarageView.swift */; };
+		B72F62992C1CAE4C00B0FAA0 /* BikesInGarageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F62982C1CAE4C00B0FAA0 /* BikesInGarageView.swift */; };
+		B72F629B2C1CAEE500B0FAA0 /* BikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F629A2C1CAEE500B0FAA0 /* BikesViewModel.swift */; };
+		B72F629D2C1CB0A100B0FAA0 /* AddBikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F629C2C1CB0A100B0FAA0 /* AddBikeView.swift */; };
 		B784B4D32C1B582900A9C36E /* LearningAppSwiftDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784B4D22C1B582900A9C36E /* LearningAppSwiftDataApp.swift */; };
 		B784B4D52C1B582900A9C36E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784B4D42C1B582900A9C36E /* ContentView.swift */; };
 		B784B4D72C1B582A00A9C36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B784B4D62C1B582A00A9C36E /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72F62962C1CAB3000B0FAA0 /* BikeGarageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeGarageView.swift; sourceTree = "<group>"; };
+		B72F62982C1CAE4C00B0FAA0 /* BikesInGarageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesInGarageView.swift; sourceTree = "<group>"; };
+		B72F629A2C1CAEE500B0FAA0 /* BikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewModel.swift; sourceTree = "<group>"; };
+		B72F629C2C1CB0A100B0FAA0 /* AddBikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBikeView.swift; sourceTree = "<group>"; };
 		B784B4CF2C1B582900A9C36E /* LearningAppSwiftData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppSwiftData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B784B4D22C1B582900A9C36E /* LearningAppSwiftDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppSwiftDataApp.swift; sourceTree = "<group>"; };
 		B784B4D42C1B582900A9C36E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 				B784B4D42C1B582900A9C36E /* ContentView.swift */,
 				B784B4D62C1B582A00A9C36E /* Assets.xcassets */,
 				B784B4D82C1B582A00A9C36E /* Preview Content */,
+				B72F62962C1CAB3000B0FAA0 /* BikeGarageView.swift */,
+				B72F62982C1CAE4C00B0FAA0 /* BikesInGarageView.swift */,
+				B72F629A2C1CAEE500B0FAA0 /* BikesViewModel.swift */,
+				B72F629C2C1CB0A100B0FAA0 /* AddBikeView.swift */,
 			);
 			path = LearningAppSwiftData;
 			sourceTree = "<group>";
@@ -268,9 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72F62972C1CAB3000B0FAA0 /* BikeGarageView.swift in Sources */,
+				B72F62992C1CAE4C00B0FAA0 /* BikesInGarageView.swift in Sources */,
 				B784B4D52C1B582900A9C36E /* ContentView.swift in Sources */,
 				B784B4D32C1B582900A9C36E /* LearningAppSwiftDataApp.swift in Sources */,
+				B72F629D2C1CB0A100B0FAA0 /* AddBikeView.swift in Sources */,
 				B784B4FE2C1B597600A9C36E /* Bike.swift in Sources */,
+				B72F629B2C1CAEE500B0FAA0 /* BikesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
