@@ -7,7 +7,12 @@
 
 import Foundation
 
-class BikesViewModel: ObservableObject {
+protocol BikeViewModelProtocol {
+    func add(bike: Bike)
+    func bikesInGarage() -> [Bike]
+}
+
+class BikesViewModel: ObservableObject, BikeViewModelProtocol {
     @Published private var bikes = [Bike]()
     
     func add(bike: Bike) {
