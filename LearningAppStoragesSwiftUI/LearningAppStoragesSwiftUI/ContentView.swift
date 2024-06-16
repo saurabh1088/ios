@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    // AppStorage
     @AppStorage("appTheme") var appTheme: String = Theme.red.rawValue
+    
+    // SceneStorage
+    @SceneStorage("choosenHero") var choosenHero: String = "icon_person"
+    
+    // State properties
     @State private var showThemeSelection = false
     @State private var showTeamSelection = false
     
@@ -21,6 +27,7 @@ struct ContentView: View {
                     .frame(width: 100)
                     .foregroundStyle(.tint)
                     .tint(Theme.colorFor(value: appTheme))
+                
                 HStack {
                     Button(action: {
                         showThemeSelection.toggle()
@@ -32,10 +39,17 @@ struct ContentView: View {
                     Button(action: {
                         showTeamSelection.toggle()
                     }, label: {
-                        Text("Team")
+                        Text("Hero")
                             .foregroundStyle(Theme.colorFor(value: appTheme))
                     })
+                    
                 }
+                
+                Image(choosenHero, bundle: nil)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150)
+                    .tint(Theme.colorFor(value: appTheme))
             }
             .padding()
             .navigationDestination(isPresented: $showThemeSelection) {

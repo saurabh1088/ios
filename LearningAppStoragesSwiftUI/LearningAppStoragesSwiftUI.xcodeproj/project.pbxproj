@@ -17,6 +17,9 @@
 		B7F379492C1E0B4F009C597E /* AppThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379482C1E0B4F009C597E /* AppThemeSelectionView.swift */; };
 		B7F3794B2C1E765B009C597E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3794A2C1E765B009C597E /* Theme.swift */; };
 		B7F3794D2C1E7A0E009C597E /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3794C2C1E7A0E009C597E /* TeamsView.swift */; };
+		B7F3794F2C1EB76A009C597E /* JusticeLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */; };
+		B7F379512C1EB780009C597E /* AvengersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379502C1EB780009C597E /* AvengersView.swift */; };
+		B7F379532C1EE2A5009C597E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379522C1EE2A5009C597E /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		B7F379482C1E0B4F009C597E /* AppThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeSelectionView.swift; sourceTree = "<group>"; };
 		B7F3794A2C1E765B009C597E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B7F3794C2C1E7A0E009C597E /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JusticeLeagueView.swift; sourceTree = "<group>"; };
+		B7F379502C1EB780009C597E /* AvengersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengersView.swift; sourceTree = "<group>"; };
+		B7F379522C1EE2A5009C597E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 				B7F379482C1E0B4F009C597E /* AppThemeSelectionView.swift */,
 				B7F3794A2C1E765B009C597E /* Theme.swift */,
 				B7F3794C2C1E7A0E009C597E /* TeamsView.swift */,
+				B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */,
+				B7F379502C1EB780009C597E /* AvengersView.swift */,
+				B7F379522C1EE2A5009C597E /* Hero.swift */,
 			);
 			path = LearningAppStoragesSwiftUI;
 			sourceTree = "<group>";
@@ -267,9 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F379212C1DFE12009C597E /* ContentView.swift in Sources */,
+				B7F3794F2C1EB76A009C597E /* JusticeLeagueView.swift in Sources */,
 				B7F3794B2C1E765B009C597E /* Theme.swift in Sources */,
+				B7F379532C1EE2A5009C597E /* Hero.swift in Sources */,
 				B7F3791F2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift in Sources */,
 				B7F3794D2C1E7A0E009C597E /* TeamsView.swift in Sources */,
+				B7F379512C1EB780009C597E /* AvengersView.swift in Sources */,
 				B7F379492C1E0B4F009C597E /* AppThemeSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
