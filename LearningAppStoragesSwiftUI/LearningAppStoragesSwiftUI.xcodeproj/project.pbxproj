@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		B74B44342C1FD687005B12B9 /* JusticeLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JusticeLeagueTests.swift; sourceTree = "<group>"; };
 		B74B44362C1FD7FA005B12B9 /* AvengerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerTests.swift; sourceTree = "<group>"; };
+		B74B44382C1FFC4D005B12B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B7F3791B2C1DFE12009C597E /* LearningAppStoragesSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppStoragesSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F3791E2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppStoragesSwiftUIApp.swift; sourceTree = "<group>"; };
 		B7F379202C1DFE12009C597E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 				B7F3794C2C1E7A0E009C597E /* TeamsView.swift */,
 				B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */,
 				B7F379502C1EB780009C597E /* AvengersView.swift */,
+				B74B44382C1FFC4D005B12B9 /* README.md */,
 			);
 			path = LearningAppStoragesSwiftUI;
 			sourceTree = "<group>";
