@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct JusticeLeagueView: View {
+    // AppStorage
     @AppStorage("appTheme") var appTheme: String = Theme.red.rawValue
     
     // SceneStorage

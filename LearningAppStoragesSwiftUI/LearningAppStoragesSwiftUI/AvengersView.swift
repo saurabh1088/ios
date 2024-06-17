@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AvengersView: View {
+    // AppStorage
     @AppStorage("appTheme") var appTheme: String = Theme.red.rawValue
     
     // SceneStorage

@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct TeamsView: View {
+    // AppStorage
     @AppStorage("appTheme") var appTheme: String = Theme.red.rawValue
+    
+    // State properties
     @State private var showJusticeLeague = false
     @State private var showAvengers = false
     
