@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74B44352C1FD687005B12B9 /* JusticeLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B44342C1FD687005B12B9 /* JusticeLeagueTests.swift */; };
+		B74B44372C1FD7FA005B12B9 /* AvengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B44362C1FD7FA005B12B9 /* AvengerTests.swift */; };
 		B7F3791F2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3791E2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift */; };
 		B7F379212C1DFE12009C597E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379202C1DFE12009C597E /* ContentView.swift */; };
 		B7F379232C1DFE13009C597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F379222C1DFE13009C597E /* Assets.xcassets */; };
@@ -17,6 +19,10 @@
 		B7F379492C1E0B4F009C597E /* AppThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379482C1E0B4F009C597E /* AppThemeSelectionView.swift */; };
 		B7F3794B2C1E765B009C597E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3794A2C1E765B009C597E /* Theme.swift */; };
 		B7F3794D2C1E7A0E009C597E /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3794C2C1E7A0E009C597E /* TeamsView.swift */; };
+		B7F3794F2C1EB76A009C597E /* JusticeLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */; };
+		B7F379512C1EB780009C597E /* AvengersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379502C1EB780009C597E /* AvengersView.swift */; };
+		B7F379532C1EE2A5009C597E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379522C1EE2A5009C597E /* Hero.swift */; };
+		B7F379552C1F3B5F009C597E /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F379542C1F3B5F009C597E /* ThemeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B74B44342C1FD687005B12B9 /* JusticeLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JusticeLeagueTests.swift; sourceTree = "<group>"; };
+		B74B44362C1FD7FA005B12B9 /* AvengerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerTests.swift; sourceTree = "<group>"; };
+		B74B44382C1FFC4D005B12B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B7F3791B2C1DFE12009C597E /* LearningAppStoragesSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppStoragesSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F3791E2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppStoragesSwiftUIApp.swift; sourceTree = "<group>"; };
 		B7F379202C1DFE12009C597E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +59,10 @@
 		B7F379482C1E0B4F009C597E /* AppThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeSelectionView.swift; sourceTree = "<group>"; };
 		B7F3794A2C1E765B009C597E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B7F3794C2C1E7A0E009C597E /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JusticeLeagueView.swift; sourceTree = "<group>"; };
+		B7F379502C1EB780009C597E /* AvengersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengersView.swift; sourceTree = "<group>"; };
+		B7F379522C1EE2A5009C597E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		B7F379542C1F3B5F009C597E /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B74B44332C1FD659005B12B9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3794A2C1E765B009C597E /* Theme.swift */,
+				B7F379522C1EE2A5009C597E /* Hero.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B7F379122C1DFE12009C597E = {
 			isa = PBXGroup;
 			children = (
@@ -100,13 +122,16 @@
 		B7F3791D2C1DFE12009C597E /* LearningAppStoragesSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B74B44332C1FD659005B12B9 /* Enums */,
 				B7F3791E2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift */,
 				B7F379202C1DFE12009C597E /* ContentView.swift */,
 				B7F379222C1DFE13009C597E /* Assets.xcassets */,
 				B7F379242C1DFE13009C597E /* Preview Content */,
 				B7F379482C1E0B4F009C597E /* AppThemeSelectionView.swift */,
-				B7F3794A2C1E765B009C597E /* Theme.swift */,
 				B7F3794C2C1E7A0E009C597E /* TeamsView.swift */,
+				B7F3794E2C1EB76A009C597E /* JusticeLeagueView.swift */,
+				B7F379502C1EB780009C597E /* AvengersView.swift */,
+				B74B44382C1FFC4D005B12B9 /* README.md */,
 			);
 			path = LearningAppStoragesSwiftUI;
 			sourceTree = "<group>";
@@ -122,7 +147,10 @@
 		B7F3792E2C1DFE13009C597E /* LearningAppStoragesSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B74B44362C1FD7FA005B12B9 /* AvengerTests.swift */,
+				B74B44342C1FD687005B12B9 /* JusticeLeagueTests.swift */,
 				B7F3792F2C1DFE13009C597E /* LearningAppStoragesSwiftUITests.swift */,
+				B7F379542C1F3B5F009C597E /* ThemeTests.swift */,
 			);
 			path = LearningAppStoragesSwiftUITests;
 			sourceTree = "<group>";
@@ -267,9 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F379212C1DFE12009C597E /* ContentView.swift in Sources */,
+				B7F3794F2C1EB76A009C597E /* JusticeLeagueView.swift in Sources */,
 				B7F3794B2C1E765B009C597E /* Theme.swift in Sources */,
+				B7F379532C1EE2A5009C597E /* Hero.swift in Sources */,
 				B7F3791F2C1DFE12009C597E /* LearningAppStoragesSwiftUIApp.swift in Sources */,
 				B7F3794D2C1E7A0E009C597E /* TeamsView.swift in Sources */,
+				B7F379512C1EB780009C597E /* AvengersView.swift in Sources */,
 				B7F379492C1E0B4F009C597E /* AppThemeSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74B44372C1FD7FA005B12B9 /* AvengerTests.swift in Sources */,
 				B7F379302C1DFE13009C597E /* LearningAppStoragesSwiftUITests.swift in Sources */,
+				B7F379552C1F3B5F009C597E /* ThemeTests.swift in Sources */,
+				B74B44352C1FD687005B12B9 /* JusticeLeagueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

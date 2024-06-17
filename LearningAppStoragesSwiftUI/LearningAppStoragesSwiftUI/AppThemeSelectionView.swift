@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppThemeSelectionView: View {
+    // AppStorage
     @AppStorage("appTheme") var appTheme: String = Theme.red.rawValue
     
     var body: some View {
