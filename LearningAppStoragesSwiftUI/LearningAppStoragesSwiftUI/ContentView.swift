@@ -21,35 +21,33 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Image(systemName: "folder.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100)
-                    .foregroundStyle(.tint)
-                    .tint(Theme.colorFor(value: appTheme))
                 
-                HStack {
+                VStack {
                     Button(action: {
                         showThemeSelection.toggle()
                     }, label: {
-                        Text("Theme")
+                        /// When using system images which are SF Symbols, instead of setting frames with width
+                        /// and height, one should set size with typography modifier .font
+                        /// This is because SF Symbols are technically typographical and one achieves best behaviour
+                        /// and performance setting size like this.
+                        Image(systemName: "paintbrush.pointed.fill")
+                            .font(.system(size: 200))
                             .foregroundStyle(Theme.colorFor(value: appTheme))
                     })
                     
                     Button(action: {
                         showTeamSelection.toggle()
                     }, label: {
-                        Text("Hero")
-                            .foregroundStyle(Theme.colorFor(value: appTheme))
+                        Image(choosenHero, bundle: nil)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 300)
+                            .padding()
+                            .border(Theme.colorFor(value: appTheme), width: 20)
                     })
                     
                 }
                 
-                Image(choosenHero, bundle: nil)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150)
-                    .tint(Theme.colorFor(value: appTheme))
             }
             .padding()
             .navigationDestination(isPresented: $showThemeSelection) {
