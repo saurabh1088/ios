@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct BikesInGarageView: View {
-    @ObservedObject var viewModel: BikesViewModel
+    @Query private var bikes: [Bike]
     @State private var showAddBikeView = false
     
     var body: some View {
         VStack {
-            ForEach(viewModel.bikesInGarage(), id: \.name) { bike in
+            ForEach(bikes, id: \.name) { bike in
                 VStack {
                     Text(bike.name)
                         .font(.system(size: 32))
@@ -39,11 +40,11 @@ struct BikesInGarageView: View {
             }
         }
         .sheet(isPresented: $showAddBikeView, content: {
-            AddBikeView(viewModel: viewModel)
+            AddBikeView()
         })
     }
 }
 
 #Preview {
-    BikesInGarageView(viewModel: BikesViewModel())
+    BikesInGarageView()
 }
