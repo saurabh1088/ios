@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct BikeGarageView: View {
-    @StateObject private var bikeViewModel = BikesViewModel()
     @State private var showBikesInGarageView = false
     
     var body: some View {
@@ -29,7 +28,7 @@ struct BikeGarageView: View {
 
             }
             .navigationDestination(isPresented: $showBikesInGarageView) {
-                BikesInGarageView(viewModel: bikeViewModel)
+                BikesInGarageView()
             }
         }
     }

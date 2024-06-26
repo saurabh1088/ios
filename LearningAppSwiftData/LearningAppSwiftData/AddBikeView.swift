@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct AddBikeView: View {
-    @ObservedObject var viewModel: BikesViewModel
     @State private var bikeName = String()
     @State private var company = String()
     @State private var engineCC = String()
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         VStack(spacing: 16) {
@@ -22,7 +22,8 @@ struct AddBikeView: View {
             
             Button {
                 if let cc = Int(engineCC) {
-                    viewModel.add(bike: Bike(name: bikeName, company: company, cubicCapacity: cc))
+                    let newBike = Bike(name: bikeName, company: company, cubicCapacity: cc)
+                    modelContext.insert(newBike)
                     dismiss()
                 }
             } label: {
@@ -34,5 +35,5 @@ struct AddBikeView: View {
 }
 
 #Preview {
-    AddBikeView(viewModel: BikesViewModel())
+    AddBikeView()
 }
