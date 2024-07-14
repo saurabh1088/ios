@@ -27,6 +27,10 @@
 		B763D9272C43E04300142F80 /* BikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9262C43E04300142F80 /* BikesViewModel.swift */; };
 		B763D9292C43E05F00142F80 /* CompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9282C43E05F00142F80 /* CompaniesViewModel.swift */; };
 		B763D92B2C43E07700142F80 /* RidingGearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D92A2C43E07700142F80 /* RidingGearViewModel.swift */; };
+		B763D92E2C43E54B00142F80 /* Bikes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B763D92C2C43E54B00142F80 /* Bikes.xcdatamodeld */; };
+		B763D9312C43E55F00142F80 /* Companies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B763D92F2C43E55F00142F80 /* Companies.xcdatamodeld */; };
+		B763D9342C43E56F00142F80 /* RidingGear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B763D9322C43E56F00142F80 /* RidingGear.xcdatamodeld */; };
+		B763D9362C43E91A00142F80 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9352C43E91A00142F80 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		B763D9262C43E04300142F80 /* BikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewModel.swift; sourceTree = "<group>"; };
 		B763D9282C43E05F00142F80 /* CompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewModel.swift; sourceTree = "<group>"; };
 		B763D92A2C43E07700142F80 /* RidingGearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidingGearViewModel.swift; sourceTree = "<group>"; };
+		B763D92D2C43E54B00142F80 /* Bikes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bikes.xcdatamodel; sourceTree = "<group>"; };
+		B763D9302C43E55F00142F80 /* Companies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Companies.xcdatamodel; sourceTree = "<group>"; };
+		B763D9332C43E56F00142F80 /* RidingGear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RidingGear.xcdatamodel; sourceTree = "<group>"; };
+		B763D9352C43E91A00142F80 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B763D9152C43C4C500142F80 /* MainModel.swift */,
+				B763D9352C43E91A00142F80 /* CoreDataManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -168,6 +177,7 @@
 				B763D9182C43D45C00142F80 /* BikesStoryboard.storyboard */,
 				B763D9202C43D9CE00142F80 /* BikesViewController.swift */,
 				B763D9262C43E04300142F80 /* BikesViewModel.swift */,
+				B763D92C2C43E54B00142F80 /* Bikes.xcdatamodeld */,
 			);
 			path = Bike;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 				B763D91C2C43D4DF00142F80 /* CompanyStoryboard.storyboard */,
 				B763D9222C43D9EA00142F80 /* CompaniesViewController.swift */,
 				B763D9282C43E05F00142F80 /* CompaniesViewModel.swift */,
+				B763D92F2C43E55F00142F80 /* Companies.xcdatamodeld */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 				B763D91E2C43D50200142F80 /* RidingGearStoryboard.storyboard */,
 				B763D9242C43D9FA00142F80 /* RidingGearViewController.swift */,
 				B763D92A2C43E07700142F80 /* RidingGearViewModel.swift */,
+				B763D9322C43E56F00142F80 /* RidingGear.xcdatamodeld */,
 			);
 			path = RidingGear;
 			sourceTree = "<group>";
@@ -326,13 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B763D9312C43E55F00142F80 /* Companies.xcdatamodeld in Sources */,
+				B763D92E2C43E54B00142F80 /* Bikes.xcdatamodeld in Sources */,
 				B763D9292C43E05F00142F80 /* CompaniesViewModel.swift in Sources */,
+				B763D9362C43E91A00142F80 /* CoreDataManager.swift in Sources */,
 				B763D8E72C435F3900142F80 /* ViewController.swift in Sources */,
 				B763D92B2C43E07700142F80 /* RidingGearViewModel.swift in Sources */,
 				B763D9212C43D9CE00142F80 /* BikesViewController.swift in Sources */,
 				B763D8E32C435F3900142F80 /* AppDelegate.swift in Sources */,
 				B763D8E52C435F3900142F80 /* SceneDelegate.swift in Sources */,
 				B763D9252C43D9FA00142F80 /* RidingGearViewController.swift in Sources */,
+				B763D9342C43E56F00142F80 /* RidingGear.xcdatamodeld in Sources */,
 				B763D9272C43E04300142F80 /* BikesViewModel.swift in Sources */,
 				B763D9162C43C4C500142F80 /* MainModel.swift in Sources */,
 				B763D9232C43D9EA00142F80 /* CompaniesViewController.swift in Sources */,
@@ -677,6 +693,42 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B763D92C2C43E54B00142F80 /* Bikes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B763D92D2C43E54B00142F80 /* Bikes.xcdatamodel */,
+			);
+			currentVersion = B763D92D2C43E54B00142F80 /* Bikes.xcdatamodel */;
+			name = Bikes.xcdatamodeld;
+			path = /Users/saurabhverma/DevBox/iOSProgramming/ios/LearningAppCoreDataMultipleManagedObjectsUIKit/LearningAppCoreDataMultipleManagedObjectsUIKit/Bike/Bikes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B763D92F2C43E55F00142F80 /* Companies.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B763D9302C43E55F00142F80 /* Companies.xcdatamodel */,
+			);
+			currentVersion = B763D9302C43E55F00142F80 /* Companies.xcdatamodel */;
+			name = Companies.xcdatamodeld;
+			path = /Users/saurabhverma/DevBox/iOSProgramming/ios/LearningAppCoreDataMultipleManagedObjectsUIKit/LearningAppCoreDataMultipleManagedObjectsUIKit/Company/Companies.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B763D9322C43E56F00142F80 /* RidingGear.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B763D9332C43E56F00142F80 /* RidingGear.xcdatamodel */,
+			);
+			currentVersion = B763D9332C43E56F00142F80 /* RidingGear.xcdatamodel */;
+			name = RidingGear.xcdatamodeld;
+			path = /Users/saurabhverma/DevBox/iOSProgramming/ios/LearningAppCoreDataMultipleManagedObjectsUIKit/LearningAppCoreDataMultipleManagedObjectsUIKit/RidingGear/RidingGear.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B763D8D72C435F3900142F80 /* Project object */;
 }
