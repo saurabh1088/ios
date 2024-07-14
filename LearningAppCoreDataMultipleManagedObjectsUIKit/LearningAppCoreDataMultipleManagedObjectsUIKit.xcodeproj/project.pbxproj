@@ -16,6 +16,17 @@
 		B763D8FA2C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D8F92C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitTests.swift */; };
 		B763D9042C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9032C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITests.swift */; };
 		B763D9062C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9052C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITestsLaunchTests.swift */; };
+		B763D9142C43659100142F80 /* ManagedObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9132C43659100142F80 /* ManagedObjectsViewController.swift */; };
+		B763D9162C43C4C500142F80 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9152C43C4C500142F80 /* MainModel.swift */; };
+		B763D9192C43D45C00142F80 /* BikesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B763D9182C43D45C00142F80 /* BikesStoryboard.storyboard */; };
+		B763D91D2C43D4DF00142F80 /* CompanyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B763D91C2C43D4DF00142F80 /* CompanyStoryboard.storyboard */; };
+		B763D91F2C43D50200142F80 /* RidingGearStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B763D91E2C43D50200142F80 /* RidingGearStoryboard.storyboard */; };
+		B763D9212C43D9CE00142F80 /* BikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9202C43D9CE00142F80 /* BikesViewController.swift */; };
+		B763D9232C43D9EA00142F80 /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9222C43D9EA00142F80 /* CompaniesViewController.swift */; };
+		B763D9252C43D9FA00142F80 /* RidingGearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9242C43D9FA00142F80 /* RidingGearViewController.swift */; };
+		B763D9272C43E04300142F80 /* BikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9262C43E04300142F80 /* BikesViewModel.swift */; };
+		B763D9292C43E05F00142F80 /* CompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D9282C43E05F00142F80 /* CompaniesViewModel.swift */; };
+		B763D92B2C43E07700142F80 /* RidingGearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763D92A2C43E07700142F80 /* RidingGearViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		B763D8FF2C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppCoreDataMultipleManagedObjectsUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B763D9032C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppCoreDataMultipleManagedObjectsUIKitUITests.swift; sourceTree = "<group>"; };
 		B763D9052C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppCoreDataMultipleManagedObjectsUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B763D9132C43659100142F80 /* ManagedObjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectsViewController.swift; sourceTree = "<group>"; };
+		B763D9152C43C4C500142F80 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B763D9182C43D45C00142F80 /* BikesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BikesStoryboard.storyboard; sourceTree = "<group>"; };
+		B763D91C2C43D4DF00142F80 /* CompanyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyStoryboard.storyboard; sourceTree = "<group>"; };
+		B763D91E2C43D50200142F80 /* RidingGearStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RidingGearStoryboard.storyboard; sourceTree = "<group>"; };
+		B763D9202C43D9CE00142F80 /* BikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewController.swift; sourceTree = "<group>"; };
+		B763D9222C43D9EA00142F80 /* CompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewController.swift; sourceTree = "<group>"; };
+		B763D9242C43D9FA00142F80 /* RidingGearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidingGearViewController.swift; sourceTree = "<group>"; };
+		B763D9262C43E04300142F80 /* BikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewModel.swift; sourceTree = "<group>"; };
+		B763D9282C43E05F00142F80 /* CompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewModel.swift; sourceTree = "<group>"; };
+		B763D92A2C43E07700142F80 /* RidingGearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidingGearViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +121,14 @@
 		B763D8E12C435F3900142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B763D9172C43D44600142F80 /* Bike */,
+				B763D91A2C43D4AB00142F80 /* Company */,
+				B763D91B2C43D4B800142F80 /* RidingGear */,
+				B763D9122C43625C00142F80 /* Common */,
 				B763D8E22C435F3900142F80 /* AppDelegate.swift */,
 				B763D8E42C435F3900142F80 /* SceneDelegate.swift */,
 				B763D8E62C435F3900142F80 /* ViewController.swift */,
+				B763D9132C43659100142F80 /* ManagedObjectsViewController.swift */,
 				B763D8E82C435F3900142F80 /* Main.storyboard */,
 				B763D8EB2C435F3B00142F80 /* Assets.xcassets */,
 				B763D8ED2C435F3B00142F80 /* LaunchScreen.storyboard */,
@@ -125,6 +152,44 @@
 				B763D9052C435F3B00142F80 /* LearningAppCoreDataMultipleManagedObjectsUIKitUITestsLaunchTests.swift */,
 			);
 			path = LearningAppCoreDataMultipleManagedObjectsUIKitUITests;
+			sourceTree = "<group>";
+		};
+		B763D9122C43625C00142F80 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B763D9152C43C4C500142F80 /* MainModel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B763D9172C43D44600142F80 /* Bike */ = {
+			isa = PBXGroup;
+			children = (
+				B763D9182C43D45C00142F80 /* BikesStoryboard.storyboard */,
+				B763D9202C43D9CE00142F80 /* BikesViewController.swift */,
+				B763D9262C43E04300142F80 /* BikesViewModel.swift */,
+			);
+			path = Bike;
+			sourceTree = "<group>";
+		};
+		B763D91A2C43D4AB00142F80 /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				B763D91C2C43D4DF00142F80 /* CompanyStoryboard.storyboard */,
+				B763D9222C43D9EA00142F80 /* CompaniesViewController.swift */,
+				B763D9282C43E05F00142F80 /* CompaniesViewModel.swift */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
+		B763D91B2C43D4B800142F80 /* RidingGear */ = {
+			isa = PBXGroup;
+			children = (
+				B763D91E2C43D50200142F80 /* RidingGearStoryboard.storyboard */,
+				B763D9242C43D9FA00142F80 /* RidingGearViewController.swift */,
+				B763D92A2C43E07700142F80 /* RidingGearViewModel.swift */,
+			);
+			path = RidingGear;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +296,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B763D9192C43D45C00142F80 /* BikesStoryboard.storyboard in Resources */,
+				B763D91D2C43D4DF00142F80 /* CompanyStoryboard.storyboard in Resources */,
 				B763D8EC2C435F3B00142F80 /* Assets.xcassets in Resources */,
+				B763D91F2C43D50200142F80 /* RidingGearStoryboard.storyboard in Resources */,
 				B763D8EF2C435F3B00142F80 /* Base in Resources */,
 				B763D8EA2C435F3900142F80 /* Base in Resources */,
 			);
@@ -258,9 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B763D9292C43E05F00142F80 /* CompaniesViewModel.swift in Sources */,
 				B763D8E72C435F3900142F80 /* ViewController.swift in Sources */,
+				B763D92B2C43E07700142F80 /* RidingGearViewModel.swift in Sources */,
+				B763D9212C43D9CE00142F80 /* BikesViewController.swift in Sources */,
 				B763D8E32C435F3900142F80 /* AppDelegate.swift in Sources */,
 				B763D8E52C435F3900142F80 /* SceneDelegate.swift in Sources */,
+				B763D9252C43D9FA00142F80 /* RidingGearViewController.swift in Sources */,
+				B763D9272C43E04300142F80 /* BikesViewModel.swift in Sources */,
+				B763D9162C43C4C500142F80 /* MainModel.swift in Sources */,
+				B763D9232C43D9EA00142F80 /* CompaniesViewController.swift in Sources */,
+				B763D9142C43659100142F80 /* ManagedObjectsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
