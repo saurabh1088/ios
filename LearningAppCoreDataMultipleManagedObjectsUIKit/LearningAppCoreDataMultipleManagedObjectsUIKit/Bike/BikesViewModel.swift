@@ -14,6 +14,7 @@ class BikesViewModel {
 }
 
 extension BikesViewModel {
+    // TODO: Just for tempporary inserts, need to remove this with proper implementation
     func insertBikes() {
         let bikeEntity = NSEntityDescription.entity(forEntityName: "Bike", in: CoreDataManager.shared.persistentContainer.viewContext)!
         let newBike = NSManagedObject(entity: bikeEntity, insertInto: CoreDataManager.shared.persistentContainer.viewContext)

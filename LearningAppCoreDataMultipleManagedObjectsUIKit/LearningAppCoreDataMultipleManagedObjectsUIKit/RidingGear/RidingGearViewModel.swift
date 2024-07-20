@@ -28,6 +28,7 @@ extension RidingGearViewModel {
 }
 
 extension RidingGearViewModel {
+    // TODO: Just for tempporary inserts, need to remove this with proper implementation
     func fetchRidingGear() {
         var fetcherGears = [RidingGear]()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "RidingGear")

@@ -14,6 +14,7 @@ class CompaniesViewModel {
 }
 
 extension CompaniesViewModel {
+    // TODO: Just for tempporary inserts, need to remove this with proper implementation
     func insertCompanies() {
         let companyEntity = NSEntityDescription.entity(forEntityName: "Company", in: CoreDataManager.shared.persistentContainer.viewContext)!
         let newCompany = NSManagedObject(entity: companyEntity, insertInto: CoreDataManager.shared.persistentContainer.viewContext)
