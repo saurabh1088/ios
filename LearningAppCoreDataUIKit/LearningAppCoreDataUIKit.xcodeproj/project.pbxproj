@@ -54,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		B7093B522BB342A6008C81A1 /* AddDirectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDirectorViewController.swift; sourceTree = "<group>"; };
+		B717D6962C4D77740039ABF2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B72ED2182B9C645D0038A388 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B73243802B9A999500641FC5 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		B732D8032C12963F001D3592 /* CoreDataScenarioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScenarioTests.swift; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 				B7BD74972B9821BE002BC6C0 /* LaunchScreen.storyboard */,
 				B7BD749A2B9821BE002BC6C0 /* Info.plist */,
 				B7BD74922B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld */,
+				B717D6962C4D77740039ABF2 /* README.md */,
 			);
 			path = LearningAppCoreDataUIKit;
 			sourceTree = "<group>";
