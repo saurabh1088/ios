@@ -10,7 +10,7 @@ import UIKit
 class AddDirectorViewController: UIViewController {
     
     var viewModel: DirectorViewModel!
-    var addDirectorCallback: BasicBlock?
+    var addDirectorCallback: ((String) -> ())?
     
     @IBOutlet weak var directorNameTextField: UITextField!
     
@@ -22,7 +22,7 @@ class AddDirectorViewController: UIViewController {
         if let directorName = directorNameTextField.text {
             viewModel.add(director: directorName)
             if let action = addDirectorCallback {
-                action()
+                action(directorName)
             }
         }
     }

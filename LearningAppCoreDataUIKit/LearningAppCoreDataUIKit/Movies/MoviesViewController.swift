@@ -20,12 +20,14 @@ class MoviesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchAllMovies()
+        directorViewModel.fetchDirectors()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        registerMovieTableViewCell()
         undoLastChangesButton.isHidden = true
     }
     
@@ -34,6 +36,11 @@ class MoviesViewController: UIViewController {
         viewModel.fetchAllMovies()
         tableView.reloadData()
         undoLastChangesButton.isHidden = true
+    }
+    
+    private func registerMovieTableViewCell() {
+        let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "movieTableViewCell")
     }
 }
 
@@ -65,9 +72,15 @@ extension MoviesViewController {
 extension MoviesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieTableViewCell", for: indexPath)
-        cell.textLabel?.text = viewModel.movies[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieTableViewCell", for: indexPath) as! MovieTableViewCell
+        cell.title.text = viewModel.movies[indexPath.row].title
+        cell.director.text = viewModel.movies[indexPath.row].director?.name
+        cell.year.text = String(viewModel.movies[indexPath.row].yearOfRelease)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
     }
 }
 
