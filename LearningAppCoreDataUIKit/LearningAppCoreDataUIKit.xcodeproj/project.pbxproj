@@ -13,6 +13,8 @@
 		B732D8042C12963F001D3592 /* CoreDataScenarioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B732D8032C12963F001D3592 /* CoreDataScenarioTests.swift */; };
 		B7352F162BB079A80011587D /* OptionsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */; };
 		B7352F182BB07D470011587D /* DirectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7352F172BB07D470011587D /* DirectorViewModel.swift */; };
+		B7369E8C2C4CA84A00F88AD8 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7369E8B2C4CA84A00F88AD8 /* MovieTableViewCell.xib */; };
+		B7369E8D2C4CA84A00F88AD8 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7369E8A2C4CA84A00F88AD8 /* MovieTableViewCell.swift */; };
 		B78189682B9BEC120060A522 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78189672B9BEC120060A522 /* AddMovieViewController.swift */; };
 		B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */; };
 		B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD748B2B9821BE002BC6C0 /* SceneDelegate.swift */; };
@@ -57,6 +59,8 @@
 		B732D8032C12963F001D3592 /* CoreDataScenarioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScenarioTests.swift; sourceTree = "<group>"; };
 		B7352F152BB079A80011587D /* OptionsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelectionViewController.swift; sourceTree = "<group>"; };
 		B7352F172BB07D470011587D /* DirectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorViewModel.swift; sourceTree = "<group>"; };
+		B7369E8A2C4CA84A00F88AD8 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		B7369E8B2C4CA84A00F88AD8 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		B78189672B9BEC120060A522 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		B7BD74862B9821BE002BC6C0 /* LearningAppCoreDataUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppCoreDataUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 				B7CD2D4B2B9A32A300D7AFDD /* MoviesStoryboard.storyboard */,
 				B73243802B9A999500641FC5 /* MoviesViewController.swift */,
 				B78189672B9BEC120060A522 /* AddMovieViewController.swift */,
+				B7369E8A2C4CA84A00F88AD8 /* MovieTableViewCell.swift */,
+				B7369E8B2C4CA84A00F88AD8 /* MovieTableViewCell.xib */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BD74992B9821BE002BC6C0 /* LaunchScreen.storyboard in Resources */,
+				B7369E8C2C4CA84A00F88AD8 /* MovieTableViewCell.xib in Resources */,
 				B7EA9EEB2BB10EE200BE6E15 /* DirectorStoryboard.storyboard in Resources */,
 				B7BD74962B9821BE002BC6C0 /* Assets.xcassets in Resources */,
 				B7F911352BB03C0800D65EB2 /* OptionsSelectorStoryboard.storyboard in Resources */,
@@ -343,6 +350,7 @@
 				B7EA9EED2BB10F4000BE6E15 /* DirectorViewController.swift in Sources */,
 				B7352F182BB07D470011587D /* DirectorViewModel.swift in Sources */,
 				B7BD748A2B9821BE002BC6C0 /* AppDelegate.swift in Sources */,
+				B7369E8D2C4CA84A00F88AD8 /* MovieTableViewCell.swift in Sources */,
 				B7BD748C2B9821BE002BC6C0 /* SceneDelegate.swift in Sources */,
 				B72ED2192B9C645E0038A388 /* Common.swift in Sources */,
 				B7D6CF2A2B98BD84005C3BF5 /* CoreDataScenariosTableViewController.swift in Sources */,

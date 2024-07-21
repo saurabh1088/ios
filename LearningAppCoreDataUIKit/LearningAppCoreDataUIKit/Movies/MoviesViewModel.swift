@@ -15,6 +15,7 @@ protocol HasManagedContext {
 
 protocol MoviesViewModelProtocol: HasManagedContext {
     func fetchAllMovies()
+    func fetch(director: String) -> Director?
     func addMovie(title: String, length: Int16, yearOfRelease: Int16)
     func addMovie(title: String, length: Int16, yearOfRelease: Int16, director: String)
     func deleteMovie(at indexPath: IndexPath, completion: BasicBlock)
@@ -45,6 +46,21 @@ class MoviesViewModel: MoviesViewModelProtocol {
         }
     }
     
+    func fetch(director: String) -> Director? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Director")
+        fetchRequest.predicate = NSPredicate(format: "name == %@", director)
+        var fetchedDirector: Director?
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            if let director = results.first {
+                fetchedDirector = director as? Director
+            }
+        } catch {
+            print("Error while fetching director :: \(director)")
+        }
+        return fetchedDirector
+    }
+    
     func addMovie(title: String, length: Int16, yearOfRelease: Int16) {
         let movieEntity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
         let newMovie = NSManagedObject(entity: movieEntity, insertInto: managedContext)
@@ -67,6 +83,9 @@ class MoviesViewModel: MoviesViewModelProtocol {
         newMovie.title = title
         newMovie.length = length
         newMovie.yearOfRelease = yearOfRelease
+        if let movieDirector = fetch(director: director) {
+            newMovie.director = movieDirector
+        }
         do {
             try managedContext.save()
             fetchAllMovies()

@@ -65,7 +65,7 @@ extension DirectorViewController {
         if segue.identifier == "showAddDirectorViewController" {
             if let destination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddDirectorViewController {
                 destination.viewModel = viewModel
-                destination.addDirectorCallback = {
+                destination.addDirectorCallback = { _ in
                     self.tableView.reloadData()
                 }
             }

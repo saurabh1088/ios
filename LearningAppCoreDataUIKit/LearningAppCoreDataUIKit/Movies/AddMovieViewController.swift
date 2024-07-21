@@ -18,10 +18,13 @@ class AddMovieViewController: UIViewController {
     
     @IBOutlet weak var directorSelectionButton: UIButton!
     
+    @IBOutlet weak var addDirectorButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Add Movie"
+        addDirectorButton.isHidden = !directorViewModel.directors.isEmpty
+        directorSelectionButton.isHidden = directorViewModel.directors.isEmpty
     }
     
     @IBAction func addMovieButtonAction(_ sender: Any) {
@@ -39,6 +42,21 @@ class AddMovieViewController: UIViewController {
             self.dismiss(animated: true)
         }
     }
+    
+    
+    @IBAction func addDirectorButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "DirectorStoryboard", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "addDirectorViewControllerId") as? AddDirectorViewController {
+            viewController.viewModel = directorViewModel
+            viewController.addDirectorCallback = { directorName in
+                self.addDirectorButton.isHidden = !self.directorViewModel.directors.isEmpty
+                self.directorSelectionButton.isHidden = self.directorViewModel.directors.isEmpty
+                self.directorSelectionButton.setTitle(directorName, for: .normal)
+            }
+            self.present(viewController, animated: true)
+        }
+    }
+    
 }
 
 extension AddMovieViewController {
@@ -73,6 +91,14 @@ extension AddMovieViewController {
                     self.directorSelectionButton.setTitle(selectedValue, for: .normal)
                 }
             }
+        }
+    }
+}
+
+extension AddMovieViewController {
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+        if let identifier = unwindSegue.identifier {
+            print("Unwind from :: \(identifier)")
         }
     }
 }

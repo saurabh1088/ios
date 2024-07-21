@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="LearningAppCoreDataUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36V-4k-end">
+                        <rect key="frame" x="16" y="16" width="288" height="27.666666666666671"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-Ib-U2i">
+                        <rect key="frame" x="16" y="47" width="59" height="20"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                        <color key="textColor" name="neonYellow"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRR-L5-QuJ">
+                        <rect key="frame" x="270" y="46" width="34" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="neonYellow"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="36V-4k-end" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="AXP-BY-WxZ"/>
+                    <constraint firstAttribute="trailing" secondItem="jRR-L5-QuJ" secondAttribute="trailing" constant="16" id="Hph-Re-3U8"/>
+                    <constraint firstItem="Kdx-Ib-U2i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="U6v-xb-vXg"/>
+                    <constraint firstAttribute="trailing" secondItem="36V-4k-end" secondAttribute="trailing" constant="16" id="a92-uk-fOY"/>
+                    <constraint firstAttribute="bottom" secondItem="jRR-L5-QuJ" secondAttribute="bottom" constant="8" id="aRO-sT-nMd"/>
+                    <constraint firstItem="36V-4k-end" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ai3-Iw-ChQ"/>
+                    <constraint firstAttribute="bottom" secondItem="Kdx-Ib-U2i" secondAttribute="bottom" constant="8" id="l6E-kh-MCt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="neonRed"/>
+            <connections>
+                <outlet property="director" destination="Kdx-Ib-U2i" id="4OL-B4-nvG"/>
+                <outlet property="title" destination="36V-4k-end" id="bFB-DO-yid"/>
+                <outlet property="year" destination="jRR-L5-QuJ" id="A4b-V5-xqR"/>
+            </connections>
+            <point key="canvasLocation" x="100.76335877862596" y="31.338028169014088"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="neonRed">
+            <color red="0.7803921568627451" green="0.0" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="neonYellow">
+            <color red="0.97254901960784312" green="0.87058823529411766" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
