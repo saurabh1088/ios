@@ -61,6 +61,7 @@
 		B7352F172BB07D470011587D /* DirectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorViewModel.swift; sourceTree = "<group>"; };
 		B7369E8A2C4CA84A00F88AD8 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		B7369E8B2C4CA84A00F88AD8 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		B7369E8F2C4D3EF700F88AD8 /* LearningAppCoreDataUIKit_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LearningAppCoreDataUIKit_v2.xcdatamodel; sourceTree = "<group>"; };
 		B78189672B9BEC120060A522 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		B7BD74862B9821BE002BC6C0 /* LearningAppCoreDataUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppCoreDataUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BD74892B9821BE002BC6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -706,9 +707,10 @@
 		B7BD74922B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B7369E8F2C4D3EF700F88AD8 /* LearningAppCoreDataUIKit_v2.xcdatamodel */,
 				B7BD74932B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodel */,
 			);
-			currentVersion = B7BD74932B9821BE002BC6C0 /* LearningAppCoreDataUIKit.xcdatamodel */;
+			currentVersion = B7369E8F2C4D3EF700F88AD8 /* LearningAppCoreDataUIKit_v2.xcdatamodel */;
 			path = LearningAppCoreDataUIKit.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

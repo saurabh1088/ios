@@ -9,7 +9,7 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="yearOfRelease" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" elementID="yearOfRelease"/>
         <relationship name="director" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Director" inverseName="movies" inverseEntity="Director"/>
     </entity>
 </model>
