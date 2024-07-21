@@ -82,7 +82,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
         newMovie.id = UUID()
         newMovie.title = title
         newMovie.length = length
-        newMovie.yearOfRelease = yearOfRelease
+        newMovie.year = yearOfRelease
         if let movieDirector = fetch(director: director) {
             newMovie.director = movieDirector
         }

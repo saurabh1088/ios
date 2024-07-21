@@ -75,7 +75,7 @@ extension MoviesViewController: UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieTableViewCell", for: indexPath) as! MovieTableViewCell
         cell.title.text = viewModel.movies[indexPath.row].title
         cell.director.text = viewModel.movies[indexPath.row].director?.name
-        cell.year.text = String(viewModel.movies[indexPath.row].yearOfRelease)
+        cell.year.text = String(viewModel.movies[indexPath.row].year)
         return cell
     }
     
