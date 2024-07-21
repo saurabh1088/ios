@@ -25,6 +25,11 @@ Sample project demonstrating how to set up core data stack while working in a UI
 based project. Also uses a simple use case of creating an on disk movies database
 backed completely by core data.
 
+Project also utilised light-weight core data migration feature. 
+More details can be seen in:
+- project's [README](LearningAppCoreDataUIKit/LearningAppCoreDataUIKit/README.md) file
+- Pull request for changes https://github.com/saurabh1088/ios/pull/9
+
 ### 4. LearningAppStoragesSwiftUI
 Sample project using SwiftUI to demonstrate the capabilities and differences between
 `AppStorage` and `SceneStorage`.
