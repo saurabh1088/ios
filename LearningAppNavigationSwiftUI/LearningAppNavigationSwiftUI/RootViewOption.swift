@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RootViewOption: String, CaseIterable, Identifiable {
+enum RootViewOption: String, CaseIterable, Identifiable, Codable {
     case rootViewOptionOne
     case rootViewOptionTwo
     case rootViewOptionThree
