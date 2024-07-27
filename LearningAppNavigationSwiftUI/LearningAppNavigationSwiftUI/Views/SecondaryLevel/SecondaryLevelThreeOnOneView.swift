@@ -14,6 +14,6 @@ struct SecondaryLevelThreeOnOneView: View {
     }
 }
 
-#Preview {
+#Preview("Secondary level three-on-one") {
     SecondaryLevelThreeOnOneView()
 }

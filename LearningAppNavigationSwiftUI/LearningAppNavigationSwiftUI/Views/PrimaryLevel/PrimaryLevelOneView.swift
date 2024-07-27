@@ -25,6 +25,6 @@ struct PrimaryLevelOneView: View {
     }
 }
 
-#Preview {
+#Preview("Preview primary level one") {
     PrimaryLevelOneView()
 }
