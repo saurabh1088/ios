@@ -56,3 +56,12 @@ extension BikesViewController {
         }
     }
 }
+
+#Preview {
+    // TODO: Refactor BikesViewModel so that mock data could be provided here.
+    let viewcontroller = Storyboard.Main.bikeViewController.instantiate as? BikesViewController
+    let viewModel = BikesViewModel(managedContext: CoreDataMemoryOption.inMemory.persistentContainer.viewContext,
+                                   memoryOption: CoreDataMemoryOption.inMemory)
+    viewcontroller?.viewModel = viewModel
+    return viewcontroller!
+}

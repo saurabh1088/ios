@@ -31,3 +31,12 @@ class AddNewBikeViewController: UIViewController {
         }
     }
 }
+
+#Preview {
+    // TODO: Refactor BikesViewModel so that mock data could be provided here.
+    let viewcontroller = Storyboard.Main.addNewBikeViewController.instantiate as? AddNewBikeViewController
+    let viewModel = BikesViewModel(managedContext: CoreDataMemoryOption.inMemory.persistentContainer.viewContext,
+                                   memoryOption: CoreDataMemoryOption.inMemory)
+    viewcontroller?.viewModel = viewModel
+    return viewcontroller!
+}

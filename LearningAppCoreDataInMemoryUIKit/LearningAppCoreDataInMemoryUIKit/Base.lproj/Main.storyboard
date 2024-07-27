@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearningAppCoreDataInMemoryUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewControllerStoryboardId" id="BYZ-38-t0r" customClass="ViewController" customModule="LearningAppCoreDataInMemoryUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
         <!--Add New Bike View Controller-->
         <scene sceneID="P4x-1r-Udb">
             <objects>
-                <viewController id="McR-GM-6rh" customClass="AddNewBikeViewController" customModule="LearningAppCoreDataInMemoryUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNewBikeViewControllerStoryboardId" id="McR-GM-6rh" customClass="AddNewBikeViewController" customModule="LearningAppCoreDataInMemoryUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGs-xD-buA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
