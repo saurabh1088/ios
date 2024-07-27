@@ -59,3 +59,7 @@ extension ViewController {
         }
     }
 }
+
+#Preview {
+    return Storyboard.Main.viewController.instantiate
+}

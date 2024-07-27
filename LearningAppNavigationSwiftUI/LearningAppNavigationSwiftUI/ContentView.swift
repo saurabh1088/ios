@@ -29,6 +29,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+#Preview("Default Preview") {
     ContentView()
+        .environmentObject(NavigationModel())
 }

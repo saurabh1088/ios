@@ -13,6 +13,6 @@ struct PrimaryLevelThreeView: View {
     }
 }
 
-#Preview {
+#Preview("Preview primary level three") {
     PrimaryLevelThreeView()
 }
