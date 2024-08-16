@@ -1,4 +1,4 @@
-# ios
+# iOS
 
 Collection of projects aimed at learning various capabilities and frameworks for
 iOS app development world.
@@ -41,3 +41,7 @@ data.
 
 ### 6. LearningMultiplatformPlusSwiftDataSwiftUIApp
 Sample project with capability for multiple platforms using Swift Data and SwiftUI.
+
+### 7. LearningAppiPadSwiftUI
+Sample project supporting iPad using SwiftUI. This app will explore UI options which
+can be used exclusively for iPad form factor.
