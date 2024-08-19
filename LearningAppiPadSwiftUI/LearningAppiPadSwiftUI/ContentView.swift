@@ -9,12 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
+    @State private var colorOpted = Color.clear
+    
     var body: some View {
         TabView(selection: $selection) {
             NavigationSplitView {
-                Text("Sidebar")
+                List(ColorOption.allCases) { color in
+                    Button(color.printValue) {
+                        colorOpted = color.value
+                    }
+                }
             } detail: {
-                Text("Detail View")
+                ZStack {
+                    colorOpted
+                        .ignoresSafeArea()
+                }
             }
             .tabItem({
                 Label("Option 1", systemImage: "1.circle")
