@@ -45,3 +45,7 @@ Sample project with capability for multiple platforms using Swift Data and Swift
 ### 7. LearningAppiPadSwiftUI
 Sample project supporting iPad using SwiftUI. This app will explore UI options which
 can be used exclusively for iPad form factor.
+
+### 8. LearningAppiPadUIKit
+Sample project supporting iPad using UIKit. This app explores UI options and designs
+one can implement considering more real state on larger iPad screens.
