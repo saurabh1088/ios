@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="754" y="-559"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Main Split View Navigation Controller-->
         <scene sceneID="Dxv-2v-tsn">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" primaryBackgroundStyle="sidebar" id="Gh3-pz-xVS" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" primaryBackgroundStyle="sidebar" id="Gh3-pz-xVS" customClass="MainSplitViewNavigationController" customModule="LearningAppiPadUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="fVX-Nf-uuF" kind="relationship" relationship="masterViewController" id="yWo-Wv-RV1"/>
                         <segue destination="cdd-uJ-4Wj" kind="relationship" relationship="detailViewController" id="lFT-7G-qyR"/>

@@ -15,6 +15,7 @@
 		B7D670BA2C8D577700B10E9F /* LearningAppiPadUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670B92C8D577700B10E9F /* LearningAppiPadUIKitTests.swift */; };
 		B7D670C42C8D577700B10E9F /* LearningAppiPadUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670C32C8D577700B10E9F /* LearningAppiPadUIKitUITests.swift */; };
 		B7D670C62C8D577700B10E9F /* LearningAppiPadUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670C52C8D577700B10E9F /* LearningAppiPadUIKitUITestsLaunchTests.swift */; };
+		B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B7D670BF2C8D577700B10E9F /* LearningAppiPadUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppiPadUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D670C32C8D577700B10E9F /* LearningAppiPadUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppiPadUIKitUITests.swift; sourceTree = "<group>"; };
 		B7D670C52C8D577700B10E9F /* LearningAppiPadUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppiPadUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B7D670AB2C8D577700B10E9F /* Assets.xcassets */,
 				B7D670AD2C8D577700B10E9F /* LaunchScreen.storyboard */,
 				B7D670B02C8D577700B10E9F /* Info.plist */,
+				B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */,
 			);
 			path = LearningAppiPadUIKit;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */,
+				B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */,
 				B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
