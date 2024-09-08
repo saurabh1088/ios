@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="754" y="48"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Primary Side Bar Menu Table View Controller-->
         <scene sceneID="Buk-oX-WQs">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="bBf-NP-2dR" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="bBf-NP-2dR" customClass="PrimarySideBarMenuTableViewController" customModule="LearningAppiPadUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dHN-LI-qcl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="bBf-NP-2dR" id="2XL-3X-Qpo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kpv-eg-4NN"/>
+                    <navigationItem key="navigationItem" id="kpv-eg-4NN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXK-Qw-I2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
