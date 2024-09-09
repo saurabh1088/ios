@@ -11,6 +11,7 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(UINib(nibName: "MainSideBarMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "mainSideBarMenuTableViewCell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,13 +27,17 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return PrimaryMenuOption.allCases.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Menu \(indexPath.row)"
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "mainSideBarMenuTableViewCell", for: indexPath) as? MainSideBarMenuTableViewCell,
+           let menuOption = PrimaryMenuOption.menuOptionFor(index: indexPath) {
+            cell.menuImageView.image = UIImage(systemName: menuOption.icon)
+            cell.menuTitle.text = menuOption.printValue
+            return cell
+        }
+        return UITableViewCell()
     }
 
     /*
