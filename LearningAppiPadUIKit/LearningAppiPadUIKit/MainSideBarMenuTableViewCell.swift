@@ -11,6 +11,8 @@ class MainSideBarMenuTableViewCell: UITableViewCell {
     
     @IBOutlet weak var menuImageView: UIImageView!
     
+    @IBOutlet weak var menuTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -8,11 +8,14 @@
 import Foundation
 
 enum PrimaryMenuOption: String, CaseIterable, Identifiable {
+    case calendar
     case home
     case work
     
     var printValue: String {
         switch self {
+        case .calendar:
+            return "Calendar"
         case .home:
             return "Home"
         case .work:
@@ -22,6 +25,8 @@ enum PrimaryMenuOption: String, CaseIterable, Identifiable {
     
     var icon: String {
         switch self {
+        case .calendar:
+            return "calendar"
         case .home:
             return "house.fill"
         case .work:
@@ -35,6 +40,8 @@ enum PrimaryMenuOption: String, CaseIterable, Identifiable {
             return .home
         case 1:
             return .work
+        case 2:
+            return .calendar
         default:
             return nil
         }

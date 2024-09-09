@@ -34,6 +34,7 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "mainSideBarMenuTableViewCell", for: indexPath) as? MainSideBarMenuTableViewCell,
            let menuOption = PrimaryMenuOption.menuOptionFor(index: indexPath) {
             cell.menuImageView.image = UIImage(systemName: menuOption.icon)
+            cell.menuTitle.text = menuOption.printValue
             return cell
         }
         return UITableViewCell()
