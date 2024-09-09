@@ -12,6 +12,7 @@ class MainSplitViewNavigationController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setPrimaryMenuViewToBeAlwaysVisible()
+        setPrimaryMenuViewWidth()
     }
 }
 
@@ -20,5 +21,11 @@ extension MainSplitViewNavigationController {
         self.preferredDisplayMode = .oneBesideSecondary
         self.presentsWithGesture = false
         self.primaryBackgroundStyle = .sidebar
+    }
+}
+
+extension MainSplitViewNavigationController {
+    private func setPrimaryMenuViewWidth() {
+        preferredPrimaryColumnWidthFraction = 0.125
     }
 }
