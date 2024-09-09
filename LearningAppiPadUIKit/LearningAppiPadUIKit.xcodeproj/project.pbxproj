@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */; };
+		B7902DE22C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */; };
 		B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670A22C8D577600B10E9F /* AppDelegate.swift */; };
 		B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670A42C8D577600B10E9F /* SceneDelegate.swift */; };
 		B7D670AA2C8D577600B10E9F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B7D670A92C8D577600B10E9F /* Base */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSideBarMenuTableViewCell.swift; sourceTree = "<group>"; };
+		B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainSideBarMenuTableViewCell.xib; sourceTree = "<group>"; };
 		B7D6709F2C8D577600B10E9F /* LearningAppiPadUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppiPadUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D670A22C8D577600B10E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D670A42C8D577600B10E9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				B7D670B02C8D577700B10E9F /* Info.plist */,
 				B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */,
 				B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */,
+				B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */,
+				B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */,
 			);
 			path = LearningAppiPadUIKit;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7902DE22C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib in Resources */,
 				B7D670AC2C8D577700B10E9F /* Assets.xcassets in Resources */,
 				B7D670AF2C8D577700B10E9F /* Base in Resources */,
 				B7D670AA2C8D577600B10E9F /* Base in Resources */,
@@ -262,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D670D52C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift in Sources */,
+				B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */,
 				B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */,
 				B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */,
 				B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */,
