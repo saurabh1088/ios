@@ -39,6 +39,16 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
         }
         return UITableViewCell()
     }
+    
+    // TODO: Revisit this and check best way to show this.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let option = PrimaryMenuOption.menuOptionFor(index: indexPath) {
+            if option == .home {
+                let homeViewController = HomeViewController()
+                self.splitViewController?.showDetailViewController(homeViewController, sender: self)
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
