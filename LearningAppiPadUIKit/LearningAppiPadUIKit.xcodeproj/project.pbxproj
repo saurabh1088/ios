@@ -10,6 +10,8 @@
 		B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */; };
 		B7902DE22C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */; };
 		B7902DE42C8E9CB600A90440 /* PrimaryMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7902DE32C8E9CB600A90440 /* PrimaryMenuOption.swift */; };
+		B79473212C90B278000B3E7F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79473202C90B278000B3E7F /* HomeViewController.xib */; };
+		B79473222C90B278000B3E7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794731F2C90B278000B3E7F /* HomeViewController.swift */; };
 		B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670A22C8D577600B10E9F /* AppDelegate.swift */; };
 		B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670A42C8D577600B10E9F /* SceneDelegate.swift */; };
 		B7D670AA2C8D577600B10E9F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B7D670A92C8D577600B10E9F /* Base */; };
@@ -43,6 +45,8 @@
 		B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSideBarMenuTableViewCell.swift; sourceTree = "<group>"; };
 		B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainSideBarMenuTableViewCell.xib; sourceTree = "<group>"; };
 		B7902DE32C8E9CB600A90440 /* PrimaryMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryMenuOption.swift; sourceTree = "<group>"; };
+		B794731F2C90B278000B3E7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B79473202C90B278000B3E7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B7D6709F2C8D577600B10E9F /* LearningAppiPadUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppiPadUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D670A22C8D577600B10E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D670A42C8D577600B10E9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */,
 				B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */,
 				B7902DE32C8E9CB600A90440 /* PrimaryMenuOption.swift */,
+				B794731F2C90B278000B3E7F /* HomeViewController.swift */,
+				B79473202C90B278000B3E7F /* HomeViewController.xib */,
 			);
 			path = LearningAppiPadUIKit;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			files = (
 				B7902DE22C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib in Resources */,
 				B7D670AC2C8D577700B10E9F /* Assets.xcassets in Resources */,
+				B79473212C90B278000B3E7F /* HomeViewController.xib in Resources */,
 				B7D670AF2C8D577700B10E9F /* Base in Resources */,
 				B7D670AA2C8D577600B10E9F /* Base in Resources */,
 			);
@@ -276,6 +283,7 @@
 				B7902DE42C8E9CB600A90440 /* PrimaryMenuOption.swift in Sources */,
 				B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */,
 				B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */,
+				B79473222C90B278000B3E7F /* HomeViewController.swift in Sources */,
 				B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
