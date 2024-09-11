@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="LearningAppiPadUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="detailsButton" destination="dwU-AU-KTV" id="tYw-bP-Hqv"/>
+                <outlet property="homeLabel" destination="1zF-hP-cpf" id="TBk-0Z-Hpr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,12 +26,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-AU-KTV">
+                    <rect key="frame" x="16" y="468.66666666666669" width="361" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Details"/>
+                    <connections>
+                        <action selector="detailsButtonAction:" destination="-1" eventType="touchUpInside" id="ptt-FY-hqA"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="1zF-hP-cpf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="krH-PL-zks"/>
-                <constraint firstItem="1zF-hP-cpf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uzP-yR-8jp"/>
+                <constraint firstItem="dwU-AU-KTV" firstAttribute="top" secondItem="1zF-hP-cpf" secondAttribute="bottom" constant="32" id="Aae-ce-CWm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwU-AU-KTV" secondAttribute="trailing" constant="16" id="IOr-Gz-F5h"/>
+                <constraint firstItem="1zF-hP-cpf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KoH-lk-mUs"/>
+                <constraint firstItem="dwU-AU-KTV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nog-gW-EKm"/>
+                <constraint firstItem="1zF-hP-cpf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vMt-fg-XUP"/>
             </constraints>
             <point key="canvasLocation" x="140" y="20"/>
         </view>
