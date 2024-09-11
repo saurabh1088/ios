@@ -44,8 +44,15 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let option = PrimaryMenuOption.menuOptionFor(index: indexPath) {
             if option == .home {
-                let homeViewController = HomeViewController()
-                self.splitViewController?.showDetailViewController(homeViewController, sender: self)
+                // TODO: Fix this, flow always going inside if condition
+                // TODO: Investigate why self.splitViewController has two UINavigationController instances
+                if let result = self.splitViewController?.viewControllers.contains(where: { $0 is HomeViewController }),
+                   result == true {
+                    print("HomeViewController already on navigation stack, not pushing again")
+                } else {
+                    let homeViewController = HomeViewController()
+                    self.splitViewController?.showDetailViewController(homeViewController, sender: self)
+                }
             }
         }
     }
