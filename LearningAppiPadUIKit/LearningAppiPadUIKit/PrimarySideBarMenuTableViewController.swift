@@ -44,7 +44,11 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let option = PrimaryMenuOption.menuOptionFor(index: indexPath) {
             if option == .home {
-                // TODO: Investigate why self.splitViewController has two UINavigationController instances
+                /// If we check splitViewController's viewControllers property here, it shows it containing
+                /// two instances of UINavigationController, however as per storyboard there is only one
+                /// set.
+                /// Observed this to be UISplitViewController's behaviour as in a isolated project with only
+                /// UISplitViewController same behaviour was noticed.
                 if let navigationController = self.splitViewController?.viewControllers.last as? UINavigationController,
                    let topViewcontroller = navigationController.topViewController,
                     topViewcontroller is HomeViewController {
