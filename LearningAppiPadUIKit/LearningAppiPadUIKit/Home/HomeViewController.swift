@@ -14,11 +14,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backButton = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.backward.fill"),
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(goBack))
-        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = backButton
+        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = navigationBarBackButton()
     }
     
     @IBAction func detailsButtonAction(_ sender: Any) {
@@ -28,5 +24,14 @@ class HomeViewController: UIViewController {
     
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func navigationBarBackButton() -> UIBarButtonItem {
+        let backBarButton = UIBarButtonItem(image: UIImage(systemName: "arrowshape.backward.fill"),
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(goBack))
+        backBarButton.tintColor = UIColor(named: "vintageRed")
+        return backBarButton
     }
 }
