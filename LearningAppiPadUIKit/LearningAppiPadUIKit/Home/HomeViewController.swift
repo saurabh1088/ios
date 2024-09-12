@@ -14,10 +14,19 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.backward.fill"),
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(goBack))
+        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = backButton
     }
     
     @IBAction func detailsButtonAction(_ sender: Any) {
         let detailViewController = HomeDetailViewController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    @objc func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
