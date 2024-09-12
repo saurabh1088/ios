@@ -103,6 +103,29 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B79199802C9290390007F519 /* AppMain */ = {
+			isa = PBXGroup;
+			children = (
+				B7D670A22C8D577600B10E9F /* AppDelegate.swift */,
+				B7D670A42C8D577600B10E9F /* SceneDelegate.swift */,
+				B7D670A82C8D577600B10E9F /* Main.storyboard */,
+				B7D670AD2C8D577700B10E9F /* LaunchScreen.storyboard */,
+				B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */,
+			);
+			path = AppMain;
+			sourceTree = "<group>";
+		};
+		B79199812C9290AE0007F519 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */,
+				B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */,
+				B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */,
+				B7902DE32C8E9CB600A90440 /* PrimaryMenuOption.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		B7D670962C8D577600B10E9F = {
 			isa = PBXGroup;
 			children = (
@@ -126,18 +149,11 @@
 		B7D670A12C8D577600B10E9F /* LearningAppiPadUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B79199812C9290AE0007F519 /* Menu */,
+				B79199802C9290390007F519 /* AppMain */,
 				B76668BD2C9202CF0011DE23 /* Home */,
-				B7D670A22C8D577600B10E9F /* AppDelegate.swift */,
-				B7D670A42C8D577600B10E9F /* SceneDelegate.swift */,
-				B7D670A82C8D577600B10E9F /* Main.storyboard */,
 				B7D670AB2C8D577700B10E9F /* Assets.xcassets */,
-				B7D670AD2C8D577700B10E9F /* LaunchScreen.storyboard */,
 				B7D670B02C8D577700B10E9F /* Info.plist */,
-				B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */,
-				B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */,
-				B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */,
-				B7902DE02C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib */,
-				B7902DE32C8E9CB600A90440 /* PrimaryMenuOption.swift */,
 			);
 			path = LearningAppiPadUIKit;
 			sourceTree = "<group>";
