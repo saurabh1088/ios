@@ -51,7 +51,7 @@
 		B7902DE32C8E9CB600A90440 /* PrimaryMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryMenuOption.swift; sourceTree = "<group>"; };
 		B794731F2C90B278000B3E7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B79473202C90B278000B3E7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		B7D6709F2C8D577600B10E9F /* LearningAppiPadUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppiPadUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7D6709F2C8D577600B10E9F /* iPad UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPad UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D670A22C8D577600B10E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D670A42C8D577600B10E9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B7D670A92C8D577600B10E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		B7D670A02C8D577600B10E9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7D6709F2C8D577600B10E9F /* LearningAppiPadUIKit.app */,
+				B7D6709F2C8D577600B10E9F /* iPad UIKit.app */,
 				B7D670B52C8D577700B10E9F /* LearningAppiPadUIKitTests.xctest */,
 				B7D670BF2C8D577700B10E9F /* LearningAppiPadUIKitUITests.xctest */,
 			);
@@ -192,7 +192,7 @@
 			);
 			name = LearningAppiPadUIKit;
 			productName = LearningAppiPadUIKit;
-			productReference = B7D6709F2C8D577600B10E9F /* LearningAppiPadUIKit.app */;
+			productReference = B7D6709F2C8D577600B10E9F /* iPad UIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B7D670B42C8D577700B10E9F /* LearningAppiPadUIKitTests */ = {
@@ -511,7 +511,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.LearningAppiPadUIKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iPad UIKit";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,7 +538,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.LearningAppiPadUIKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iPad UIKit";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

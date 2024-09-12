@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,22 +14,31 @@
                     <view key="view" contentMode="scaleToFill" id="HHu-89-VyL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-RZ-CFe">
+                                <rect key="frame" x="16" y="416" width="361" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="67"/>
+                                <color key="textColor" red="0.78823529411764703" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ic7-eR-PS9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qw-6G-veP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="102"/>
+            <point key="canvasLocation" x="751.90839694656484" y="101.40845070422536"/>
         </scene>
         <!--Primary Side Bar Menu Table View Controller-->
         <scene sceneID="Buk-oX-WQs">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="bBf-NP-2dR" customClass="PrimarySideBarMenuTableViewController" customModule="LearningAppiPadUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="bBf-NP-2dR" customClass="PrimarySideBarMenuTableViewController" customModule="iPad_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dHN-LI-qcl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.87450980392156863" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UUH-wq-0mn">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -39,6 +47,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.87450980389999999" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -71,7 +80,7 @@
         <!--Main Split View Navigation Controller-->
         <scene sceneID="Dxv-2v-tsn">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" primaryBackgroundStyle="sidebar" id="Gh3-pz-xVS" customClass="MainSplitViewNavigationController" customModule="LearningAppiPadUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" primaryBackgroundStyle="sidebar" id="Gh3-pz-xVS" customClass="MainSplitViewNavigationController" customModule="iPad_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="fVX-Nf-uuF" kind="relationship" relationship="masterViewController" id="yWo-Wv-RV1"/>
                         <segue destination="cdd-uJ-4Wj" kind="relationship" relationship="detailViewController" id="lFT-7G-qyR"/>
@@ -82,9 +91,4 @@
             <point key="canvasLocation" x="-387" y="-196"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
