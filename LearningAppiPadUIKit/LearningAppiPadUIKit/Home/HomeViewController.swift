@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = navigationBarBackButton()
+        self.navigationItem.leftBarButtonItem = navigationBarBackButton()
     }
     
     @IBAction func detailsButtonAction(_ sender: Any) {
