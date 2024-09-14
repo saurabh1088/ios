@@ -50,6 +50,15 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
                     let homeViewController = HomeViewController()
                     self.splitViewController?.showDetailViewController(homeViewController, sender: self)
                 }
+            } else if option == .work {
+                if let navigationController = self.splitViewController?.viewControllers.last as? UINavigationController,
+                   let topViewcontroller = navigationController.topViewController,
+                    topViewcontroller is WorkViewController {
+                    print("WorkViewController already on navigation stack, not pushing again")
+                } else {
+                    let workViewController = WorkViewController()
+                    self.splitViewController?.showDetailViewController(workViewController, sender: self)
+                }
             }
         }
     }

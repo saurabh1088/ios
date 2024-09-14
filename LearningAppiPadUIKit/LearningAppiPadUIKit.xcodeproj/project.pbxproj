@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75B822A2C9550BD00379CFF /* WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75B82292C9550BD00379CFF /* WorkViewController.xib */; };
+		B75B822B2C9550BD00379CFF /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75B82282C9550BD00379CFF /* WorkViewController.swift */; };
 		B76668C02C9203130011DE23 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76668BE2C9203130011DE23 /* HomeDetailViewController.swift */; };
 		B76668C12C9203130011DE23 /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B76668BF2C9203130011DE23 /* HomeDetailViewController.xib */; };
 		B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B75B82282C9550BD00379CFF /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		B75B82292C9550BD00379CFF /* WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkViewController.xib; sourceTree = "<group>"; };
 		B76668BE2C9203130011DE23 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		B76668BF2C9203130011DE23 /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSideBarMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75B82272C9550A000379CFF /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				B75B82282C9550BD00379CFF /* WorkViewController.swift */,
+				B75B82292C9550BD00379CFF /* WorkViewController.xib */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
 		B76668BD2C9202CF0011DE23 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 		B7D670A12C8D577600B10E9F /* LearningAppiPadUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B75B82272C9550A000379CFF /* Work */,
 				B79199812C9290AE0007F519 /* Menu */,
 				B79199802C9290390007F519 /* AppMain */,
 				B76668BD2C9202CF0011DE23 /* Home */,
@@ -282,6 +296,7 @@
 				B7902DE22C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib in Resources */,
 				B7D670AC2C8D577700B10E9F /* Assets.xcassets in Resources */,
 				B79473212C90B278000B3E7F /* HomeViewController.xib in Resources */,
+				B75B822A2C9550BD00379CFF /* WorkViewController.xib in Resources */,
 				B7D670AF2C8D577700B10E9F /* Base in Resources */,
 				B76668C12C9203130011DE23 /* HomeDetailViewController.xib in Resources */,
 				B7D670AA2C8D577600B10E9F /* Base in Resources */,
@@ -315,6 +330,7 @@
 				B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */,
 				B76668C02C9203130011DE23 /* HomeDetailViewController.swift in Sources */,
 				B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */,
+				B75B822B2C9550BD00379CFF /* WorkViewController.swift in Sources */,
 				B79473222C90B278000B3E7F /* HomeViewController.swift in Sources */,
 				B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */,
 			);
