@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkViewController" customModule="iPad_UIKit" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="iPad_UIKit" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-Gn-N1y">
-                    <rect key="frame" x="148" y="402" width="97" height="48"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUr-I9-0cn">
+                    <rect key="frame" x="116.66666666666669" y="402" width="160" height="48"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
                     <color key="textColor" name="vintageRed"/>
                     <nil key="highlightedColor"/>
@@ -28,10 +28,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="vintageWhite"/>
             <constraints>
-                <constraint firstItem="w3L-Gn-N1y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uaa-BE-Mgf"/>
-                <constraint firstItem="w3L-Gn-N1y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nzo-JA-aRC"/>
+                <constraint firstItem="WUr-I9-0cn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="iRL-Qh-rSS"/>
+                <constraint firstItem="WUr-I9-0cn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r2f-0k-62W"/>
             </constraints>
-            <point key="canvasLocation" x="-5" y="20"/>
+            <point key="canvasLocation" x="-98" y="20"/>
         </view>
     </objects>
     <resources>

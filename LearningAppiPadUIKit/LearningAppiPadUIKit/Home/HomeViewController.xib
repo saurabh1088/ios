@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zF-hP-cpf">
-                    <rect key="frame" x="159.66666666666666" y="407" width="73.666666666666657" height="38.333333333333314"/>
-                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                    <rect key="frame" x="150.33333333333334" y="402" width="92.333333333333343" height="48"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
                     <color key="textColor" name="vintageRed"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-AU-KTV">
-                    <rect key="frame" x="16" y="477.33333333333331" width="361" height="34.999999999999943"/>
+                    <rect key="frame" x="16" y="482" width="361" height="35"/>
                     <color key="backgroundColor" name="vintageBlue"/>
                     <color key="tintColor" name="vintageWhite"/>
                     <state key="normal" title="Button"/>

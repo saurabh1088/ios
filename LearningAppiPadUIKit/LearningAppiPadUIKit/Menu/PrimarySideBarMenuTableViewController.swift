@@ -59,6 +59,15 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
                     let workViewController = WorkViewController()
                     self.splitViewController?.showDetailViewController(workViewController, sender: self)
                 }
+            } else if option == .calendar {
+                if let navigationController = self.splitViewController?.viewControllers.last as? UINavigationController,
+                   let topViewcontroller = navigationController.topViewController,
+                    topViewcontroller is CalendarViewController {
+                    print("CalendarViewController already on navigation stack, not pushing again")
+                } else {
+                    let calendarViewController = CalendarViewController()
+                    self.splitViewController?.showDetailViewController(calendarViewController, sender: self)
+                }
             }
         }
     }
