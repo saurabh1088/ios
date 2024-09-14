@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-RZ-CFe">
-                                <rect key="frame" x="16" y="416" width="361" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-RZ-CFe">
+                                <rect key="frame" x="77.333333333333329" y="389.66666666666669" width="238.66666666666669" height="73"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="67"/>
                                 <color key="textColor" red="0.78823529411764703" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -25,6 +24,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ic7-eR-PS9"/>
                         <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AaU-RZ-CFe" firstAttribute="centerY" secondItem="HHu-89-VyL" secondAttribute="centerY" id="JAa-8B-yNG"/>
+                            <constraint firstItem="AaU-RZ-CFe" firstAttribute="centerX" secondItem="HHu-89-VyL" secondAttribute="centerX" id="Ka1-6b-xjT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qw-6G-veP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
