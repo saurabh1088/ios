@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="iPad_UIKit" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="iPad_UIKit" customModuleProvider="target">
             <connections>
-                <outlet property="detailsButton" destination="dwU-AU-KTV" id="tYw-bP-Hqv"/>
-                <outlet property="homeLabel" destination="1zF-hP-cpf" id="TBk-0Z-Hpr"/>
+                <outlet property="calendarLabel" destination="WUr-I9-0cn" id="dmy-VS-5kY"/>
+                <outlet property="detailsButton" destination="D8k-Sa-0SM" id="PYt-Mx-45l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,33 +20,34 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zF-hP-cpf">
-                    <rect key="frame" x="150.33333333333334" y="402" width="92.333333333333343" height="48"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUr-I9-0cn">
+                    <rect key="frame" x="116.66666666666669" y="402" width="160" height="48"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
                     <color key="textColor" name="vintageRed"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-AU-KTV">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8k-Sa-0SM">
                     <rect key="frame" x="16" y="482" width="361" height="35"/>
                     <color key="backgroundColor" name="vintageBlue"/>
-                    <color key="tintColor" name="vintageWhite"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Details"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Details">
+                        <color key="baseForegroundColor" name="vintageWhite"/>
+                    </buttonConfiguration>
                     <connections>
-                        <action selector="detailsButtonAction:" destination="-1" eventType="touchUpInside" id="ptt-FY-hqA"/>
+                        <action selector="detailsButtonAction:" destination="-1" eventType="touchUpInside" id="6GS-un-lc7"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" name="vintageWhite"/>
             <constraints>
-                <constraint firstItem="dwU-AU-KTV" firstAttribute="top" secondItem="1zF-hP-cpf" secondAttribute="bottom" constant="32" id="Aae-ce-CWm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwU-AU-KTV" secondAttribute="trailing" constant="16" id="IOr-Gz-F5h"/>
-                <constraint firstItem="1zF-hP-cpf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KoH-lk-mUs"/>
-                <constraint firstItem="dwU-AU-KTV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nog-gW-EKm"/>
-                <constraint firstItem="1zF-hP-cpf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vMt-fg-XUP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D8k-Sa-0SM" secondAttribute="trailing" constant="16" id="Wmq-qP-3H5"/>
+                <constraint firstItem="D8k-Sa-0SM" firstAttribute="top" secondItem="WUr-I9-0cn" secondAttribute="bottom" constant="32" id="aRl-iI-UPI"/>
+                <constraint firstItem="WUr-I9-0cn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="iRL-Qh-rSS"/>
+                <constraint firstItem="WUr-I9-0cn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r2f-0k-62W"/>
+                <constraint firstItem="D8k-Sa-0SM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yK8-FO-Z66"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="20"/>
+            <point key="canvasLocation" x="-98.473282442748086" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

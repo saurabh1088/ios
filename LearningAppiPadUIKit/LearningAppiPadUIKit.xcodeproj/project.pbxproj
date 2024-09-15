@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75B822A2C9550BD00379CFF /* WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75B82292C9550BD00379CFF /* WorkViewController.xib */; };
+		B75B822B2C9550BD00379CFF /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75B82282C9550BD00379CFF /* WorkViewController.swift */; };
+		B75B822F2C9554FD00379CFF /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75B822E2C9554FD00379CFF /* CalendarViewController.xib */; };
+		B75B82302C9554FD00379CFF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75B822D2C9554FD00379CFF /* CalendarViewController.swift */; };
 		B76668C02C9203130011DE23 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76668BE2C9203130011DE23 /* HomeDetailViewController.swift */; };
 		B76668C12C9203130011DE23 /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B76668BF2C9203130011DE23 /* HomeDetailViewController.xib */; };
 		B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */; };
@@ -24,6 +28,10 @@
 		B7D670C62C8D577700B10E9F /* LearningAppiPadUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670C52C8D577700B10E9F /* LearningAppiPadUIKitUITestsLaunchTests.swift */; };
 		B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */; };
 		B7D670D52C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */; };
+		B7F4CBA62C969E3A0010F12B /* CalendarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4CBA42C969E3A0010F12B /* CalendarDetailsViewController.swift */; };
+		B7F4CBA72C969E3A0010F12B /* CalendarDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F4CBA52C969E3A0010F12B /* CalendarDetailsViewController.xib */; };
+		B7F4CBAA2C96A21A0010F12B /* WorkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4CBA82C96A21A0010F12B /* WorkDetailsViewController.swift */; };
+		B7F4CBAB2C96A21A0010F12B /* WorkDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F4CBA92C96A21A0010F12B /* WorkDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B75B82282C9550BD00379CFF /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		B75B82292C9550BD00379CFF /* WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkViewController.xib; sourceTree = "<group>"; };
+		B75B822D2C9554FD00379CFF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B75B822E2C9554FD00379CFF /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 		B76668BE2C9203130011DE23 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		B76668BF2C9203130011DE23 /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		B7902DDF2C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSideBarMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +77,10 @@
 		B7D670C52C8D577700B10E9F /* LearningAppiPadUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppiPadUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7D670D22C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewNavigationController.swift; sourceTree = "<group>"; };
 		B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySideBarMenuTableViewController.swift; sourceTree = "<group>"; };
+		B7F4CBA42C969E3A0010F12B /* CalendarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDetailsViewController.swift; sourceTree = "<group>"; };
+		B7F4CBA52C969E3A0010F12B /* CalendarDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDetailsViewController.xib; sourceTree = "<group>"; };
+		B7F4CBA82C96A21A0010F12B /* WorkDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewController.swift; sourceTree = "<group>"; };
+		B7F4CBA92C96A21A0010F12B /* WorkDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +108,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75B82272C9550A000379CFF /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				B75B82282C9550BD00379CFF /* WorkViewController.swift */,
+				B75B82292C9550BD00379CFF /* WorkViewController.xib */,
+				B7F4CBA82C96A21A0010F12B /* WorkDetailsViewController.swift */,
+				B7F4CBA92C96A21A0010F12B /* WorkDetailsViewController.xib */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		B75B822C2C9554E600379CFF /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B75B822D2C9554FD00379CFF /* CalendarViewController.swift */,
+				B75B822E2C9554FD00379CFF /* CalendarViewController.xib */,
+				B7F4CBA42C969E3A0010F12B /* CalendarDetailsViewController.swift */,
+				B7F4CBA52C969E3A0010F12B /* CalendarDetailsViewController.xib */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		B76668BD2C9202CF0011DE23 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +187,8 @@
 		B7D670A12C8D577600B10E9F /* LearningAppiPadUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B75B822C2C9554E600379CFF /* Calendar */,
+				B75B82272C9550A000379CFF /* Work */,
 				B79199812C9290AE0007F519 /* Menu */,
 				B79199802C9290390007F519 /* AppMain */,
 				B76668BD2C9202CF0011DE23 /* Home */,
@@ -282,9 +322,13 @@
 				B7902DE22C8E98EA00A90440 /* MainSideBarMenuTableViewCell.xib in Resources */,
 				B7D670AC2C8D577700B10E9F /* Assets.xcassets in Resources */,
 				B79473212C90B278000B3E7F /* HomeViewController.xib in Resources */,
+				B75B822A2C9550BD00379CFF /* WorkViewController.xib in Resources */,
+				B75B822F2C9554FD00379CFF /* CalendarViewController.xib in Resources */,
 				B7D670AF2C8D577700B10E9F /* Base in Resources */,
+				B7F4CBAB2C96A21A0010F12B /* WorkDetailsViewController.xib in Resources */,
 				B76668C12C9203130011DE23 /* HomeDetailViewController.xib in Resources */,
 				B7D670AA2C8D577600B10E9F /* Base in Resources */,
+				B7F4CBA72C969E3A0010F12B /* CalendarDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,12 +353,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75B82302C9554FD00379CFF /* CalendarViewController.swift in Sources */,
+				B7F4CBA62C969E3A0010F12B /* CalendarDetailsViewController.swift in Sources */,
+				B7F4CBAA2C96A21A0010F12B /* WorkDetailsViewController.swift in Sources */,
 				B7D670D52C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift in Sources */,
 				B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */,
 				B7902DE42C8E9CB600A90440 /* PrimaryMenuOption.swift in Sources */,
 				B7D670A32C8D577600B10E9F /* AppDelegate.swift in Sources */,
 				B76668C02C9203130011DE23 /* HomeDetailViewController.swift in Sources */,
 				B7D670D32C8DD9DE00B10E9F /* MainSplitViewNavigationController.swift in Sources */,
+				B75B822B2C9550BD00379CFF /* WorkViewController.swift in Sources */,
 				B79473222C90B278000B3E7F /* HomeViewController.swift in Sources */,
 				B7D670A52C8D577600B10E9F /* SceneDelegate.swift in Sources */,
 			);
