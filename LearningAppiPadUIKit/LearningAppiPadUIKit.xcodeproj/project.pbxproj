@@ -30,6 +30,8 @@
 		B7D670D52C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */; };
 		B7F4CBA62C969E3A0010F12B /* CalendarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4CBA42C969E3A0010F12B /* CalendarDetailsViewController.swift */; };
 		B7F4CBA72C969E3A0010F12B /* CalendarDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F4CBA52C969E3A0010F12B /* CalendarDetailsViewController.xib */; };
+		B7F4CBAA2C96A21A0010F12B /* WorkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4CBA82C96A21A0010F12B /* WorkDetailsViewController.swift */; };
+		B7F4CBAB2C96A21A0010F12B /* WorkDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F4CBA92C96A21A0010F12B /* WorkDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		B7D670D42C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySideBarMenuTableViewController.swift; sourceTree = "<group>"; };
 		B7F4CBA42C969E3A0010F12B /* CalendarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDetailsViewController.swift; sourceTree = "<group>"; };
 		B7F4CBA52C969E3A0010F12B /* CalendarDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDetailsViewController.xib; sourceTree = "<group>"; };
+		B7F4CBA82C96A21A0010F12B /* WorkDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewController.swift; sourceTree = "<group>"; };
+		B7F4CBA92C96A21A0010F12B /* WorkDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				B75B82282C9550BD00379CFF /* WorkViewController.swift */,
 				B75B82292C9550BD00379CFF /* WorkViewController.xib */,
+				B7F4CBA82C96A21A0010F12B /* WorkDetailsViewController.swift */,
+				B7F4CBA92C96A21A0010F12B /* WorkDetailsViewController.xib */,
 			);
 			path = Work;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				B75B822A2C9550BD00379CFF /* WorkViewController.xib in Resources */,
 				B75B822F2C9554FD00379CFF /* CalendarViewController.xib in Resources */,
 				B7D670AF2C8D577700B10E9F /* Base in Resources */,
+				B7F4CBAB2C96A21A0010F12B /* WorkDetailsViewController.xib in Resources */,
 				B76668C12C9203130011DE23 /* HomeDetailViewController.xib in Resources */,
 				B7D670AA2C8D577600B10E9F /* Base in Resources */,
 				B7F4CBA72C969E3A0010F12B /* CalendarDetailsViewController.xib in Resources */,
@@ -348,6 +355,7 @@
 			files = (
 				B75B82302C9554FD00379CFF /* CalendarViewController.swift in Sources */,
 				B7F4CBA62C969E3A0010F12B /* CalendarDetailsViewController.swift in Sources */,
+				B7F4CBAA2C96A21A0010F12B /* WorkDetailsViewController.swift in Sources */,
 				B7D670D52C8DDC6000B10E9F /* PrimarySideBarMenuTableViewController.swift in Sources */,
 				B7902DE12C8E98EA00A90440 /* MainSideBarMenuTableViewCell.swift in Sources */,
 				B7902DE42C8E9CB600A90440 /* PrimaryMenuOption.swift in Sources */,

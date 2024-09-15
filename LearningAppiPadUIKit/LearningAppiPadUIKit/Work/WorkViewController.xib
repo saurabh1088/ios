@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkViewController" customModule="iPad_UIKit" customModuleProvider="target">
             <connections>
+                <outlet property="detailsButton" destination="gO1-st-Asl" id="dmM-Rn-75T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="workLabel" destination="w3L-Gn-N1y" id="CVE-xY-uRA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,17 +26,34 @@
                     <color key="textColor" name="vintageRed"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-st-Asl">
+                    <rect key="frame" x="16" y="482" width="361" height="35"/>
+                    <color key="backgroundColor" name="vintageBlue"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Details">
+                        <color key="baseForegroundColor" name="vintageWhite"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="detailsButtonAction:" destination="-1" eventType="touchUpInside" id="CCh-g5-lJf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="vintageWhite"/>
             <constraints>
                 <constraint firstItem="w3L-Gn-N1y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uaa-BE-Mgf"/>
+                <constraint firstItem="gO1-st-Asl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Yvd-f0-stA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gO1-st-Asl" secondAttribute="trailing" constant="16" id="hcl-Hf-AQZ"/>
                 <constraint firstItem="w3L-Gn-N1y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nzo-JA-aRC"/>
+                <constraint firstItem="gO1-st-Asl" firstAttribute="top" secondItem="w3L-Gn-N1y" secondAttribute="bottom" constant="32" id="pqI-iq-fQK"/>
             </constraints>
-            <point key="canvasLocation" x="-5" y="20"/>
+            <point key="canvasLocation" x="-5.343511450381679" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="vintageBlue">
+            <color red="0.49411764705882355" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="vintageRed">
             <color red="0.78823529411764703" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -1,31 +1,21 @@
 //
-//  WorkViewController.swift
+//  WorkDetailsViewController.swift
 //  LearningAppiPadUIKit
 //
-//  Created by Saurabh Verma on 14/09/24.
+//  Created by Saurabh Verma on 15/09/24.
 //
 
 import UIKit
 
-class WorkViewController: UIViewController {
-    
-    @IBOutlet weak var workLabel: UILabel!
-    
-    @IBOutlet weak var detailsButton: UIButton!
-    
+class WorkDetailsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = navigationBarBackButton()
     }
-    
-    @IBAction func detailsButtonAction(_ sender: Any) {
-        let workDetailsViewController = WorkDetailsViewController()
-        self.navigationController?.pushViewController(workDetailsViewController, animated: true)
-    }
-    
 }
 
-extension WorkViewController {
+extension WorkDetailsViewController {
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
     }
