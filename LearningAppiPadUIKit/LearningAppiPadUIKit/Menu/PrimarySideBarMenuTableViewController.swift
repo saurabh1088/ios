@@ -79,12 +79,12 @@ extension PrimarySideBarMenuTableViewController {
         let button = UIButton(type: .system)
         button.frame = CGRect(x: 0, y: 50, width: 10, height: 200)
         button.setTitle("Test", for: .normal)
-        button.tintColor = .white // Change the icon color
+        button.tintColor = .white
         button.backgroundColor = .blue
         
         let bottomView = UIView()
-        bottomView.backgroundColor = .red // or your color
-        bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 200, width: tableView.frame.size.width, height: 200) // 78 or your size of view
+        bottomView.backgroundColor = .red
+        bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 200, width: tableView.frame.size.width, height: 200)
         bottomView.addSubview(button)
         navigationController?.view.addSubview(bottomView)
         tableView.tableFooterView = UIView()
