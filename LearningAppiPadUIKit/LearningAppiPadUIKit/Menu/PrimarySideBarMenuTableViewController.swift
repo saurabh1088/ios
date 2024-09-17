@@ -12,6 +12,7 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MainSideBarMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "mainSideBarMenuTableViewCell")
+        createBottomButton()
     }
 
     // MARK: - Table view data source
@@ -70,5 +71,22 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
                 }
             }
         }
+    }
+}
+
+extension PrimarySideBarMenuTableViewController {
+    private func createBottomButton() {
+        let button = UIButton(type: .system)
+        button.frame = CGRect(x: 0, y: 50, width: 10, height: 200)
+        button.setTitle("Test", for: .normal)
+        button.tintColor = .white // Change the icon color
+        button.backgroundColor = .blue
+        
+        let bottomView = UIView()
+        bottomView.backgroundColor = .red // or your color
+        bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 200, width: tableView.frame.size.width, height: 200) // 78 or your size of view
+        bottomView.addSubview(button)
+        navigationController?.view.addSubview(bottomView)
+        tableView.tableFooterView = UIView()
     }
 }
