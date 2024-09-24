@@ -74,6 +74,7 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
     }
 }
 
+// TODO: Explore more, this domewhat works but the image isn't sized properly.
 extension PrimarySideBarMenuTableViewController {
     private func createBottomButton() {
         // Option 1
