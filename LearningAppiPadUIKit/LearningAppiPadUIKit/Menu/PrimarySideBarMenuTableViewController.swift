@@ -76,17 +76,30 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
 
 extension PrimarySideBarMenuTableViewController {
     private func createBottomButton() {
-        let button = UIButton(type: .system)
-        button.frame = CGRect(x: 0, y: 50, width: 10, height: 200)
-        button.setTitle("Test", for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = .blue
-        
-        let bottomView = UIView()
-        bottomView.backgroundColor = .red
-        bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 200, width: tableView.frame.size.width, height: 200)
-        bottomView.addSubview(button)
-        navigationController?.view.addSubview(bottomView)
-        tableView.tableFooterView = UIView()
+        // Option 1
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 200, width: tableView.frame.size.width, height: 200)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        imageView.image = UIImage(named: "exit")
+        imageView.contentMode = .scaleAspectFill
+        button.addSubview(imageView)
+        button.setBackgroundImage(UIImage(named: "exit"), for: .normal)
+        button.backgroundColor = .yellow
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        navigationController?.view.addSubview(button)
+
+        // Option 2
+        /*
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 200, width: tableView.frame.size.width, height: 200)
+        button.setImage(UIImage(named: "exit"), for: .normal)
+        button.backgroundColor = .yellow
+        self.view.addSubview(button)
+         */
+    }
+    
+    @objc func buttonTapped() {
+        print("Button was tapped!")
     }
 }
