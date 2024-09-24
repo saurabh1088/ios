@@ -13,7 +13,7 @@ class PrimarySideBarMenuTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MainSideBarMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "mainSideBarMenuTableViewCell")
         // TODO: Uncomment once proper solution is implemented.
-        createBottomButton()
+        // createBottomButton()
     }
 
     // MARK: - Table view data source
