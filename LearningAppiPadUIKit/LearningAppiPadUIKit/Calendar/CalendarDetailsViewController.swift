@@ -8,7 +8,9 @@
 import UIKit
 
 class CalendarDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = navigationBarBackButton()
