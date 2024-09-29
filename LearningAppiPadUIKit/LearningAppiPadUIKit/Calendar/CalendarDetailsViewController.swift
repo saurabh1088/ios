@@ -7,13 +7,17 @@
 
 import UIKit
 
-class CalendarDetailsViewController: UIViewController {
+class CalendarDetailsViewController: UIViewController,
+                                     UICollectionViewDataSource,
+                                     UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = navigationBarBackButton()
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
     }
 }
 
@@ -29,5 +33,15 @@ extension CalendarDetailsViewController {
                                             action: #selector(goBack))
         backBarButton.tintColor = UIColor(named: "vintageRed")
         return backBarButton
+    }
+}
+
+extension CalendarDetailsViewController {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
 }
