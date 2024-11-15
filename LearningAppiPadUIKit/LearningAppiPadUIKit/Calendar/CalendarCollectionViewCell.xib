@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calendarCollectionViewCell" id="gTV-IL-0wX" customClass="CalendarCollectionViewCell" customModule="iPad_UIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LG7-dE-ff1">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-2z-WV0">
+                                <rect key="frame" x="44" y="72" width="112" height="56.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="vintageBlue"/>
+                        <constraints>
+                            <constraint firstItem="G7G-2z-WV0" firstAttribute="centerY" secondItem="LG7-dE-ff1" secondAttribute="centerY" id="8mF-8W-laa"/>
+                            <constraint firstItem="G7G-2z-WV0" firstAttribute="centerX" secondItem="LG7-dE-ff1" secondAttribute="centerX" id="opx-Yc-vaG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LG7-dE-ff1" secondAttribute="bottom" id="E6u-cO-W8Z"/>
+                <constraint firstItem="LG7-dE-ff1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KVc-BT-oPw"/>
+                <constraint firstItem="LG7-dE-ff1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vr3-wR-Wsh"/>
+                <constraint firstAttribute="trailing" secondItem="LG7-dE-ff1" secondAttribute="trailing" id="chV-MK-AlP"/>
+            </constraints>
+            <size key="customSize" width="151" height="140"/>
+            <connections>
+                <outlet property="dayNumberLabel" destination="G7G-2z-WV0" id="Ikc-Ei-s5X"/>
+            </connections>
+            <point key="canvasLocation" x="215.26717557251908" y="51.408450704225352"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="vintageBlue">
+            <color red="0.49411764705882355" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
