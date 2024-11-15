@@ -49,3 +49,6 @@ can be used exclusively for iPad form factor.
 ### 8. LearningAppiPadUIKit
 Sample project supporting iPad using UIKit. This app explores UI options and designs
 one can implement considering more real state on larger iPad screens.
+
+### 9. LearningAppStartupUIKit
+Sample project using UIKit to explore app startup.
