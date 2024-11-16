@@ -51,4 +51,6 @@ Sample project supporting iPad using UIKit. This app explores UI options and des
 one can implement considering more real state on larger iPad screens.
 
 ### 9. LearningAppStartupUIKit
-Sample project using UIKit to explore app startup.
+Sample project using UIKit to explore app startup. This app explores various startup
+scenarios and app states delegate callbacks.
+
