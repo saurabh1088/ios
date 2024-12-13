@@ -37,6 +37,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bO0-wd-fBF" kind="show" identifier="showShowFromNavigationControllerViewController" id="aT0-rO-WSA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -94,6 +97,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foK-yi-t61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1530.534351145038" y="-158.45070422535213"/>
+        </scene>
+        <!--Show From Navigation Controller View Controller-->
+        <scene sceneID="Vo1-K0-e9t">
+            <objects>
+                <viewController id="eYA-DN-taz" customClass="ShowFromNavigationControllerViewController" customModule="LearningAppStoryboardSegueOptionsUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQ8-ka-aBw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Is-LR-fGD">
+                                <rect key="frame" x="159" y="403.66666666666669" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="showButtonAction:" destination="eYA-DN-taz" eventType="touchUpInside" id="jeY-eg-BoI"/>
+                                    <segue destination="Mpz-Aj-y3s" kind="show" id="Ok1-EJ-Ux6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6fY-Ub-rCG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Is-LR-fGD" firstAttribute="centerX" secondItem="JQ8-ka-aBw" secondAttribute="centerX" id="GXM-EZ-B0z"/>
+                            <constraint firstItem="2Is-LR-fGD" firstAttribute="centerY" secondItem="JQ8-ka-aBw" secondAttribute="centerY" id="vaf-wY-5DK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EuZ-H1-4m5"/>
+                    <connections>
+                        <outlet property="showButton" destination="2Is-LR-fGD" id="hhw-HC-fIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrE-Ku-H4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457.2519083969464" y="595.77464788732402"/>
+        </scene>
+        <!--Show From Navigation Controller Child View Controller-->
+        <scene sceneID="hkI-Yr-i52">
+            <objects>
+                <viewController id="Mpz-Aj-y3s" customClass="ShowFromNavigationControllerChildViewController" customModule="LearningAppStoryboardSegueOptionsUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2qe-m1-zVk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l1j-Il-VrH">
+                                <rect key="frame" x="16" y="56" width="361" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ENf-hc-BdP"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pQM-1v-xyD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pQM-1v-xyD" firstAttribute="trailing" secondItem="l1j-Il-VrH" secondAttribute="trailing" constant="16" id="CCI-Ug-dag"/>
+                            <constraint firstItem="l1j-Il-VrH" firstAttribute="top" secondItem="pQM-1v-xyD" secondAttribute="top" id="CYC-Lo-vKa"/>
+                            <constraint firstItem="l1j-Il-VrH" firstAttribute="leading" secondItem="pQM-1v-xyD" secondAttribute="leading" constant="16" id="Wfo-FI-ebl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OVi-id-VsD"/>
+                    <connections>
+                        <outlet property="textView" destination="l1j-Il-VrH" id="e51-qb-42r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVl-Sm-cnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3437" y="596"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b2Z-FO-43k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bO0-wd-fBF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Xzw-Wi-gb1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F8N-aQ-leo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eYA-DN-taz" kind="relationship" relationship="rootViewController" id="X1Z-gv-oHl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjQ-k8-WZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530.534351145038" y="595.77464788732402"/>
         </scene>
     </scenes>
     <resources>

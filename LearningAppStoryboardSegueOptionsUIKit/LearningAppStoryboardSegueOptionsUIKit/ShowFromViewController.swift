@@ -13,6 +13,6 @@ class ShowFromViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = "This view controller is shown from another view controller using a segue with options"
+        textView.text = "This view controller is shown from another view controller using a segue with option - Show(Push)"
     }
 }

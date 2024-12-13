@@ -37,3 +37,13 @@ extension ViewController {
         return UITableViewCell()
     }
 }
+
+extension ViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showShowFromNavigationControllerViewController",
+           let navigationController = segue.destination as? UINavigationController {
+            navigationController.modalPresentationStyle = .fullScreen
+        }
+    }
+}
