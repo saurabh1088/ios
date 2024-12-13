@@ -54,3 +54,6 @@ one can implement considering more real state on larger iPad screens.
 Sample project using UIKit to explore app startup. This app explores various startup
 scenarios and app states delegate callbacks.
 
+### 10. LearningAppStoryboardSegueOptionsUIKit
+Sample project using UIKit to explore storyboard segue options.
+
