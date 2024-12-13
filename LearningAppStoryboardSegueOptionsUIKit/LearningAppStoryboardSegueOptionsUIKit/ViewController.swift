@@ -25,7 +25,7 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,6 +44,9 @@ extension ViewController {
         if segue.identifier == "showShowFromNavigationControllerViewController",
            let navigationController = segue.destination as? UINavigationController {
             navigationController.modalPresentationStyle = .fullScreen
+        } else if segue.identifier == "showShowDetailFromSplitViewController",
+            let splitViewController = segue.destination as? ShowDetailFromSplitViewController {
+            splitViewController.modalTransitionStyle = .flipHorizontal
         }
     }
 }
