@@ -12,7 +12,7 @@ enum StoryboardSegueOption: String, CaseIterable, Identifiable {
     case showFromViewController
     case showFromNavigationController
     case showDetailFromViewController
-    case showDetailFromNavigationController
+    case showDetailFromSplitViewController
     case presentModally
     case presentAsPopover
     
@@ -26,8 +26,8 @@ enum StoryboardSegueOption: String, CaseIterable, Identifiable {
             return "Show From Navigation Controller"
         case .showDetailFromViewController:
             return "Show Detail From View Controller"
-        case .showDetailFromNavigationController:
-            return "Show Detail From Navigation Controller"
+        case .showDetailFromSplitViewController:
+            return "Show Detail From Split View Controller"
         case .presentModally:
             return "Present Modally"
         case .presentAsPopover:
@@ -43,8 +43,8 @@ enum StoryboardSegueOption: String, CaseIterable, Identifiable {
             return "showFromNavigationControllerSegueCell"
         case .showDetailFromViewController:
             return "showDetailFromViewControllerSegueCell"
-        case .showDetailFromNavigationController:
-            return "showDetailFromNavigationControllerSegueCell"
+        case .showDetailFromSplitViewController:
+            return "showDetailFromSplitViewControllerSegueCell"
         case .presentModally:
             return "presentModallySegueCell"
         case .presentAsPopover:
@@ -61,7 +61,7 @@ enum StoryboardSegueOption: String, CaseIterable, Identifiable {
         case 2:
             return .showDetailFromViewController
         case 3:
-            return .showDetailFromNavigationController
+            return .showDetailFromSplitViewController
         case 4:
             return .presentModally
         case 5:
