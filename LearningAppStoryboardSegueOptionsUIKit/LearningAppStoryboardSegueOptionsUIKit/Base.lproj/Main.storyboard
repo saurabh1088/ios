@@ -26,6 +26,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fGe-wF-Wet" kind="show" identifier="showShowFromViewController" id="ctB-Hz-Ft3"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showFromNavigationControllerSegueCell" id="pgJ-FW-Yt1">
                                         <rect key="frame" x="20" y="99" width="353" height="43.666667938232422"/>
@@ -55,8 +58,48 @@
             </objects>
             <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
         </scene>
+        <!--Show From View Controller-->
+        <scene sceneID="Cor-vj-dPB">
+            <objects>
+                <viewController id="fGe-wF-Wet" customClass="ShowFromViewController" customModule="LearningAppStoryboardSegueOptionsUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fN-dR-SR7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-bh-Hj7">
+                                <rect key="frame" x="16" y="16" width="361" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GQh-oQ-EYa"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W33-Nx-zZw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W33-Nx-zZw" firstAttribute="trailing" secondItem="oOZ-bh-Hj7" secondAttribute="trailing" constant="16" id="Mmc-P0-HZO"/>
+                            <constraint firstItem="oOZ-bh-Hj7" firstAttribute="leading" secondItem="W33-Nx-zZw" secondAttribute="leading" constant="16" id="OJx-Tk-r3l"/>
+                            <constraint firstItem="oOZ-bh-Hj7" firstAttribute="top" secondItem="6fN-dR-SR7" secondAttribute="top" constant="16" id="UCb-en-mZG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9wg-pJ-nTD"/>
+                    <connections>
+                        <outlet property="textView" destination="oOZ-bh-Hj7" id="6sH-ei-j2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foK-yi-t61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530.534351145038" y="-158.45070422535213"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
