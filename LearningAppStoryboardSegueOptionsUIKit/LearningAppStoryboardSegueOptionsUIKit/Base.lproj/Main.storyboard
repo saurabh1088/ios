@@ -41,6 +41,17 @@
                                             <segue destination="bO0-wd-fBF" kind="show" identifier="showShowFromNavigationControllerViewController" id="aT0-rO-WSA"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showDetailFromViewControllerSegueCell" id="cJL-tA-pA4">
+                                        <rect key="frame" x="20" y="142.66666793823242" width="353" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJL-tA-pA4" id="JAn-Ne-QGq">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="b4M-UV-e2h" kind="showDetail" id="w8c-cA-58r"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -60,6 +71,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
+        </scene>
+        <!--Show Detail From View Controller-->
+        <scene sceneID="qed-nc-MMg">
+            <objects>
+                <viewController id="b4M-UV-e2h" customClass="ShowDetailFromViewController" customModule="LearningAppStoryboardSegueOptionsUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qgy-91-bmF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pi5-ae-VN6">
+                                <rect key="frame" x="16" y="32" width="361" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LVO-sC-zMc"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yip-ln-tNZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pi5-ae-VN6" firstAttribute="top" secondItem="Yip-ln-tNZ" secondAttribute="top" constant="32" id="GML-2P-i9U"/>
+                            <constraint firstItem="pi5-ae-VN6" firstAttribute="leading" secondItem="Yip-ln-tNZ" secondAttribute="leading" constant="16" id="Yw0-VK-0IM"/>
+                            <constraint firstItem="Yip-ln-tNZ" firstAttribute="trailing" secondItem="pi5-ae-VN6" secondAttribute="trailing" constant="16" id="hw4-wQ-CaQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="pi5-ae-VN6" id="Zhh-oc-GPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHe-0I-9hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="555"/>
         </scene>
         <!--Show From View Controller-->
         <scene sceneID="Cor-vj-dPB">
@@ -96,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foK-yi-t61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530.534351145038" y="-158.45070422535213"/>
+            <point key="canvasLocation" x="1036" y="-887"/>
         </scene>
         <!--Show From Navigation Controller View Controller-->
         <scene sceneID="Vo1-K0-e9t">
@@ -130,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrE-Ku-H4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2457.2519083969464" y="595.77464788732402"/>
+            <point key="canvasLocation" x="1932" y="-196"/>
         </scene>
         <!--Show From Navigation Controller Child View Controller-->
         <scene sceneID="hkI-Yr-i52">
@@ -167,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVl-Sm-cnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3437" y="596"/>
+            <point key="canvasLocation" x="2708" y="-196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b2Z-FO-43k">
@@ -186,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjQ-k8-WZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530.534351145038" y="595.77464788732402"/>
+            <point key="canvasLocation" x="1079" y="-196"/>
         </scene>
     </scenes>
     <resources>
