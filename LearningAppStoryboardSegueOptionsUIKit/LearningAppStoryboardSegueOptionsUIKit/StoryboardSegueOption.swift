@@ -9,6 +9,10 @@ import Foundation
 
 enum StoryboardSegueOption: String, CaseIterable, Identifiable {
     
+    // TODO: Add unit tests for this enum
+    // TODO: Add example for case showDetailFromSplitViewController
+    // TODO: Add example for case presentAsPopover
+    
     case showFromViewController
     case showFromNavigationController
     case showDetailFromViewController
