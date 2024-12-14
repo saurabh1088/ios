@@ -39,6 +39,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lWL-Yi-yeV" kind="show" identifier="showBoundsViewController" id="oEN-Vr-gDI"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="centerOptionCell" id="NfA-kO-o8m">
                                         <rect key="frame" x="20" y="142.66666793823242" width="353" height="43.666667938232422"/>
@@ -138,6 +141,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwe-z7-7e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1093.8931297709923" y="-231.69014084507043"/>
+        </scene>
+        <!--Bounds View Controller-->
+        <scene sceneID="B9e-qH-kr6">
+            <objects>
+                <viewController id="lWL-Yi-yeV" customClass="BoundsViewController" customModule="LearningAppFrameBoundCenterUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zGC-b4-8qc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyj-WH-UU6">
+                                <rect key="frame" x="16" y="32" width="361" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtW-g6-mea">
+                                        <rect key="frame" x="60" y="36" width="100" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="customOrange"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4de-2s-CCh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-0C-uiH">
+                                <rect key="frame" x="16" y="240" width="361" height="35"/>
+                                <color key="backgroundColor" name="customRed"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Animate Bounds">
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="animateBoundsSizeAction:" destination="lWL-Yi-yeV" eventType="touchUpInside" id="03J-qi-aJk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nlE-Kb-M10"/>
+                        <color key="backgroundColor" name="customBackground"/>
+                        <constraints>
+                            <constraint firstItem="aHJ-0C-uiH" firstAttribute="top" secondItem="iyj-WH-UU6" secondAttribute="bottom" constant="8" id="3dX-o7-EQQ"/>
+                            <constraint firstItem="nlE-Kb-M10" firstAttribute="trailing" secondItem="aHJ-0C-uiH" secondAttribute="trailing" constant="16" id="8SZ-Kp-w89"/>
+                            <constraint firstItem="iyj-WH-UU6" firstAttribute="leading" secondItem="nlE-Kb-M10" secondAttribute="leading" constant="16" id="Ffz-SV-w2b"/>
+                            <constraint firstItem="iyj-WH-UU6" firstAttribute="top" secondItem="nlE-Kb-M10" secondAttribute="top" constant="32" id="Jn1-O3-IZl"/>
+                            <constraint firstItem="nlE-Kb-M10" firstAttribute="trailing" secondItem="iyj-WH-UU6" secondAttribute="trailing" constant="16" id="POm-Ot-WHz"/>
+                            <constraint firstItem="aHJ-0C-uiH" firstAttribute="leading" secondItem="nlE-Kb-M10" secondAttribute="leading" constant="16" id="zfK-VS-xs3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2hZ-zX-Z5i"/>
+                    <connections>
+                        <outlet property="animateBoundsSize" destination="aHJ-0C-uiH" id="8o1-dm-zje"/>
+                        <outlet property="exampleSubViewOne" destination="xtW-g6-mea" id="Zg4-8C-D7P"/>
+                        <outlet property="exampleSuperViewOne" destination="iyj-WH-UU6" id="Fkz-By-DjB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zS4-3q-ABO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="497"/>
         </scene>
     </scenes>
     <resources>

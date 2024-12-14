@@ -40,6 +40,9 @@ extension ViewController {
         if segue.identifier == "showFrameViewController",
            let vc = segue.destination as? FrameViewController {
             vc.modalPresentationStyle = .fullScreen
+        } else if segue.identifier == "showBoundsViewController",
+            let vc = segue.destination as? BoundsViewController {
+            vc.modalPresentationStyle = .fullScreen
         }
     }
 }
