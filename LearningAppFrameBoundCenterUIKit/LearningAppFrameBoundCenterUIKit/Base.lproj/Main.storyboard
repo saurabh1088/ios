@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PzD-r7-saM">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="customBackground"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="frameOptionCell" id="yeW-fV-myw">
                                         <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
@@ -28,6 +28,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="customRed"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="zBp-Ov-f4b" kind="show" identifier="showFrameViewController" id="CDn-v4-JGD"/>
                                         </connections>
@@ -39,6 +41,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="customGreen"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="lWL-Yi-yeV" kind="show" identifier="showBoundsViewController" id="oEN-Vr-gDI"/>
                                         </connections>
@@ -50,6 +54,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="customOrange"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="a4S-f6-nt6" kind="show" identifier="showCenterViewController" id="88l-QF-wqY"/>
                                         </connections>
@@ -89,10 +95,10 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-hS-A9m">
                                         <rect key="frame" x="68" y="36" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="customOrange"/>
+                                        <color key="backgroundColor" name="customGreen"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="customYellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="yDd-Uh-dtl"/>
                                 </constraints>
@@ -172,7 +178,7 @@
                                         <color key="backgroundColor" name="customRed"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="customYellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="oc0-I1-9jb"/>
                                 </constraints>
@@ -226,10 +232,10 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtW-g6-mea">
                                         <rect key="frame" x="60" y="36" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="customOrange"/>
+                                        <color key="backgroundColor" name="customGreen"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="customYellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="4de-2s-CCh"/>
                                 </constraints>
@@ -296,9 +302,9 @@
         <namedColor name="customRed">
             <color red="0.55294117647058827" green="0.043137254901960784" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="customYellow">
+            <color red="0.98039215686274506" green="0.85490196078431369" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

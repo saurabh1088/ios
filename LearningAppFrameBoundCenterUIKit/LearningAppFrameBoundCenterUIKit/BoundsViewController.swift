@@ -7,7 +7,6 @@
 
 import UIKit
 
-// TODO: Need to explore this example in detail
 class BoundsViewController: UIViewController {
     
     @IBOutlet weak var exampleSuperViewOne: UIView!

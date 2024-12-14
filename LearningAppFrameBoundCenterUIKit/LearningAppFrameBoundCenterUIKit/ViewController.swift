@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
