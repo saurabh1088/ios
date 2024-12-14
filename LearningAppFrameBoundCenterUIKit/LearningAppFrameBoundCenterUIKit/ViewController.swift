@@ -43,6 +43,9 @@ extension ViewController {
         } else if segue.identifier == "showBoundsViewController",
             let vc = segue.destination as? BoundsViewController {
             vc.modalPresentationStyle = .fullScreen
+        } else if segue.identifier == "showCenterViewController",
+            let vc = segue.destination as? CenterViewController {
+            vc.modalPresentationStyle = .fullScreen
         }
     }
 }
