@@ -96,9 +96,20 @@
                                 <color key="backgroundColor" name="customRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Animate Frame"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Animate Frame - Size"/>
                                 <connections>
                                     <action selector="animateFrameAction:" destination="zBp-Ov-f4b" eventType="touchUpInside" id="SY7-uM-NAG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfz-IK-Zb9">
+                                <rect key="frame" x="16" y="283" width="361" height="35"/>
+                                <color key="backgroundColor" name="customRed"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Animate Frame - Position">
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="animateFramePositionAction:" destination="zBp-Ov-f4b" eventType="touchUpInside" id="LcE-XA-itM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,16 +117,20 @@
                         <color key="backgroundColor" name="customBackground"/>
                         <constraints>
                             <constraint firstItem="8LQ-fM-Zto" firstAttribute="top" secondItem="W5v-wv-JIc" secondAttribute="top" constant="32" id="CT9-mk-yq4"/>
+                            <constraint firstItem="Lfz-IK-Zb9" firstAttribute="top" secondItem="fhb-2e-t3h" secondAttribute="bottom" constant="8" id="JDU-4n-Nzw"/>
                             <constraint firstItem="W5v-wv-JIc" firstAttribute="trailing" secondItem="fhb-2e-t3h" secondAttribute="trailing" constant="16" id="PBT-R3-Pb1"/>
                             <constraint firstItem="W5v-wv-JIc" firstAttribute="trailing" secondItem="8LQ-fM-Zto" secondAttribute="trailing" constant="16" id="f6o-HQ-9lu"/>
                             <constraint firstItem="fhb-2e-t3h" firstAttribute="leading" secondItem="W5v-wv-JIc" secondAttribute="leading" constant="16" id="fnE-AS-eEb"/>
+                            <constraint firstItem="Lfz-IK-Zb9" firstAttribute="leading" secondItem="W5v-wv-JIc" secondAttribute="leading" constant="16" id="fuK-f1-4PN"/>
                             <constraint firstItem="8LQ-fM-Zto" firstAttribute="leading" secondItem="W5v-wv-JIc" secondAttribute="leading" constant="16" id="iYw-9a-KWb"/>
                             <constraint firstItem="fhb-2e-t3h" firstAttribute="top" secondItem="8LQ-fM-Zto" secondAttribute="bottom" constant="8" id="rW4-ts-asa"/>
+                            <constraint firstItem="W5v-wv-JIc" firstAttribute="trailing" secondItem="Lfz-IK-Zb9" secondAttribute="trailing" constant="16" id="vWJ-7R-eMn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5j9-zf-FWc"/>
                     <connections>
                         <outlet property="animateFrameButton" destination="fhb-2e-t3h" id="YuN-8A-pua"/>
+                        <outlet property="animateFramePositionButton" destination="Lfz-IK-Zb9" id="1OL-ES-bDP"/>
                         <outlet property="exampleSubViewOne" destination="tEZ-hS-A9m" id="ilI-VA-d7k"/>
                         <outlet property="exampleSuperViewOne" destination="8LQ-fM-Zto" id="ca2-Ai-0Gg"/>
                     </connections>
