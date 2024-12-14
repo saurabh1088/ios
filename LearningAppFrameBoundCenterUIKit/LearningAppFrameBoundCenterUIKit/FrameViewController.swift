@@ -6,19 +6,19 @@
 //
 
 import UIKit
+import OSLog
 
 class FrameViewController: UIViewController {
     
     @IBOutlet weak var exampleSuperViewOne: UIView!
-    
     @IBOutlet weak var exampleSubViewOne: UIView!
     @IBOutlet weak var animateFrameButton: UIButton!
-    
     @IBOutlet weak var animateFramePositionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Current frame of exampleSubViewOne \(exampleSubViewOne.frame)")
+        Logger.viewBounds.info("Current frame of exampleSuperViewOne \(self.exampleSuperViewOne.frame.debugDescription)")
+        Logger.viewBounds.info("Current frame of exampleSubViewOne \(self.exampleSubViewOne.frame.debugDescription)")
     }
     
     @IBAction func animateFrameAction(_ sender: Any) {
@@ -30,7 +30,6 @@ class FrameViewController: UIViewController {
         }
     }
     
-    
     @IBAction func animateFramePositionAction(_ sender: Any) {
         UIView.animate(withDuration: 1) { [weak self] in
             guard let self else { return }
@@ -39,5 +38,4 @@ class FrameViewController: UIViewController {
             exampleSubViewOne.frame = CGRect(x: 0, y: 0, width: originalWidth, height: originalHeight)
         }
     }
-    
 }

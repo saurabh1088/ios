@@ -8,11 +8,11 @@
 import Foundation
 
 enum PropertiesOption: String, CaseIterable, Identifiable {
-    var id: String { self.rawValue }
-    
     case frame
     case bounds
     case center
+    
+    var id: String { self.rawValue }
     
     var printableDescription: String {
         switch self {

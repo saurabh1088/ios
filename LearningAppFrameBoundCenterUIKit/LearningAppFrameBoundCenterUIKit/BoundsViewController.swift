@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 class BoundsViewController: UIViewController {
     
@@ -15,9 +16,9 @@ class BoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Current frame of exampleSubViewOne \(exampleSubViewOne.frame)")
+        Logger.viewBounds.info("Current frame of exampleSuperViewOne \(self.exampleSuperViewOne.frame.debugDescription)")
+        Logger.viewBounds.info("Current frame of exampleSubViewOne \(self.exampleSubViewOne.frame.debugDescription)")
     }
-    
     
     @IBAction func animateBoundsSizeAction(_ sender: Any) {
         UIView.animate(withDuration: 1) { [weak self] in
