@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,6 +28,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zBp-Ov-f4b" kind="show" identifier="showFrameViewController" id="CDn-v4-JGD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="boundsOptionCell" id="TPD-qx-2uX">
                                         <rect key="frame" x="20" y="99" width="353" height="43.666667938232422"/>
@@ -49,7 +53,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="customBackground"/>
                         <constraints>
                             <constraint firstItem="PzD-r7-saM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9c0-Gq-EKq"/>
                             <constraint firstItem="PzD-r7-saM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nuw-mr-SYu"/>
@@ -65,8 +69,72 @@
             </objects>
             <point key="canvasLocation" x="-77.099236641221367" y="3.5211267605633805"/>
         </scene>
+        <!--Frame View Controller-->
+        <scene sceneID="eoy-Zr-8GD">
+            <objects>
+                <viewController id="zBp-Ov-f4b" customClass="FrameViewController" customModule="LearningAppFrameBoundCenterUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUi-6b-TDM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8LQ-fM-Zto">
+                                <rect key="frame" x="16" y="32" width="361" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-hS-A9m">
+                                        <rect key="frame" x="68" y="36" width="100" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="customOrange"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yDd-Uh-dtl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhb-2e-t3h">
+                                <rect key="frame" x="16" y="240" width="361" height="35"/>
+                                <color key="backgroundColor" name="customRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Animate Frame"/>
+                                <connections>
+                                    <action selector="animateFrameAction:" destination="zBp-Ov-f4b" eventType="touchUpInside" id="SY7-uM-NAG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W5v-wv-JIc"/>
+                        <color key="backgroundColor" name="customBackground"/>
+                        <constraints>
+                            <constraint firstItem="8LQ-fM-Zto" firstAttribute="top" secondItem="W5v-wv-JIc" secondAttribute="top" constant="32" id="CT9-mk-yq4"/>
+                            <constraint firstItem="W5v-wv-JIc" firstAttribute="trailing" secondItem="fhb-2e-t3h" secondAttribute="trailing" constant="16" id="PBT-R3-Pb1"/>
+                            <constraint firstItem="W5v-wv-JIc" firstAttribute="trailing" secondItem="8LQ-fM-Zto" secondAttribute="trailing" constant="16" id="f6o-HQ-9lu"/>
+                            <constraint firstItem="fhb-2e-t3h" firstAttribute="leading" secondItem="W5v-wv-JIc" secondAttribute="leading" constant="16" id="fnE-AS-eEb"/>
+                            <constraint firstItem="8LQ-fM-Zto" firstAttribute="leading" secondItem="W5v-wv-JIc" secondAttribute="leading" constant="16" id="iYw-9a-KWb"/>
+                            <constraint firstItem="fhb-2e-t3h" firstAttribute="top" secondItem="8LQ-fM-Zto" secondAttribute="bottom" constant="8" id="rW4-ts-asa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5j9-zf-FWc"/>
+                    <connections>
+                        <outlet property="animateFrameButton" destination="fhb-2e-t3h" id="YuN-8A-pua"/>
+                        <outlet property="exampleSubViewOne" destination="tEZ-hS-A9m" id="ilI-VA-d7k"/>
+                        <outlet property="exampleSuperViewOne" destination="8LQ-fM-Zto" id="ca2-Ai-0Gg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwe-z7-7e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.8931297709923" y="-231.69014084507043"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="customBackground">
+            <color red="1" green="0.97254901960784312" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customOrange">
+            <color red="0.82745098039215681" green="0.61568627450980395" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customRed">
+            <color red="0.55294117647058827" green="0.043137254901960784" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

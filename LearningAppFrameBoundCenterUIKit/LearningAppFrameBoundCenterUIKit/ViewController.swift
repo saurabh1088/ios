@@ -34,3 +34,13 @@ extension ViewController {
     }
 }
 
+extension ViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFrameViewController",
+           let vc = segue.destination as? FrameViewController {
+            vc.modalPresentationStyle = .fullScreen
+        }
+    }
+}
+
