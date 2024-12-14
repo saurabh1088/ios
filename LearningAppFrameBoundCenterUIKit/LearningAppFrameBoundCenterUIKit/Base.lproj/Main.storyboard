@@ -153,9 +153,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyj-WH-UU6">
                                 <rect key="frame" x="16" y="32" width="361" height="200"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtW-g6-mea">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtW-g6-mea">
                                         <rect key="frame" x="60" y="36" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-ef-wcl">
+                                                <rect key="frame" x="16" y="9" width="68" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="customGreen"/>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" name="customOrange"/>
                                     </view>
                                 </subviews>
@@ -175,15 +182,29 @@
                                     <action selector="animateBoundsSizeAction:" destination="lWL-Yi-yeV" eventType="touchUpInside" id="03J-qi-aJk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-n4-zmG">
+                                <rect key="frame" x="16" y="283" width="361" height="35"/>
+                                <color key="backgroundColor" name="customRed"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bounds - clipsToBounds">
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clipsToBoundsAction:" destination="lWL-Yi-yeV" eventType="touchUpInside" id="ulb-Cf-NhL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nlE-Kb-M10"/>
                         <color key="backgroundColor" name="customBackground"/>
                         <constraints>
+                            <constraint firstItem="Sey-n4-zmG" firstAttribute="leading" secondItem="nlE-Kb-M10" secondAttribute="leading" constant="16" id="08L-qz-hzh"/>
                             <constraint firstItem="aHJ-0C-uiH" firstAttribute="top" secondItem="iyj-WH-UU6" secondAttribute="bottom" constant="8" id="3dX-o7-EQQ"/>
                             <constraint firstItem="nlE-Kb-M10" firstAttribute="trailing" secondItem="aHJ-0C-uiH" secondAttribute="trailing" constant="16" id="8SZ-Kp-w89"/>
+                            <constraint firstItem="nlE-Kb-M10" firstAttribute="trailing" secondItem="Sey-n4-zmG" secondAttribute="trailing" constant="16" id="CBf-d1-7N8"/>
                             <constraint firstItem="iyj-WH-UU6" firstAttribute="leading" secondItem="nlE-Kb-M10" secondAttribute="leading" constant="16" id="Ffz-SV-w2b"/>
                             <constraint firstItem="iyj-WH-UU6" firstAttribute="top" secondItem="nlE-Kb-M10" secondAttribute="top" constant="32" id="Jn1-O3-IZl"/>
                             <constraint firstItem="nlE-Kb-M10" firstAttribute="trailing" secondItem="iyj-WH-UU6" secondAttribute="trailing" constant="16" id="POm-Ot-WHz"/>
+                            <constraint firstItem="Sey-n4-zmG" firstAttribute="top" secondItem="aHJ-0C-uiH" secondAttribute="bottom" constant="8" id="SXC-OG-DQc"/>
                             <constraint firstItem="aHJ-0C-uiH" firstAttribute="leading" secondItem="nlE-Kb-M10" secondAttribute="leading" constant="16" id="zfK-VS-xs3"/>
                         </constraints>
                     </view>
@@ -196,12 +217,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zS4-3q-ABO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="497"/>
+            <point key="canvasLocation" x="1139.6946564885495" y="496.47887323943667"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="customBackground">
             <color red="1" green="0.97254901960784312" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customGreen">
+            <color red="0.0" green="0.59999999999999998" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="customOrange">
             <color red="0.82745098039215681" green="0.61568627450980395" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
