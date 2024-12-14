@@ -30,6 +30,7 @@ class BoundsViewController: UIViewController {
     }
     
     @IBAction func clipsToBoundsAction(_ sender: Any) {
+        exampleSuperViewOne.clipsToBounds = false
         UIView.animate(withDuration: 1) { [weak self] in
             guard let self else { return }
             let screenWidth = UIScreen.main.bounds.width
