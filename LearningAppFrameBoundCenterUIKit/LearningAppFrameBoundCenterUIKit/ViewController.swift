@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -46,6 +47,13 @@ extension ViewController {
             let vc = segue.destination as? CenterViewController {
             vc.modalPresentationStyle = .fullScreen
         }
+    }
+}
+
+extension ViewController {
+    
+    @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
+        Logger.storyboardSegueUnwind.info("Unwind to Root View Controller")
     }
 }
 
