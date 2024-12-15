@@ -53,7 +53,11 @@ extension ViewController {
 extension ViewController {
     
     @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
-        Logger.storyboardSegueUnwind.info("Unwind to Root View Controller")
+        if let segueIdentifier = segue.identifier {
+            Logger.storyboardSegueUnwind.info("Unwind to ViewController from Segue : \(segueIdentifier)")
+        } else {
+            Logger.storyboardSegueUnwind.info("Unwind to ViewController from unknown segue")
+        }
     }
 }
 

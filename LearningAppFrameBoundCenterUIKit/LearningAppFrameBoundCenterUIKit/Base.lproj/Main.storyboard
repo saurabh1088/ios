@@ -132,7 +132,7 @@
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="uEC-9N-Kvn" kind="unwind" unwindAction="unwindToViewControllerWithSegue:" id="Qxq-Vg-sB2"/>
+                                    <segue destination="uEC-9N-Kvn" kind="unwind" identifier="unwindFromFrameViewController" unwindAction="unwindToViewControllerWithSegue:" id="Qxq-Vg-sB2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -217,7 +217,7 @@
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7V3-lI-Pu9" kind="unwind" unwindAction="unwindToViewControllerWithSegue:" id="9PK-dA-pQc"/>
+                                    <segue destination="7V3-lI-Pu9" kind="unwind" identifier="unwindFromCenterViewController" unwindAction="unwindToViewControllerWithSegue:" id="9PK-dA-pQc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -300,7 +300,7 @@
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Jad-cw-1Im" kind="unwind" unwindAction="unwindToViewControllerWithSegue:" id="v2u-27-wP5"/>
+                                    <segue destination="Jad-cw-1Im" kind="unwind" identifier="unwindFromBoundsViewController" unwindAction="unwindToViewControllerWithSegue:" id="v2u-27-wP5"/>
                                 </connections>
                             </button>
                         </subviews>
