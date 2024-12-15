@@ -62,4 +62,6 @@ Sample project using UIKit to explore UIView properties like frame, bound and ce
 
 #### TODOs
 - [x] Add unwind segues from all example views.
+- [ ] Add Unit tests.
+- [ ] Add UI tests.
 
