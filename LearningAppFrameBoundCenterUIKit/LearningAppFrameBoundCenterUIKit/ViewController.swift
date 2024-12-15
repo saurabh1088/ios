@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -45,6 +46,17 @@ extension ViewController {
         } else if segue.identifier == "showCenterViewController",
             let vc = segue.destination as? CenterViewController {
             vc.modalPresentationStyle = .fullScreen
+        }
+    }
+}
+
+extension ViewController {
+    
+    @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
+        if let segueIdentifier = segue.identifier {
+            Logger.storyboardSegueUnwind.info("Unwind to ViewController from Segue : \(segueIdentifier)")
+        } else {
+            Logger.storyboardSegueUnwind.info("Unwind to ViewController from unknown segue")
         }
     }
 }

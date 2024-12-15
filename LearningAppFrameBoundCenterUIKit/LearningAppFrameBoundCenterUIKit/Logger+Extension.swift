@@ -17,3 +17,7 @@ extension Logger {
     static let viewBounds = Logger(subsystem: subsystem, category: "ViewBounds")
     static let viewCenter = Logger(subsystem: subsystem, category: "ViewCenter")
 }
+
+extension Logger {
+    static let storyboardSegueUnwind = Logger(subsystem: subsystem, category: "unwind segue")
+}
