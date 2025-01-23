@@ -1,0 +1,15 @@
+{
+  "originHash" : "0c52593419b2fed62ddd3b8b933e2c78b5e7edf3cd5e7bbac4fef0fee93d549c",
+  "pins" : [
+    {
+      "identity" : "swift-networking",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:saurabh1088/swift-networking.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cb8cd6ab9d2cb9532b358243b0431d566d85b115"
+      }
+    }
+  ],
+  "version" : 3
+}
