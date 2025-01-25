@@ -72,6 +72,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AaU-nR-Ied"/>
+                    <connections>
+                        <outlet property="searchBar" destination="aIS-zV-NaK" id="lta-OS-u58"/>
+                        <outlet property="tableView" destination="OLD-aF-9Dg" id="R2H-Ve-Go0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMg-HZ-ql2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
