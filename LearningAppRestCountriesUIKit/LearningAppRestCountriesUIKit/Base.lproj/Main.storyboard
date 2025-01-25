@@ -20,6 +20,9 @@
                                 <rect key="frame" x="166" y="408.66666666666669" width="61.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <segue destination="cve-b0-mkA" kind="show" identifier="showCountrySelectionViewController" id="7JP-1U-dHW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,6 +37,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058.7786259541983" y="3.5211267605633805"/>
+        </scene>
+        <!--Country Selection View Controller-->
+        <scene sceneID="SzE-xU-FOJ">
+            <objects>
+                <viewController id="cve-b0-mkA" customClass="CountrySelectionViewController" customModule="LearningAppRestCountriesUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dDg-La-WDB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-zV-NaK">
+                                <rect key="frame" x="8" y="111" width="377" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cve-b0-mkA" id="V5H-tu-oAm"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OLD-aF-9Dg">
+                                <rect key="frame" x="0.0" y="175" width="393" height="635"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uj8-Lv-qXT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uj8-Lv-qXT" firstAttribute="trailing" secondItem="OLD-aF-9Dg" secondAttribute="trailing" id="H8W-08-xak"/>
+                            <constraint firstItem="OLD-aF-9Dg" firstAttribute="top" secondItem="aIS-zV-NaK" secondAttribute="bottom" constant="8" id="M1d-7k-kxW"/>
+                            <constraint firstItem="aIS-zV-NaK" firstAttribute="leading" secondItem="uj8-Lv-qXT" secondAttribute="leading" constant="8" id="O6L-vs-lR1"/>
+                            <constraint firstItem="uj8-Lv-qXT" firstAttribute="bottom" secondItem="OLD-aF-9Dg" secondAttribute="bottom" constant="8" id="OtO-0z-jpi"/>
+                            <constraint firstItem="OLD-aF-9Dg" firstAttribute="leading" secondItem="uj8-Lv-qXT" secondAttribute="leading" id="PZW-AH-Zre"/>
+                            <constraint firstItem="aIS-zV-NaK" firstAttribute="trailing" secondItem="uj8-Lv-qXT" secondAttribute="trailing" constant="-8" id="VYl-vF-Ud3"/>
+                            <constraint firstItem="aIS-zV-NaK" firstAttribute="top" secondItem="uj8-Lv-qXT" secondAttribute="top" constant="8" id="iDO-dW-MsF"/>
+                            <constraint firstItem="OLD-aF-9Dg" firstAttribute="top" secondItem="aIS-zV-NaK" secondAttribute="bottom" constant="8" id="qds-IO-qib"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AaU-nR-Ied"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMg-HZ-ql2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a7Y-hd-SWL">
