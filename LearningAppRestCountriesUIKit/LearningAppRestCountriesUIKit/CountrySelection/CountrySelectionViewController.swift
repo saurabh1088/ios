@@ -16,5 +16,20 @@ class CountrySelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+    }
+}
+
+extension CountrySelectionViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.listOfSupportedCountries().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "supportedCountryTableViewCell") {
+            cell.textLabel?.text = viewModel.listOfSupportedCountries()[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
     }
 }

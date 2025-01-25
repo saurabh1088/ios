@@ -7,8 +7,12 @@
 
 import Foundation
 
-protocol CountrySelectionViewModelProtocol {}
+protocol CountrySelectionViewModelProtocol {
+    func listOfSupportedCountries() -> [String]
+}
 
 class CountrySelectionViewModel: CountrySelectionViewModelProtocol {
-    
+    func listOfSupportedCountries() -> [String] {
+        return Locale.listOfCountries
+    }
 }
