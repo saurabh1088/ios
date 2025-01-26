@@ -29,7 +29,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="lightestSkyBlue"/>
+                        <color key="backgroundColor" name="themeOrangeBackground"/>
                         <constraints>
                             <constraint firstItem="ete-Vf-yQY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ui1-B7-3Wy"/>
                             <constraint firstItem="ete-Vf-yQY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xpI-Zh-cwq"/>
@@ -52,7 +52,7 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-zV-NaK">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <color key="backgroundColor" name="themeYellow"/>
-                                <color key="barTintColor" name="themeYellow"/>
+                                <color key="barTintColor" name="themeRed"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="cve-b0-mkA" id="V5H-tu-oAm"/>
@@ -60,7 +60,7 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OLD-aF-9Dg">
                                 <rect key="frame" x="0.0" y="159" width="393" height="651"/>
-                                <color key="backgroundColor" name="themeYellow"/>
+                                <color key="backgroundColor" name="themeRed"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="supportedCountryTableViewCell" id="vEb-8C-yxb">
                                         <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
@@ -69,13 +69,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="themeLightGreen"/>
+                                        <color key="backgroundColor" name="themeDarkBlue"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uj8-Lv-qXT"/>
-                        <color key="backgroundColor" name="lightestSkyBlue"/>
+                        <color key="backgroundColor" name="themeOrangeBackground"/>
                         <constraints>
                             <constraint firstItem="uj8-Lv-qXT" firstAttribute="trailing" secondItem="OLD-aF-9Dg" secondAttribute="trailing" id="H8W-08-xak"/>
                             <constraint firstItem="aIS-zV-NaK" firstAttribute="leading" secondItem="uj8-Lv-qXT" secondAttribute="leading" id="O6L-vs-lR1"/>
@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="lightestSkyBlue"/>
                         <navigationBarAppearance key="scrollEdgeAppearance">
-                            <color key="backgroundColor" name="lightestSkyBlue"/>
+                            <color key="backgroundColor" name="themeOrangeBackground"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -123,11 +123,17 @@
         <namedColor name="lightestSkyBlue">
             <color red="0.90588235294117647" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="themeDarkGreen">
-            <color red="0.066666666666666666" green="0.45882352941176469" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="themeDarkBlue">
+            <color red="0.070588235294117646" green="0.35686274509803922" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="themeLightGreen">
-            <color red="0.43137254901960786" green="0.76078431372549016" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="themeDarkGreen">
+            <color red="0.043137254901960784" green="0.51764705882352946" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeOrangeBackground">
+            <color red="1" green="0.74509803921568629" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeRed">
+            <color red="0.94117647058823528" green="0.35294117647058826" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="themeYellow">
             <color red="1" green="0.92156862745098034" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
