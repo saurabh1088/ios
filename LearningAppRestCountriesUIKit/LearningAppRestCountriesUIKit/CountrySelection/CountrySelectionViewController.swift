@@ -17,6 +17,7 @@ class CountrySelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -31,5 +32,11 @@ extension CountrySelectionViewController: UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension CountrySelectionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showCountryDetailsViewController", sender: self)
     }
 }
