@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,11 +92,28 @@
                     <connections>
                         <outlet property="searchBar" destination="aIS-zV-NaK" id="lta-OS-u58"/>
                         <outlet property="tableView" destination="OLD-aF-9Dg" id="R2H-Ve-Go0"/>
+                        <segue destination="YS2-ti-eBF" kind="show" id="C8S-Xk-8gz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMg-HZ-ql2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1912" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aFy-Fl-ja4">
+            <objects>
+                <viewController id="YS2-ti-eBF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hB4-3F-Fg8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bMI-VV-RBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8A6-At-Tc3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpU-Pc-7gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2723" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a7Y-hd-SWL">
@@ -137,5 +155,8 @@
         <namedColor name="themeYellow">
             <color red="1" green="0.92156862745098034" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
