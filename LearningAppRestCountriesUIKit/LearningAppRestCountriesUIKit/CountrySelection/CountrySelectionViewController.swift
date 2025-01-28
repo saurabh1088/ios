@@ -13,6 +13,7 @@ class CountrySelectionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: CountrySelectionViewModelProtocol = CountrySelectionViewModel()
+    private var selectedCellIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,16 @@ extension CountrySelectionViewController: UITableViewDataSource {
 
 extension CountrySelectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCellIndex = indexPath.row
         self.performSegue(withIdentifier: "showCountryDetailsViewController", sender: self)
+    }
+}
+
+extension CountrySelectionViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCountryDetailsViewController",
+           let viewController = segue.destination as? CountryDetailsViewController {
+            viewController.viewModel.selectedCountry = viewModel.listOfSupportedCountries()[selectedCellIndex]
+        }
     }
 }
