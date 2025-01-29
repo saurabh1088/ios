@@ -18,6 +18,8 @@ class CountryDetailsViewModel: CountryDetailsViewModelProtocol {
     func fetchCountryDetails() async -> String? {
         do {
             if let selectedCountry = selectedCountry {
+                // TODO: Move this logic to a common place
+                // TODO: Possibly think of a common way to show API response in a textview modal
                 let request = FetchCountryDetailsRequest(countryName: selectedCountry)
                 let response = try await CountryDetailsService().fetchDetailsFor(country: selectedCountry, with: request)
                 let jsonData = try JSONEncoder().encode(response)
