@@ -9,7 +9,6 @@ import UIKit
 
 class SelectableCountryTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var countryNameLabel: UILabel!
     
     override func awakeFromNib() {
@@ -18,6 +17,10 @@ class SelectableCountryTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func setCountryName(_ name: String) {
+        countryNameLabel.text = name
     }
     
 }
