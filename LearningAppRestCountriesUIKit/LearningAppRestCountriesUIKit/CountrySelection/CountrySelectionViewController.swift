@@ -32,6 +32,7 @@ extension CountrySelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "supportedCountryTableViewCell") as? SelectableCountryTableViewCell {
             cell.setCountryName(viewModel.listOfSupportedCountries()[indexPath.row])
+            cell.setAccessoryViewWithImage()
             return cell
         }
         return UITableViewCell()

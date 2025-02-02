@@ -25,6 +25,8 @@ class SelectableCountryTableViewCell: UITableViewCell {
     
     func setAccessoryViewWithImage(named: String = "chevron.compact.right") {
         let indicatorImage = UIImage(systemName: named)
-        self.accessoryView = UIImageView(image: indicatorImage)
+        let accessoryImageView = UIImageView(image: indicatorImage)
+        accessoryImageView.backgroundColor = .clear
+        self.accessoryView = accessoryImageView
     }
 }
