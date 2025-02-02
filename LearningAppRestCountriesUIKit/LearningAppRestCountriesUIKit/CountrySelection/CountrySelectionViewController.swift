@@ -43,6 +43,10 @@ extension CountrySelectionViewController: UITableViewDelegate {
         selectedCellIndex = indexPath.row
         self.performSegue(withIdentifier: "showCountryDetailsViewController", sender: self)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60.0
+    }
 }
 
 extension CountrySelectionViewController {
