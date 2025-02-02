@@ -44,5 +44,4 @@ class SelectableTableViewCell: UITableViewCell {
         accessoryImageView.backgroundColor = .clear
         accessoryView = accessoryImageView
     }
-    
 }
