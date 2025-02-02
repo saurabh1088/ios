@@ -20,7 +20,7 @@ class CountrySelectionViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.register(UINib(nibName: "SelectableCountryTableViewCell", bundle: nil), forCellReuseIdentifier: "supportedCountryTableViewCell")
+        tableView.register(UINib(nibName: "SelectableTableViewCell", bundle: nil), forCellReuseIdentifier: "supportedCountryTableViewCell")
     }
 }
 
@@ -30,9 +30,8 @@ extension CountrySelectionViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "supportedCountryTableViewCell") as? SelectableCountryTableViewCell {
-            cell.setCountryName(viewModel.listOfSupportedCountries()[indexPath.row])
-            cell.setAccessoryViewWithImage()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "supportedCountryTableViewCell") as? SelectableTableViewCell {
+            cell.configure(withText: viewModel.listOfSupportedCountries()[indexPath.row])
             return cell
         }
         return UITableViewCell()
