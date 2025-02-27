@@ -11,46 +11,52 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    
+    @StateObject private var viewModel = DrawingViewModel()
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        VStack {
+            DrawingView(viewModel: viewModel)
+                .frame(width: 300, height: 300)
+                .border(Color.black)
+
+            HStack {
+                Button("Clear") {
+                    viewModel.clear()
                 }
-                .onDelete(perform: deleteItems)
+                .padding()
+                
+                Button("Save") {
+                    let image = saveAsImage()
+                    // Send `image` to ML model
+                }
+                .padding()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
         }
     }
+    
+    func saveAsImage() -> UIImage {
+        /// Why 28x28?
+        /// Because, MNIST model expects a 28x28 pixel grayscale image, so we draw directly in this size.
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 28, height: 28))
+        return renderer.image { context in
+            UIColor.white.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 28, height: 28))
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+            let path = UIBezierPath()
+            path.lineWidth = 5
+            UIColor.black.setStroke()
+            
+            for stroke in viewModel.strokes {
+                if let first = stroke.first {
+                    path.move(to: first)
+                    for point in stroke.dropFirst() {
+                        path.addLine(to: point)
+                    }
+                }
             }
+            
+            path.stroke()
         }
     }
 }
