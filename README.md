@@ -63,6 +63,9 @@ Sample project using UIKit to explore UIView properties like frame, bound and ce
 ### 12. LearningAppRestCountriesUIKit
 Sample project using UIKit and APIs from restcountries.com.
 
+### 12. LearningAppCoreMLSwiftUI
+Sample project using SwiftUI to explore Apple's Core ML framework.
+
 #### TODOs
 - [x] Add unwind segues from all example views.
 - [ ] Add Unit tests.
