@@ -7,28 +7,36 @@
 
 import SwiftUI
 import SwiftData
+import CoreML
+import Vision
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     
     @StateObject private var viewModel = DrawingViewModel()
+    @State private var recognizedDigit: String = "?"
 
     var body: some View {
         VStack {
             DrawingView(viewModel: viewModel)
                 .frame(width: 300, height: 300)
                 .border(Color.black)
+            
+            Text("Recognized Digit: \(recognizedDigit)")
+                .font(.largeTitle)
+                .padding()
 
             HStack {
                 Button("Clear") {
                     viewModel.clear()
+                    recognizedDigit = "?"
                 }
                 .padding()
                 
                 Button("Save") {
                     let image = saveAsImage()
-                    // Send `image` to ML model
+                    recognizeDigit(from: image)
                 }
                 .padding()
             }
@@ -57,6 +65,63 @@ struct ContentView: View {
             }
             
             path.stroke()
+        }
+    }
+    
+    func convertToPixelBuffer(image: UIImage) -> CVPixelBuffer? {
+        let width = 28
+        let height = 28
+        let attributes = [kCVPixelBufferCGImageCompatibilityKey: true,
+                          kCVPixelBufferCGBitmapContextCompatibilityKey: true] as CFDictionary
+        var pixelBuffer: CVPixelBuffer?
+        
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, width, height,
+                                         kCVPixelFormatType_OneComponent8, attributes, &pixelBuffer)
+        
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else { return nil }
+        
+        CVPixelBufferLockBaseAddress(buffer, .init(rawValue: 0))
+        let context = CGContext(data: CVPixelBufferGetBaseAddress(buffer),
+                                width: width,
+                                height: height,
+                                bitsPerComponent: 8,
+                                bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
+                                space: CGColorSpaceCreateDeviceGray(),
+                                bitmapInfo: CGImageAlphaInfo.none.rawValue)
+        
+        guard let cgImage = image.cgImage else { return nil }
+        context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+        CVPixelBufferUnlockBaseAddress(buffer, .init(rawValue: 0))
+        
+        return buffer
+    }
+    
+    func recognizeDigit(from image: UIImage) {
+        do {
+            let model = try VNCoreMLModel(for: MNISTClassifier(configuration: MLModelConfiguration()).model)
+            
+            let request = VNCoreMLRequest(model: model) { request, _ in
+                if let results = request.results as? [VNClassificationObservation],
+                   let topResult = results.first {
+                    DispatchQueue.main.async {
+                        recognizedDigit = topResult.identifier // Extract the predicted digit
+                        print("Recognized Digit: \(topResult.identifier), Confidence: \(topResult.confidence)")
+                    }
+                } else {
+                    print("No valid results found")
+                }
+            }
+
+            guard let buffer = convertToPixelBuffer(image: image) else {
+                print("Failed to convert image to PixelBuffer")
+                return
+            }
+
+            let handler = VNImageRequestHandler(cvPixelBuffer: buffer)
+
+            try handler.perform([request])
+        } catch {
+            print("Error loading MNISTClassifier model: \(error)")
         }
     }
 }
