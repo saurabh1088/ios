@@ -48,22 +48,28 @@ struct ContentView: View {
         /// Because, MNIST model expects a 28x28 pixel grayscale image, so we draw directly in this size.
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 28, height: 28))
         return renderer.image { context in
-            UIColor.white.setFill()
+            // Black background
+            // MNIST data typically has white digits on a black background, hence set like this
+            // Using reverse reduces the capability of model drastically
+            UIColor.black.setFill()
             context.fill(CGRect(x: 0, y: 0, width: 28, height: 28))
+            
+            // Scale points from 300x300 to 28x28
+            let scaleX = 28.0 / 300.0
+            let scaleY = 28.0 / 300.0
 
             let path = UIBezierPath()
-            path.lineWidth = 5
-            UIColor.black.setStroke()
+            path.lineWidth = 2
+            UIColor.white.setStroke()
             
             for stroke in viewModel.strokes {
                 if let first = stroke.first {
-                    path.move(to: first)
+                    path.move(to: CGPoint(x: first.x * scaleX, y: first.y * scaleY))
                     for point in stroke.dropFirst() {
-                        path.addLine(to: point)
+                        path.addLine(to: CGPoint(x: point.x * scaleX, y: point.y * scaleY))
                     }
                 }
             }
-            
             path.stroke()
         }
     }
@@ -77,22 +83,30 @@ struct ContentView: View {
         
         let status = CVPixelBufferCreate(kCFAllocatorDefault, width, height,
                                          kCVPixelFormatType_OneComponent8, attributes, &pixelBuffer)
-        
         guard status == kCVReturnSuccess, let buffer = pixelBuffer else { return nil }
         
-        CVPixelBufferLockBaseAddress(buffer, .init(rawValue: 0))
+        CVPixelBufferLockBaseAddress(buffer, [])
         let context = CGContext(data: CVPixelBufferGetBaseAddress(buffer),
-                                width: width,
-                                height: height,
+                                width: width, height: height,
                                 bitsPerComponent: 8,
                                 bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
                                 space: CGColorSpaceCreateDeviceGray(),
                                 bitmapInfo: CGImageAlphaInfo.none.rawValue)
-        
         guard let cgImage = image.cgImage else { return nil }
         context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
-        CVPixelBufferUnlockBaseAddress(buffer, .init(rawValue: 0))
         
+        // Normalize pixel values to 0-1
+        let data = CVPixelBufferGetBaseAddress(buffer)!
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(buffer)
+        for y in 0..<height {
+            for x in 0..<width {
+                let pixel = data.advanced(by: y * bytesPerRow + x)
+                let value = pixel.load(as: UInt8.self)
+                pixel.storeBytes(of: UInt8(Float(value) / 255.0 * 255), as: UInt8.self) // Scale to 0-1
+            }
+        }
+        
+        CVPixelBufferUnlockBaseAddress(buffer, [])
         return buffer
     }
     
