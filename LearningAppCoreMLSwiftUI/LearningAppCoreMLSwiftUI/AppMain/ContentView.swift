@@ -11,8 +11,8 @@ import SwiftData
 struct ContentView: View {
 
     var body: some View {
-        VStack {
-            DigitsRecognizerView()
+        NavigationStack {
+            NavigationLink("Digits Recognizer", destination: DigitsRecognizerView())
         }
     }
 }
