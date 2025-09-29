@@ -66,6 +66,9 @@ Sample project using UIKit and APIs from restcountries.com.
 ### 12. LearningAppCoreMLSwiftUI
 Sample project using SwiftUI to explore Apple's Core ML framework.
 
+### 13. LearningAppFastlaneIntegration
+Sample project demonstrating how to integrate fastlane in an iOS project.
+
 #### TODOs
 - [x] Add unwind segues from all example views.
 - [ ] Add Unit tests.
