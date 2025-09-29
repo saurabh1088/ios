@@ -46,3 +46,11 @@ source "https://rubygems.org"
 gem "fastlane"
 ```
 
+### 8. Create folder fastlane and add file Fastfile inside it
+
+### 9. Execute command to run added lane
+- Note : Because the lane is defined under platform :ios, one must include ios in the command
+
+```
+fastlane ios try_it
+```
