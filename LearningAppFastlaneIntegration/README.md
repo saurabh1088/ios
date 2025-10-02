@@ -3,9 +3,10 @@
 
 ## Pre-requisites
 
-### 1. Ruby should be installed and match the minimum required version
+### 1. Ensure Ruby is Installed.
+- Ruby should be installed and match the minimum required version
 
-### 2. Install rbenv for managing ruby versions
+### 2. Install `rbenv`(Ruby Version Manager)
 ```
 brew install rbenv
 ```
@@ -29,7 +30,8 @@ rbenv global 3.1.2   # set the default Ruby version for this machine
 rbenv local 3.1.2    # set the Ruby version for this directory
 ```
 
-### 5. Initialise rbenv, place below in .bash_profile or .zshrc
+### 5. Set Up rbenv in Shell.
+- Initialise rbenv, place below in .bash_profile or .zshrc
 ```
 eval "$(rbenv init -)"
 ```
