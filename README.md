@@ -68,6 +68,8 @@ Sample project using SwiftUI to explore Apple's Core ML framework.
 
 ### 13. LearningAppFastlaneIntegration
 Sample project demonstrating how to integrate fastlane in an iOS project.
+- More details at project's README
+    - https://github.com/saurabh1088/ios/blob/main/LearningAppFastlaneIntegration/README.md
 
 #### TODOs
 - [x] Add unwind segues from all example views.
