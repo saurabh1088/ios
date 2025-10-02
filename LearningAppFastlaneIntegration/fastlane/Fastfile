@@ -1,7 +1,7 @@
 # Define the platform we are working with
 platform :ios do
 
-  # Define the lane. This is the workflow you run: 'fastlane try_it'
+  # Define the lane. This is the workflow we run: 'fastlane try_it'
   desc "Runs a test action that increments the project's build number."
   lane :try_it do
     UI.message "--- Starting 'try_it' Lane ---"
@@ -13,7 +13,7 @@ platform :ios do
     # =========================================================
 
     # We use a unique timestamp as the build number so the change is easy to confirm.
-    # Fastlane will automatically find and modify your .xcodeproj file.
+    # Fastlane will automatically find and modify the .xcodeproj file.
     UI.message "Reading current build number and preparing to update..."
 
     # The action performs the modification
@@ -33,7 +33,7 @@ platform :ios do
 
     UI.success "🎉 Action Complete! The build number was successfully set."
     UI.success "New Build Number: #{current_build_number}"
-    UI.message "Check your project's 'Info.plist' or 'project.pbxproj' to see the change."
+    UI.message "Check the project's 'Info.plist' or 'project.pbxproj' to see the change."
   end
 
 end
