@@ -29,9 +29,22 @@
 		B7E4E6672EEA7BFD0039D31D /* LearningAppUsingCursorUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppUsingCursorUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B7E4E66F2EEA7BFD0039D31D /* Exceptions for "LearningAppUsingCursorUIKit" folder in "LearningAppUsingCursorUIKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B7E4E6432EEA7BFC0039D31D /* LearningAppUsingCursorUIKit */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B7E4E6462EEA7BFC0039D31D /* LearningAppUsingCursorUIKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B7E4E66F2EEA7BFD0039D31D /* Exceptions for "LearningAppUsingCursorUIKit" folder in "LearningAppUsingCursorUIKit" target */,
+			);
 			path = LearningAppUsingCursorUIKit;
 			sourceTree = "<group>";
 		};
