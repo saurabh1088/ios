@@ -2,7 +2,7 @@
 
 ## Version 1.1.0 - Todo Details & Editing
 
-**Release Date:** December 11, 2025
+**Release Date:** January 10, 2025
 
 ### 🎉 New Features
 
@@ -46,3 +46,4 @@
 - ✅ Core Data persistence
 - ✅ Simple table view with navigation controller
 - ✅ Basic error handling
+
