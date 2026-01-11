@@ -16,39 +16,9 @@ protocol KeyboardHandling: AnyObject {
 
 extension KeyboardHandling where Self: UIViewController {
     
-    /// Sets up keyboard notification observers
-    func setupKeyboardHandling() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow(_:)),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillHide(_:)),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
-    }
-    
-    /// Removes keyboard notification observers
-    func removeKeyboardHandling() {
-        NotificationCenter.default.removeObserver(
-            self,
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        
-        NotificationCenter.default.removeObserver(
-            self,
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
-    }
-    
-    @objc private func keyboardWillShow(_ notification: Notification) {
+    /// Handles keyboard will show notification
+    /// This method contains the reusable logic for keyboard handling
+    func handleKeyboardWillShow(_ notification: Notification) {
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
               let scrollView = getScrollView() else {
             return
@@ -59,7 +29,9 @@ extension KeyboardHandling where Self: UIViewController {
         scrollView.verticalScrollIndicatorInsets.bottom = keyboardHeight
     }
     
-    @objc private func keyboardWillHide(_ notification: Notification) {
+    /// Handles keyboard will hide notification
+    /// This method contains the reusable logic for keyboard handling
+    func handleKeyboardWillHide(_ notification: Notification) {
         guard let scrollView = getScrollView() else {
             return
         }
