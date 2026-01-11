@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         fetchTodos()
+        setupNotifications()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - UI Setup
@@ -134,6 +139,20 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    // MARK: - Notifications
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(todoUpdated),
+            name: NSNotification.Name("TodoUpdated"),
+            object: nil
+        )
+    }
+    
+    @objc private func todoUpdated() {
+        fetchTodos()
+    }
+    
     // MARK: - Helpers
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -168,7 +187,8 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let todo = todos[indexPath.row]
-        toggleTodoCompletion(todo)
+        let detailVC = TodoDetailViewController(todo: todo)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -176,6 +196,36 @@ extension ViewController: UITableViewDelegate {
             let todo = todos[indexPath.row]
             deleteTodo(todo)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let todo = todos[indexPath.row]
+        
+        // Edit action
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] _, _, completionHandler in
+            let detailVC = TodoDetailViewController(todo: todo)
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+            completionHandler(true)
+        }
+        editAction.image = UIImage(systemName: "pencil")
+        editAction.backgroundColor = .systemBlue
+        
+        // Delete action
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, completionHandler in
+            self?.deleteTodo(todo)
+            completionHandler(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        
+        // Complete/Incomplete action
+        let toggleAction = UIContextualAction(style: .normal, title: todo.isCompleted ? "Incomplete" : "Complete") { [weak self] _, _, completionHandler in
+            self?.toggleTodoCompletion(todo)
+            completionHandler(true)
+        }
+        toggleAction.image = UIImage(systemName: todo.isCompleted ? "circle" : "checkmark.circle.fill")
+        toggleAction.backgroundColor = todo.isCompleted ? .systemOrange : .systemGreen
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, toggleAction, editAction])
     }
 }
 
