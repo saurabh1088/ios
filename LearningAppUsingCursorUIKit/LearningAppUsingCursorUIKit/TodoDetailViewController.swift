@@ -11,7 +11,7 @@ import CoreData
 class TodoDetailViewController: UIViewController {
     
     // MARK: - Properties
-    private var todo: TodoItem
+    private var viewModel: TodoDetailViewModel
     private var isEditingMode = false
     
     // MARK: - UI Components
@@ -28,18 +28,18 @@ class TodoDetailViewController: UIViewController {
     private var saveButton: UIBarButtonItem!
     private var cancelButton: UIBarButtonItem!
     
-    // MARK: - Core Data
-    var context: NSManagedObjectContext {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("Unable to get AppDelegate")
-        }
-        return appDelegate.persistentContainer.viewContext
-    }
-    
     // MARK: - Initialization
     init(todo: TodoItem) {
-        self.todo = todo
+        let context: NSManagedObjectContext = {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                fatalError("Unable to get AppDelegate")
+            }
+            return appDelegate.persistentContainer.viewContext
+        }()
+        
+        self.viewModel = TodoDetailViewModel(todo: todo, context: context)
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -52,6 +52,10 @@ class TodoDetailViewController: UIViewController {
         setupUI()
         updateUI()
         setupKeyboardHandling()
+    }
+    
+    deinit {
+        removeKeyboardHandling()
     }
     
     // MARK: - UI Setup
@@ -183,17 +187,10 @@ class TodoDetailViewController: UIViewController {
     
     // MARK: - UI Updates
     private func updateUI() {
-        titleTextField.text = todo.title ?? ""
-        descriptionTextView.text = todo.todoDescription ?? ""
-        completionSwitch.isOn = todo.isCompleted
-        
-        // Format created date
-        if let createdAt = todo.createdAt {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            formatter.timeStyle = .short
-            createdAtLabel.text = "Created: \(formatter.string(from: createdAt))"
-        }
+        titleTextField.text = viewModel.title
+        descriptionTextView.text = viewModel.description
+        completionSwitch.isOn = viewModel.isCompleted
+        createdAtLabel.text = viewModel.formattedCreatedDate
         
         setEditingMode(isEditingMode)
     }
@@ -213,37 +210,6 @@ class TodoDetailViewController: UIViewController {
         }
     }
     
-    // MARK: - Keyboard Handling
-    private func setupKeyboardHandling() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow(_:)),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillHide(_:)),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
-    }
-    
-    @objc private func keyboardWillShow(_ notification: Notification) {
-        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
-            return
-        }
-        
-        let keyboardHeight = keyboardFrame.height
-        scrollView.contentInset.bottom = keyboardHeight
-        scrollView.verticalScrollIndicatorInsets.bottom = keyboardHeight
-    }
-    
-    @objc private func keyboardWillHide(_ notification: Notification) {
-        scrollView.contentInset.bottom = 0
-        scrollView.verticalScrollIndicatorInsets.bottom = 0
-    }
     
     // MARK: - Actions
     @objc private func editButtonTapped() {
@@ -251,46 +217,32 @@ class TodoDetailViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        guard let title = titleTextField.text?.trimmingCharacters(in: .whitespaces),
-              !title.isEmpty else {
-            showAlert(title: "Error", message: "Title cannot be empty")
-            return
-        }
+        let title = titleTextField.text ?? ""
+        let description = descriptionTextView.text
         
-        todo.title = title
-        todo.todoDescription = descriptionTextView.text.trimmingCharacters(in: .whitespaces).isEmpty ? nil : descriptionTextView.text.trimmingCharacters(in: .whitespaces)
+        let result = viewModel.updateTodo(title: title, description: description)
         
-        do {
-            try context.save()
+        if result.success {
             setEditingMode(false)
             updateUI()
-            
-            // Notify parent view controller to refresh
-            NotificationCenter.default.post(name: NSNotification.Name("TodoUpdated"), object: nil)
-        } catch {
-            print("Error saving todo: \(error)")
-            showAlert(title: "Error", message: "Failed to save changes")
+        } else {
+            showAlert(title: "Error", message: result.errorMessage ?? "Failed to save changes")
         }
     }
     
     @objc private func cancelButtonTapped() {
         // Reset to original values
-        titleTextField.text = todo.title ?? ""
-        descriptionTextView.text = todo.todoDescription ?? ""
+        updateUI()
         setEditingMode(false)
     }
     
     @objc private func completionSwitchChanged() {
-        todo.isCompleted = completionSwitch.isOn
+        let result = viewModel.setCompletion(completionSwitch.isOn)
         
-        do {
-            try context.save()
-            NotificationCenter.default.post(name: NSNotification.Name("TodoUpdated"), object: nil)
-        } catch {
-            print("Error updating todo completion: \(error)")
-            showAlert(title: "Error", message: "Failed to update completion status")
+        if !result.success {
+            showAlert(title: "Error", message: result.errorMessage ?? "Failed to update completion status")
             // Revert switch
-            completionSwitch.isOn = todo.isCompleted
+            completionSwitch.isOn = viewModel.isCompleted
         }
     }
     
@@ -300,8 +252,23 @@ class TodoDetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+}
+
+// MARK: - KeyboardHandling
+extension TodoDetailViewController: KeyboardHandling {
+    func getScrollView() -> UIScrollView? {
+        return scrollView
+    }
+}
+
+// MARK: - TodoDetailViewModelDelegate
+extension TodoDetailViewController: TodoDetailViewModelDelegate {
+    func viewModelDidUpdateTodo(_ viewModel: TodoDetailViewModel) {
+        // Notify parent view controller to refresh
+        NotificationCenter.default.post(name: NSNotification.Name("TodoUpdated"), object: nil)
+    }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
+    func viewModel(_ viewModel: TodoDetailViewModel, didEncounterError error: Error) {
+        print("Error in view model: \(error)")
     }
 }
