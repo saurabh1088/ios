@@ -1,0 +1,42 @@
+# XcodeGen - Generated project file
+# The .xcodeproj is generated from project.yml and should not be committed
+*.xcodeproj/
+
+# Xcode user-specific files (if you decide to commit .xcodeproj, uncomment these)
+# *.xcodeproj/xcuserdata/
+# *.xcodeproj/project.xcworkspace/xcuserdata/
+# *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# macOS
+.DS_Store
+
+# Xcode
+*.xcuserstate
+*.xcuserdatad
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+
+# Build products
+build/
+DerivedData/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# CocoaPods (if used)
+Pods/
+
+# Carthage (if used)
+Carthage/Build/
+
+# Fastlane (if used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection (if used)
+# After new code Injection tools run
+*.xcodeproj/xcshareddata/xcschemes/*.xcscheme
+!*.xcodeproj/xcshareddata/xcschemes/*.xcscheme
