@@ -74,6 +74,9 @@ Sample project demonstrating how to integrate fastlane in an iOS project.
 ### 14. LearningAppUsingCursorUIKit
 Sample project build using cursor.
 
+### 15. LearningToolsXcodegen
+Sample project demonstrating how to use xcodegen in an iOS project.
+
 #### TODOs
 - [x] Add unwind segues from all example views.
 - [ ] Add Unit tests.
