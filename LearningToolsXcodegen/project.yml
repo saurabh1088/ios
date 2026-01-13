@@ -103,3 +103,21 @@ schemes:
       config: Debug
     archive:
       config: Release
+  
+  LearningToolsXcodegen-Debug:
+    build:
+      targets:
+        LearningToolsXcodegen: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - LearningToolsXcodegenTests
+        - LearningToolsXcodegenUITests
+    profile:
+      config: Debug
+    analyze:
+      config: Debug
+    archive:
+      config: Debug
