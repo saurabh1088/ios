@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Swift concurrency settings
     - Preview support
   - Created scheme configuration for build, run, test, profile, analyze, and archive actions
+  - Added `LearningToolsXcodegen-Debug` scheme with Debug configuration for all actions (run, test, profile, analyze, archive)
 
 - **Documentation**: Added comprehensive `README.md` with:
   - Project overview and XcodeGen workflow explanation
