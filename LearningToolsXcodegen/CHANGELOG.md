@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Created scheme configuration for build, run, test, profile, analyze, and archive actions
   - Added `LearningToolsXcodegen-Debug` scheme with Debug configuration for all actions (run, test, profile, analyze, archive)
 
+- **Swift Package Manager Dependency**: Integrated Alamofire as an SPM dependency
+  - Declared `Alamofire` package in `project.yml` under `packages`
+  - Added `Alamofire` as a dependency of the main `LearningToolsXcodegen` application target
+
 - **Documentation**: Added comprehensive `README.md` with:
   - Project overview and XcodeGen workflow explanation
   - Step-by-step migration guide for future projects

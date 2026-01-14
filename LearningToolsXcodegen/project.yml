@@ -9,7 +9,10 @@ options:
   indentWidth: 4
   tabWidth: 4
 
-packages: {}
+packages:
+  Alamofire:
+    url: https://github.com/Alamofire/Alamofire.git
+    from: 5.9.0
 
 targets:
   LearningToolsXcodegen:
@@ -18,6 +21,8 @@ targets:
     deploymentTarget: "26.0"
     sources:
       - path: LearningToolsXcodegen
+    dependencies:
+      - package: Alamofire
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.saurabh.LearningToolsXcodegen
       MARKETING_VERSION: "1.0"
