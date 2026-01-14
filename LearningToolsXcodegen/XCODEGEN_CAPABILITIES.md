@@ -1,0 +1,30 @@
+# XcodeGen – Capabilities (One-Liners)
+
+- Generates `.xcodeproj` from a declarative spec (YAML / JSON / Plist).
+- Makes Xcode projects deterministic, reproducible, and reviewable.
+- Eliminates manual `.xcodeproj` editing for day-to-day project maintenance.
+- Treats the Xcode project as generated, disposable output (regenerate anytime).
+- Supports Apple platforms (iOS, macOS, tvOS, watchOS, and visionOS).
+- Supports many Xcode target/product types (apps, frameworks, static libs, extensions, tests, etc.).
+- Enables multi-target project generation from a single spec.
+- Supports modular/multi-module setups (multiple targets/frameworks within one workspace/project).
+- Allows defining custom build configurations (e.g., Debug, Release, Staging).
+- Supports global, per-target, and per-configuration build settings.
+- Integrates with `.xcconfig` files for layered configuration.
+- Manages sources (and file grouping) declaratively.
+- Supports resources like asset catalogs, storyboards, xibs, and localized resources.
+- Supports Info.plist via file reference and/or declarative plist values (where applicable).
+- Supports entitlements configuration (per target/config where needed).
+- Supports adding build phases (Run Script, Copy Files, custom phases).
+- Supports pre-build and post-build scripting via build phases.
+- Supports clean modeling of internal target dependencies.
+- Supports linking system frameworks and external libraries/frameworks.
+- Integrates with Swift Package Manager dependencies (as supported by Xcode/XcodeGen).
+- Generates and manages schemes (shared/user) from the spec.
+- Fully configures scheme actions (build, test, run, profile, analyze, archive).
+- Supports scheme launch arguments and environment variables.
+- Supports unit tests and UI tests wiring in schemes.
+- Works well in CI/CD (generate the project as part of the pipeline).
+- Produces diff-friendly project definitions that reduce merge conflicts.
+- Scales for teams and larger repos by centralizing configuration as code.
+- Improves onboarding by making setup consistent and automated.
