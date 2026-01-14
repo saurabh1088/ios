@@ -8,6 +8,8 @@ This project uses XcodeGen to manage the Xcode project configuration. The projec
 
 For a detailed list of changes and release notes, see [CHANGELOG.md](CHANGELOG.md).
 
+For a crisp, one-line-per-feature overview of XcodeGen itself, see [XcodeGen Capabilities](XCODEGEN_CAPABILITIES.md).
+
 ## Migration to XcodeGen - Step-by-Step Guide
 
 This guide documents the steps taken to migrate this project to XcodeGen. Follow these steps when migrating other projects in the future.
