@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B7E1C6872F27945D00170B1B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B7E1C6862F27945D00170B1B /* SQLite */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B7E1C6672F278FE700170B1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E1C6872F27945D00170B1B /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = LearningAppSQLiteSwiftUI;
 			packageProductDependencies = (
+				B7E1C6862F27945D00170B1B /* SQLite */,
 			);
 			productName = LearningAppSQLiteSwiftUI;
 			productReference = B7E1C6592F278FE600170B1B /* LearningAppSQLiteSwiftUI.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = B7E1C6502F278FE600170B1B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B7E1C6852F27945D00170B1B /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B7E1C65A2F278FE600170B1B /* Products */;
 			projectDirPath = "";
@@ -578,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7E1C6852F27945D00170B1B /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7E1C6862F27945D00170B1B /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7E1C6852F27945D00170B1B /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7E1C6512F278FE600170B1B /* Project object */;
 }
