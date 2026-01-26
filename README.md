@@ -77,6 +77,9 @@ Sample project build using cursor.
 ### 15. LearningToolsXcodegen
 Sample project demonstrating how to use xcodegen in an iOS project.
 
+### 16. LearningKeychainAPIsSwiftUI
+Sample project demonstrating sqlite usage in iOS app.
+
 #### TODOs
 - [x] Add unwind segues from all example views.
 - [ ] Add Unit tests.
