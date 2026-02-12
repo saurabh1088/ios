@@ -36,11 +36,11 @@ struct RedactionView: View {
                          matching: .images)
 
         }
-        .onChange(of: selectedItem) { newItem in
+        .onChange(of: selectedItem, { oldValue, newValue in
             Task {
-                await viewModel.loadImage(from: newItem)
+                await viewModel.loadImage(from: newValue)
             }
-        }
+        })
         .padding()
     }
 }
