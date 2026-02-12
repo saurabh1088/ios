@@ -27,6 +27,7 @@
 		B723F6332F3DF22000CBA433 /* LogRedactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogRedactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B723F6402F3DF22100CBA433 /* LogRedactorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogRedactorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B723F64A2F3DF22100CBA433 /* LogRedactorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogRedactorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7380EE92F3DF9220018EEA4 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -78,6 +79,7 @@
 				B723F6352F3DF22000CBA433 /* LogRedactor */,
 				B723F6432F3DF22100CBA433 /* LogRedactorTests */,
 				B723F64D2F3DF22100CBA433 /* LogRedactorUITests */,
+				B7380EE82F3DF9220018EEA4 /* Frameworks */,
 				B723F6342F3DF22000CBA433 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +92,14 @@
 				B723F64A2F3DF22100CBA433 /* LogRedactorUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B7380EE82F3DF9220018EEA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7380EE92F3DF9220018EEA4 /* PhotosUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +410,7 @@
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to photos to redact sensitive information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +443,7 @@
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to photos to redact sensitive information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
