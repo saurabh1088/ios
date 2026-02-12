@@ -80,6 +80,9 @@ Sample project demonstrating how to use xcodegen in an iOS project.
 ### 16. LearningKeychainAPIsSwiftUI
 Sample project demonstrating sqlite usage in iOS app.
 
+### 17. LogRedactor
+Privacy-First Intelligent Log Redactor
+
 #### TODOs
 - [x] Add unwind segues from all example views.
 - [ ] Add Unit tests.
