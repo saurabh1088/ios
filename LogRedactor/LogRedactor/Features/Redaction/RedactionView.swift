@@ -36,11 +36,9 @@ struct RedactionView: View {
                          matching: .images)
 
         }
-        .onChange(of: selectedItem, { oldValue, newValue in
-            Task {
-                await viewModel.loadImage(from: newValue)
-            }
-        })
+        .task(id: selectedItem) {
+            await viewModel.loadImage(from: selectedItem)
+        }
         .padding()
     }
 }

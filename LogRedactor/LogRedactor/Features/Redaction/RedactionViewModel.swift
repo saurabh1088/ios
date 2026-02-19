@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 import UIKit
+import SwiftUI
 import PhotosUI
-import _PhotosUI_SwiftUI
 
 @MainActor
 final class RedactionViewModel: ObservableObject {
