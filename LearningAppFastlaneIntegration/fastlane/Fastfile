@@ -35,6 +35,11 @@ platform :ios do
     UI.success "New Build Number: #{current_build_number}"
     UI.message "Check the project's 'Info.plist' or 'project.pbxproj' to see the change."
   end
+  
+  desc "Runs all the unit tests"
+  lane :tests do
+    run_tests(scheme: "LearningAppFastlaneIntegration")
+end
 
 end
 

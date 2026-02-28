@@ -23,6 +23,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Runs a test action that increments the project's build number.
 
+### ios tests
+
+```sh
+[bundle exec] fastlane ios tests
+```
+
+Runs all the unit tests
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
