@@ -5,31 +5,101 @@
 //  Created by Saurabh Verma on 19/11/26.
 //
 
+
 import XCTest
+import UIKit
+@testable import LearningAppCacheSwiftUI
 
 final class ImageCacheTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var sut: ImageCache!
+
+    override func setUp() {
+        super.setUp()
+        sut = ImageCache()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        sut.clearCache()
+        sut = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testInsertAndRetrieveImage() {
+
+        let image = makeTestImage()
+
+        sut.insert(image, forKey: "test-image")
+
+        let retrievedImage = sut.image(forKey: "test-image")
+
+        XCTAssertNotNil(retrievedImage)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testRetrieveNonExistingImage() {
+
+        let result = sut.image(forKey: "unknown")
+
+        XCTAssertNil(result)
+    }
+
+    func testRemoveImage() {
+
+        let image = makeTestImage()
+
+        sut.insert(image, forKey: "test-image")
+        sut.removeImage(forKey: "test-image")
+
+        XCTAssertNil(sut.image(forKey: "test-image"))
+    }
+
+    func testClearCache() {
+
+        sut.insert(makeTestImage(), forKey: "image-1")
+        sut.insert(makeTestImage(), forKey: "image-2")
+
+        sut.clearCache()
+
+        XCTAssertNil(sut.image(forKey: "image-1"))
+        XCTAssertNil(sut.image(forKey: "image-2"))
+    }
+    
+    func testCacheCountLimit() {
+        sut.insert(makeTestImage(), forKey: "image-1")
+        sut.insert(makeTestImage(), forKey: "image-2")
+        sut.insert(makeTestImage(), forKey: "image-3")
+        sut.insert(makeTestImage(), forKey: "image-4")
+        sut.insert(makeTestImage(), forKey: "image-5")
+        sut.insert(makeTestImage(), forKey: "image-6")
+        sut.insert(makeTestImage(), forKey: "image-7")
+        sut.insert(makeTestImage(), forKey: "image-8")
+        sut.insert(makeTestImage(), forKey: "image-9")
+        sut.insert(makeTestImage(), forKey: "image-10")
+        sut.insert(makeTestImage(), forKey: "image-11")
+        
+        XCTAssertNil(sut.image(forKey: "image-1"))
+        XCTAssertNotNil(sut.image(forKey: "image-2"))
+        XCTAssertNotNil(sut.image(forKey: "image-3"))
+        XCTAssertNotNil(sut.image(forKey: "image-4"))
+        XCTAssertNotNil(sut.image(forKey: "image-5"))
+        XCTAssertNotNil(sut.image(forKey: "image-6"))
+        XCTAssertNotNil(sut.image(forKey: "image-7"))
+        XCTAssertNotNil(sut.image(forKey: "image-8"))
+        XCTAssertNotNil(sut.image(forKey: "image-9"))
+        XCTAssertNotNil(sut.image(forKey: "image-10"))
+        XCTAssertNotNil(sut.image(forKey: "image-11"))
+    }
+
+    private func makeTestImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(
+            size: CGSize(width: 100, height: 100)
+        )
+
+        return renderer.image { context in
+            UIColor.red.setFill()
+            context.fill(
+                CGRect(x: 0, y: 0, width: 100, height: 100)
+            )
         }
     }
-
 }
