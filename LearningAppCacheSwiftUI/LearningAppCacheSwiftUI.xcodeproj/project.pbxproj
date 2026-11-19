@@ -6,8 +6,19 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		B70A5A6730AE812E00CFDB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000100000000;
+			remoteInfo = LearningAppCacheSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* LearningAppCacheSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningAppCacheSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70A5A6330AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppCacheSwiftUIUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,20 @@
 			path = LearningAppCacheSwiftUI;
 			sourceTree = "<group>";
 		};
+		B70A5A6430AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LearningAppCacheSwiftUIUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		000000000000000130000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		B70A5A6030AE812E00CFDB03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
 			);
@@ -31,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				000000000000000000000010 /* LearningAppCacheSwiftUI */,
+				B70A5A6430AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				000000000000000000000120 /* LearningAppCacheSwiftUI.app */,
+				B70A5A6330AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +87,27 @@
 			productReference = 000000000000000000000120 /* LearningAppCacheSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B70A5A6230AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70A5A6930AE812E00CFDB03 /* Build configuration list for PBXNativeTarget "LearningAppCacheSwiftUIUnitTests" */;
+			buildPhases = (
+				B70A5A5F30AE812E00CFDB03 /* Sources */,
+				B70A5A6030AE812E00CFDB03 /* Frameworks */,
+				B70A5A6130AE812E00CFDB03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B70A5A6830AE812E00CFDB03 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B70A5A6430AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests */,
+			);
+			name = LearningAppCacheSwiftUIUnitTests;
+			productName = LearningAppCacheSwiftUIUnitTests;
+			productReference = B70A5A6330AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -71,11 +115,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
+				LastSwiftUpdateCheck = 2710;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					000000000000000100000000 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					B70A5A6230AE812E00CFDB03 = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = 000000000000000100000000;
 					};
 				};
 			};
@@ -94,12 +142,18 @@
 			projectRoot = "";
 			targets = (
 				000000000000000100000000 /* LearningAppCacheSwiftUI */,
+				B70A5A6230AE812E00CFDB03 /* LearningAppCacheSwiftUIUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		000000000000000140000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		B70A5A6130AE812E00CFDB03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -112,7 +166,20 @@
 			files = (
 			);
 		};
+		B70A5A5F30AE812E00CFDB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B70A5A6830AE812E00CFDB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000100000000 /* LearningAppCacheSwiftUI */;
+			targetProxy = B70A5A6730AE812E00CFDB03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		000000000000000011000000 /* Debug configuration for PBXProject "LearningAppCacheSwiftUI" */ = {
@@ -323,6 +390,49 @@
 			};
 			name = Release;
 		};
+		B70A5A6A30AE812E00CFDB03 /* Debug configuration for PBXNativeTarget "LearningAppCacheSwiftUIUnitTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.LearningAppCacheSwiftUIUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearningAppCacheSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LearningAppCacheSwiftUI";
+			};
+			name = Debug;
+		};
+		B70A5A6B30AE812E00CFDB03 /* Release configuration for PBXNativeTarget "LearningAppCacheSwiftUIUnitTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.LearningAppCacheSwiftUIUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearningAppCacheSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LearningAppCacheSwiftUI";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +449,14 @@
 			buildConfigurations = (
 				000000000000000111000000 /* Debug configuration for PBXNativeTarget "LearningAppCacheSwiftUI" */,
 				000000000000000112000000 /* Release configuration for PBXNativeTarget "LearningAppCacheSwiftUI" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		B70A5A6930AE812E00CFDB03 /* Build configuration list for PBXNativeTarget "LearningAppCacheSwiftUIUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70A5A6A30AE812E00CFDB03 /* Debug configuration for PBXNativeTarget "LearningAppCacheSwiftUIUnitTests" */,
+				B70A5A6B30AE812E00CFDB03 /* Release configuration for PBXNativeTarget "LearningAppCacheSwiftUIUnitTests" */,
 			);
 			defaultConfigurationName = Release;
 		};

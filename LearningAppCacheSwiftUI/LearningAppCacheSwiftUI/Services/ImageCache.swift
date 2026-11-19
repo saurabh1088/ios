@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class ImageCache {
+final class ImageCache: NSObject, NSCacheDelegate {
 
     // MARK: - Properties
 
@@ -16,10 +16,14 @@ final class ImageCache {
 
     // MARK: - Initialization
 
-    init() {
+    override init() {
+        super.init()
+        
         cache.name = "com.cachelab.imagecache"
         cache.countLimit = 10
         cache.totalCostLimit = 50 * 1024 * 1024 // 50 MB
+        
+        cache.delegate = self
     }
 
     // MARK: - Cache Operations
@@ -59,6 +63,14 @@ final class ImageCache {
         }
 
         return cgImage.bytesPerRow * cgImage.height
+    }
+}
+
+// MARK: ImageCache NSCacheDelegate conformation
+extension ImageCache {
+    
+    func cache(_ cache: NSCache<AnyObject, AnyObject>, willEvictObject obj: Any) {
+        print("NSCache evicted an object:", obj)
     }
 }
 
